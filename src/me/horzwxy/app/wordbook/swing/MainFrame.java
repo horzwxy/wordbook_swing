@@ -8,6 +8,7 @@ import me.horzwxy.app.wordbook.model.Word;
 import me.horzwxy.app.wordbook.model.WordState;
 import me.horzwxy.app.wordbook.network.LocalProxy;
 import me.horzwxy.app.wordbook.network.Proxy;
+import me.horzwxy.app.wordbook.network.YinxiangProxy;
 import me.horzwxy.app.wordbook.swing.server.LocalServer;
 
 import javax.swing.*;
@@ -19,7 +20,7 @@ import java.util.*;
 import java.util.List;
 
 /**
- * Created by horz on 1/21/14.
+ * Main frame.
  */
 public class MainFrame extends JFrame {
 
@@ -115,11 +116,20 @@ public class MainFrame extends JFrame {
                 }
             }
         });
+        JButton updateStorage = new JButton("update records");
+        updateStorage.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                wordbookProxy.updateWords(wordLibrary);
+                printLog("update word storage");
+            }
+        });
         controlPanel.add(portInput);
         controlPanel.add(portSubmit);
         controlPanel.add(stopServer);
         controlPanel.add(chooseInputFile);
         controlPanel.add(analyse);
+        controlPanel.add(updateStorage);
 
         feedbackPane = new JTextPane();
         feedbackPane.setSize(600, 200);

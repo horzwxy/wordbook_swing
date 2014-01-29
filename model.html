@@ -3,7 +3,7 @@
         <title>analyse result</title>
         <script type="text/javascript">
         <![CDATA[
-            currentState = "unrecognized";
+            currentState = "none";
 
             function changeState(newState) {
                 currentState = newState;
@@ -19,6 +19,10 @@
             }
 
             function addNewWord(word, port) {
+                if(currentState == 'none') {
+                    return;
+                }
+
                 var xmlhttp = new XMLHttpRequest();
                 xmlhttp.open("GET", "http://localhost:" + port + "/addnewword?word=" + word + "&state=" + currentState, true);
                 xmlhttp.send();
@@ -47,8 +51,9 @@
         <div id="control_bar">
             <span class="state_option" onclick="changeState('familiar')">familiar</span>
             <span class="state_option" onclick="changeState('unfamiliar')">unfamiliar</span>
-            <span class="state_option" onclick="changeState('unrecognized')" style="color:red">unrecognized</span>
+            <span class="state_option" onclick="changeState('unrecognized')">unrecognized</span>
             <span class="state_option" onclick="changeState('ignored')">ignored</span>
+            <span class="none" onclick="changeState('none')" style="color:red">none</span>
         </div>
 
         <hr/>
