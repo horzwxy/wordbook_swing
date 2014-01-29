@@ -8,7 +8,6 @@ import me.horzwxy.app.wordbook.model.Word;
 import me.horzwxy.app.wordbook.model.WordState;
 import me.horzwxy.app.wordbook.network.LocalProxy;
 import me.horzwxy.app.wordbook.network.Proxy;
-import me.horzwxy.app.wordbook.network.YinxiangProxy;
 import me.horzwxy.app.wordbook.swing.server.LocalServer;
 
 import javax.swing.*;
@@ -33,6 +32,7 @@ public class MainFrame extends JFrame {
     private int port;
     private WordLibrary wordLibrary;
     private final JScrollBar scrollBar;
+    private JPanel mainPanel;
 
     public MainFrame() {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -52,6 +52,11 @@ public class MainFrame extends JFrame {
                         @Override
                         public void onStateUpdate(String newState) {
                             printLog(newState);
+                        }
+
+                        @Override
+                        public void onNewWordAdded(Word word) {
+                            mainPanel.removeAll();
                         }
                     });
                     server.start();
@@ -95,7 +100,7 @@ public class MainFrame extends JFrame {
                 else {
                     try {
                         BufferedReader reader = new BufferedReader(new FileReader(selectedFile));
-                        HTMLCreator creator = new HTMLCreator(port);
+                        AnalyseResultHTMLCreator creator = new AnalyseResultHTMLCreator(port);
                         String line;
                         while ((line = reader.readLine()) != null) {
                             String[] sentences = line.split("[\\.?!:]");
@@ -122,6 +127,18 @@ public class MainFrame extends JFrame {
                 }
             }
         });
+        JButton displayStorage = new JButton("display records");
+        displayStorage.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                printRecords();
+                SentenceEditorHTMLCreator creator = new SentenceEditorHTMLCreator(port, wordLibrary);
+                File outputFile = new File("records.html");
+                creator.outputDocument(outputFile);
+
+                DesktopApi.browse(outputFile.toURI());
+            }
+        });
         JButton updateStorage = new JButton("update records");
         updateStorage.addActionListener(new ActionListener() {
             @Override
@@ -135,6 +152,7 @@ public class MainFrame extends JFrame {
         controlPanel.add(stopServer);
         controlPanel.add(chooseInputFile);
         controlPanel.add(analyse);
+        controlPanel.add(displayStorage);
         controlPanel.add(updateStorage);
 
         feedbackPane = new JTextPane();
@@ -169,15 +187,23 @@ public class MainFrame extends JFrame {
             }
         }.start();
 
+        mainPanel = new JPanel();
+        JScrollPane mainScrollPane = new JScrollPane(mainPanel);
+
         Container contentPane = this.getContentPane();
         contentPane.setLayout(new BorderLayout());
         contentPane.add(controlPanel, BorderLayout.NORTH);
         contentPane.add(jsp, BorderLayout.WEST);
+        contentPane.add(mainScrollPane, BorderLayout.CENTER);
     }
 
     private void printLog(String newLine) {
         feedbackPane.setText(feedbackPane.getText() + "\n" + newLine);
         scrollBar.setValue(scrollBar.getMaximum());
+    }
+
+    private void printRecords() {
+        wordLibrary.printRecords();
     }
 }
 

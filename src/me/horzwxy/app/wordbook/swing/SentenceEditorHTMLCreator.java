@@ -1,5 +1,8 @@
 package me.horzwxy.app.wordbook.swing;
 
+import me.horzwxy.app.wordbook.analyzer.WordLibrary;
+import me.horzwxy.app.wordbook.model.Word;
+import me.horzwxy.app.wordbook.model.WordState;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -15,20 +18,23 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-import java.io.*;
-import java.util.List;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Collection;
 
 /**
- * Create output HTML file.
+ * Created by horz on 1/29/14.
  */
-public class HTMLCreator {
+public class SentenceEditorHTMLCreator {
 
     private Document document;
-    private Node articleNode;
     private int port;
 
-    public HTMLCreator(int port) {
+    public SentenceEditorHTMLCreator(int port, WordLibrary wordLibrary) {
         this.port = port;
+
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder db = null;
         try {
@@ -38,9 +44,14 @@ public class HTMLCreator {
         }
         document = null;
         try {
-            document = db.parse(new File("model.html"));
-            NodeList divs = document.getElementsByTagName("div");
-            articleNode = getArticleNode(divs);
+            document = db.parse(new File("sentence_editor.html"));
+            NodeList divs = document.getElementsByTagName("ul");
+            for(WordState state : WordState.values()) {
+                Node node = getNodeWithId(state.name().toLowerCase() + "_list", divs);
+                if(node != null) {
+                    updateNode(node, state, wordLibrary);
+                }
+            }
         } catch (SAXException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -48,13 +59,13 @@ public class HTMLCreator {
         }
     }
 
-    private Node getArticleNode(NodeList divs) {
+    private Node getNodeWithId(String id, NodeList divs) {
         for(int i = 0; i < divs.getLength(); i++) {
             for(int j = 0; j < divs.item(i).getAttributes().getLength(); j++) {
                 String attrName = divs.item(i).getAttributes().item(j).getNodeName();
                 String attrValue = divs.item(i).getAttributes().item(j).getNodeValue();
 
-                if(attrName.equals("id") && attrValue.equals("article")) {
+                if(attrName.equals("id") && attrValue.equals(id)) {
                     return divs.item(i);
                 }
             }
@@ -63,9 +74,31 @@ public class HTMLCreator {
         return null;
     }
 
-    public void addSentence(String sentence, List<String> emphasizedWords) {
-        Node sentenceNode = createSentenceNode(sentence, emphasizedWords);
-        articleNode.appendChild(sentenceNode);
+    private void updateNode(Node node, WordState state, WordLibrary wordLibrary) {
+        Collection<Word> words = wordLibrary.getWords(state);
+        for(Word word : words) {
+            Element liElement = document.createElement("li");
+            node.appendChild(liElement);
+
+            Element wordSpan = document.createElement("span");
+            liElement.appendChild(wordSpan);
+            wordSpan.appendChild(document.createTextNode(word.getContent()));
+
+            Element sentenceList = document.createElement("ul");
+            liElement.appendChild(sentenceList);
+
+            for(String sentence : word.getSentences()) {
+                Element sentenceNode = document.createElement("li");
+                sentenceList.appendChild(sentenceNode);
+
+                Element sentenceContent = document.createElement("span");
+                sentenceContent.appendChild(document.createTextNode(sentence));
+                sentenceContent.setAttribute("onclick", "editSentence('" + word.getContent() + "', " + sentence.hashCode() + ", " + port + ")");
+                sentenceNode.appendChild(sentenceContent);
+
+                System.out.println();
+            }
+        }
     }
 
     public void outputDocument(File outputFile) {
@@ -91,26 +124,5 @@ public class HTMLCreator {
         } catch (TransformerException e) {
             e.printStackTrace();
         }
-    }
-
-    private Node createSentenceNode(String sentence, List<String> emphasizedWords) {
-        Element sentenceNode = document.createElement("p");
-        String[] words = sentence.split("[ ,\"]");
-        for(String word : words) {
-            if(emphasizedWords.contains(word)) {
-                Element element = document.createElement("em");
-                element.setTextContent(word);
-                element.setAttribute("style", "color:red");
-                element.setAttribute("onclick", "addNewWord(\"" + word + "\", " + port + ")");
-                sentenceNode.appendChild(element);
-                sentenceNode.appendChild(document.createTextNode(" "));
-            }
-            else {
-                Node element = document.createTextNode(word + " ");
-                sentenceNode.appendChild(element);
-            }
-        }
-
-        return sentenceNode;
     }
 }

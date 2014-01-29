@@ -17,9 +17,11 @@ class AddWordHandler implements RequestHandler {
 
     @Override
     public void handleRequest(SimpleHttpRequest request, LocalServer.ServerCallback callback) {
-        Word word = new Word(request.getParameter("word"),
-                WordState.valueOf(request.getParameter("state").toUpperCase()));
-        wordLibrary.addWord(word, word.getState());
+        Word word = wordLibrary.getWord(request.getParameter("word").toLowerCase());
+        WordState originalState = word.getState();
+        word.setState(WordState.valueOf(request.getParameter("state").toUpperCase()));
+        wordLibrary.updateWord(word, originalState);
+
         callback.onStateUpdate("add word " + word.getContent() + "/" + word.getState());
     }
 }

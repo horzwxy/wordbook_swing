@@ -1,6 +1,7 @@
 package me.horzwxy.app.wordbook.swing.server;
 
 import me.horzwxy.app.wordbook.analyzer.WordLibrary;
+import me.horzwxy.app.wordbook.model.Word;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -67,5 +68,7 @@ public class LocalServer extends ServerSocket {
 
     public interface ServerCallback {
         public void onStateUpdate(String newState);
+
+        public void onNewWordAdded(Word word);
     }
 }
