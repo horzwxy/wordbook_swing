@@ -8,8 +8,7 @@ import me.horzwxy.app.wordbook.model.Word;
 import me.horzwxy.app.wordbook.model.WordState;
 import me.horzwxy.app.wordbook.network.LocalProxy;
 import me.horzwxy.app.wordbook.network.Proxy;
-import me.horzwxy.app.wordbook.network.YinxiangProxy;
-import org.w3c.dom.Document;
+import me.horzwxy.app.wordbook.swing.server.LocalServer;
 
 import javax.swing.*;
 import java.awt.*;
@@ -31,6 +30,7 @@ public class MainFrame extends JFrame {
     private LocalServer server;
     private int port;
     private WordLibrary wordLibrary;
+    private final JScrollBar scrollBar;
 
     public MainFrame() {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -46,7 +46,12 @@ public class MainFrame extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 port = Integer.parseInt(portInput.getText());
                 try {
-                    server = new LocalServer(port, wordLibrary);
+                    server = new LocalServer(port, wordLibrary, new LocalServer.ServerCallback() {
+                        @Override
+                        public void onStateUpdate(String newState) {
+                            printLog(newState);
+                        }
+                    });
                     server.start();
                     printLog("server started");
                 } catch (IOException e1) {
@@ -116,11 +121,11 @@ public class MainFrame extends JFrame {
         controlPanel.add(chooseInputFile);
         controlPanel.add(analyse);
 
-        JPanel feedbackPanel = new JPanel();
         feedbackPane = new JTextPane();
         feedbackPane.setSize(600, 200);
         feedbackPane.setText("Ready.");
-        feedbackPanel.add(feedbackPane);
+        JScrollPane jsp = new JScrollPane(feedbackPane);
+        scrollBar = jsp.getVerticalScrollBar();
 
         new Thread() {
             @Override
@@ -151,10 +156,11 @@ public class MainFrame extends JFrame {
         Container contentPane = this.getContentPane();
         contentPane.setLayout(new BorderLayout());
         contentPane.add(controlPanel, BorderLayout.NORTH);
-        contentPane.add(feedbackPanel, BorderLayout.SOUTH);
+        contentPane.add(jsp, BorderLayout.WEST);
     }
 
     private void printLog(String newLine) {
         feedbackPane.setText(feedbackPane.getText() + "\n" + newLine);
+        scrollBar.setValue(scrollBar.getMaximum());
     }
 }

@@ -2,16 +2,67 @@
     <head>
         <title>analyse result</title>
         <script type="text/javascript">
+        <![CDATA[
+            currentState = "unrecognized";
+
+            function changeState(newState) {
+                currentState = newState;
+                var options = document.getElementsByClassName("state_option");
+                for(var i = 0 ; i < options.length; i++) {
+                    options[i].style.color = "black";
+                    if(options[i].innerHTML == newState) {
+                        options[i].style.color = "red";
+                    }
+                }
+
+                document.getElementById("feedback_list").innerHTML += "<li>change state to " + newState + "</li>";
+            }
+
             function addNewWord(word, port) {
                 var xmlhttp = new XMLHttpRequest();
-                xmlhttp.open("GET", "http://localhost:" + port + "/addnewword?word=" + word, true);
+                xmlhttp.open("GET", "http://localhost:" + port + "/addnewword?word=" + word + "&state=" + currentState, true);
                 xmlhttp.send();
+
+                window.event.srcElement.style.color = "black";
+
+                document.getElementById("feedback_list").innerHTML += "<li>add "+ currentState + " word " + word + "</li>";
             }
+        ]]>
         </script>
+        <style type="text/css">
+        <![CDATA[
+            #feedback{
+                float:left;
+                width:15%;
+            }
+
+            #article{
+                float:left;
+                width:80%;
+            }
+        ]]>
+        </style>
     </head>
     <body>
-        <div id="article">
+        <div id="control_bar">
+            <span class="state_option" onclick="changeState('familiar')">familiar</span>
+            <span class="state_option" onclick="changeState('unfamiliar')">unfamiliar</span>
+            <span class="state_option" onclick="changeState('unrecognized')" style="color:red">unrecognized</span>
+            <span class="state_option" onclick="changeState('ignored')">ignored</span>
+        </div>
 
+        <hr/>
+
+        <div>
+            <div id="article">
+
+            </div>
+
+            <div id="feedback">
+                <ul id="feedback_list">
+                    <li>(feedback)</li>
+                </ul>
+            </div>
         </div>
     </body>
 </html>

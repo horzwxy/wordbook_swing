@@ -3,6 +3,7 @@ package me.horzwxy.app.wordbook.swing;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -38,12 +39,28 @@ public class HTMLCreator {
         document = null;
         try {
             document = db.parse(new File("model.html"));
-            articleNode = document.getElementsByTagName("div").item(0);
+            NodeList divs = document.getElementsByTagName("div");
+            articleNode = getArticleNode(divs);
         } catch (SAXException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private Node getArticleNode(NodeList divs) {
+        for(int i = 0; i < divs.getLength(); i++) {
+            for(int j = 0; j < divs.item(i).getAttributes().getLength(); j++) {
+                String attrName = divs.item(i).getAttributes().item(j).getNodeName();
+                String attrValue = divs.item(i).getAttributes().item(j).getNodeValue();
+
+                if(attrName.equals("id") && attrValue.equals("article")) {
+                    return divs.item(i);
+                }
+            }
+        }
+
+        return null;
     }
 
     public void addSentence(String sentence, List<String> emphasizedWords) {
