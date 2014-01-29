@@ -33,6 +33,13 @@
 
                 window.event.srcElement.style.color = "black";
 
+                var ems = document.getElementsByTagName("em");
+                for(var i = 0; i < ems.length; i++) {
+                    if(ems[i].innerHTML == word) {
+                        ems[i].style.color = "black";
+                    }
+                }
+
                 document.getElementById("feedback_list").innerHTML += "<li>add "+ currentState + " word " + word + "</li>";
             }
         
@@ -40,14 +47,29 @@
         
 <style type="text/css">
         
+            body{
+                margin:0px;
+            }
+
+            #control_bar{
+                position:fixed;
+                clear:left;
+                background-color:white;
+                width:100%;
+            }
+
             #feedback{
                 float:left;
                 width:15%;
             }
 
             #article{
+                margin-top:50px;
                 float:left;
                 width:80%;
+            }
+
+            #main{
             }
         
         </style>
@@ -62,42 +84,422 @@
             <span class="state_option" onclick="changeState('unfamiliar')">unfamiliar</span>
             <span class="state_option" onclick="changeState('unrecognized')">unrecognized</span>
             <span class="state_option" onclick="changeState('ignored')">ignored</span>
-            <span class="none" onclick="changeState('none')" style="color:red">none</span>
+            <span class="state_option" onclick="changeState('none')" style="color:red">none</span>
+            
+<hr>
         
 </div>
 
         
-<hr>
-
-        
-<div>
+<div id="main">
             
 <div id="article">
 
             
 <p>
-<em onclick="addNewWord(&quot;CARL&quot;, 7962)" style="color:red">CARL</em> <em onclick="addNewWord(&quot;AZUZ&quot;, 7962)" style="color:red">AZUZ</em>  <em onclick="addNewWord(&quot;CNN&quot;, 7962)" style="color:red">CNN</em> ANCHOR </p>
+<em onclick="addNewWord(&quot;CARL&quot;, 7962)" style="color:red">CARL</em> AZUZ  <em onclick="addNewWord(&quot;CNN&quot;, 7962)" style="color:red">CNN</em> ANCHOR </p>
 <p> Welcome to <em onclick="addNewWord(&quot;CNN&quot;, 7962)" style="color:red">CNN</em> STUDENT NEWS </p>
-<p> Your <em onclick="addNewWord(&quot;commercial-free&quot;, 7962)" style="color:red">commercial-free</em> source for news for the classroom </p>
-<p> I`m <em onclick="addNewWord(&quot;Carl&quot;, 7962)" style="color:red">Carl</em> <em onclick="addNewWord(&quot;Azuz&quot;, 7962)" style="color:red">Azuz</em> 
-</p>
-<p> And the first story we are covering today involves a man named <em onclick="addNewWord(&quot;Kenneth&quot;, 7962)" style="color:red">Kenneth</em> <em onclick="addNewWord(&quot;Bae&quot;, 7962)" style="color:red">Bae</em> 
-</p>
-<p> He is a <em onclick="addNewWord(&quot;U&quot;, 7962)" style="color:red">U</em> 
-</p>
-<p>
-<em onclick="addNewWord(&quot;S&quot;, 7962)" style="color:red">S</em> 
-</p>
+<p> Your commercial-free source for news for the classroom </p>
+<p> I`m <em onclick="addNewWord(&quot;Carl&quot;, 7962)" style="color:red">Carl</em> Azuz </p>
+<p> And the first story we are covering today involves a man named <em onclick="addNewWord(&quot;Kenneth&quot;, 7962)" style="color:red">Kenneth</em> Bae </p>
+<p> He is a U </p>
+<p>S </p>
 <p> citizen </p>
 <p> In 2012  he was arrested in North <em onclick="addNewWord(&quot;Korea&quot;, 7962)" style="color:red">Korea</em> where he gave tours to people who wanted to visit </p>
-<p> 
-<em onclick="addNewWord(&quot;Bae&quot;, 7962)" style="color:red">Bae</em> was sentenced to 15 years in the North <em onclick="addNewWord(&quot;Korean&quot;, 7962)" style="color:red">Korean</em> labor camp </p>
+<p> Bae was sentenced to 15 years in the North <em onclick="addNewWord(&quot;Korean&quot;, 7962)" style="color:red">Korean</em> labor camp </p>
 <p> We don`t know exactly why </p>
 <p> North <em onclick="addNewWord(&quot;Korea&quot;, 7962)" style="color:red">Korea</em> says he was trying to take down the country`s government </p>
-<p> His mother thinks it might be because <em onclick="addNewWord(&quot;Bae&quot;, 7962)" style="color:red">Bae</em> is a <em onclick="addNewWord(&quot;devout&quot;, 7962)" style="color:red">devout</em> Christian </p>
+<p> His mother thinks it might be because Bae is a <em onclick="addNewWord(&quot;devout&quot;, 7962)" style="color:red">devout</em> Christian </p>
 <p> And that he didn`t understand the rules of North <em onclick="addNewWord(&quot;Korea&quot;, 7962)" style="color:red">Korea</em>  an <em onclick="addNewWord(&quot;atheist&quot;, 7962)" style="color:red">atheist</em> country </p>
-<p> On Monday  <em onclick="addNewWord(&quot;Bae&quot;, 7962)" style="color:red">Bae</em> gave a statement that said he committed a serious crime against North <em onclick="addNewWord(&quot;Korea&quot;, 7962)" style="color:red">Korea</em> 
+<p> On Monday  Bae gave a statement that said he committed a serious crime against North <em onclick="addNewWord(&quot;Korea&quot;, 7962)" style="color:red">Korea</em> 
 </p>
+<p> 
+</p>
+<p>(BEGIN VIDEO CLIP) </p>
+<p> 
+</p>
+<p> I would like to <em onclick="addNewWord(&quot;plead&quot;, 7962)" style="color:red">plead</em> with the U </p>
+<p>S </p>
+<p> government  press and my family to stop <em onclick="addNewWord(&quot;worsening&quot;, 7962)" style="color:red">worsening</em> my situation by making wild <em onclick="addNewWord(&quot;rumors&quot;, 7962)" style="color:red">rumors</em> against North <em onclick="addNewWord(&quot;Korea&quot;, 7962)" style="color:red">Korea</em> and releasing materials related to me  which are not based on the facts </p>
+<p> 
+</p>
+<p>(END VIDEO CLIP) </p>
+<p> 
+</p>
+<p>AZUZ </p>
+<p> We don`t know if Bae was speaking sincerely  though </p>
+<p> North <em onclick="addNewWord(&quot;Korea&quot;, 7962)" style="color:red">Korea</em> has forced prisoners to make statements like that in the past </p>
+<p> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;UNIDENTIFIED&quot;, 7962)" style="color:red">UNIDENTIFIED</em> FEMALE </p>
+<p> See if you can I </p>
+<p>D </p>
+<p> me </p>
+<p> I`m a U </p>
+<p>S </p>
+<p> government agency that was established in 1952 </p>
+<p> My director is always a <em onclick="addNewWord(&quot;high-ranking&quot;, 7962)" style="color:red">high-ranking</em> military officer </p>
+<p> I`m America`s most secret intelligence agency </p>
+<p> I`m the National Security Agency  responsible for collecting foreign information and keeping U </p>
+<p>S </p>
+<p> information secure </p>
+<p> 
+</p>
+<p>AZUZ </p>
+<p> We`ve talked about Edward Snowden </p>
+<p> He`s a former <em onclick="addNewWord(&quot;NSA&quot;, 7962)" style="color:red">NSA</em> worker who <em onclick="addNewWord(&quot;revealed&quot;, 7962)" style="color:red">revealed</em> secret information about the agency  that it collects Americans` phone records and email <em onclick="addNewWord(&quot;info&quot;, 7962)" style="color:red">info</em>  among other data </p>
+<p> Some believe  this helps keep the country safer and monitor potential <em onclick="addNewWord(&quot;terrorist&quot;, 7962)" style="color:red">terrorist</em> activity </p>
+<p> Other see it as a significant invasion of Americans` <em onclick="addNewWord(&quot;privacy&quot;, 7962)" style="color:red">privacy</em> 
+</p>
+<p> Well  President <em onclick="addNewWord(&quot;Obama&quot;, 7962)" style="color:red">Obama</em> recently announced that he`d made major changes in the way the <em onclick="addNewWord(&quot;NSA&quot;, 7962)" style="color:red">NSA</em> gathers information </p>
+<p> But he`s not stopping the agency from gathering it </p>
+<p> 
+</p>
+<p>(BEGIN VIDEO CLIP) </p>
+<p> 
+</p>
+<p>CROWD </p>
+<p> No secret (inaudible) </p>
+<p> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;UNIDENTIFIED&quot;, 7962)" style="color:red">UNIDENTIFIED</em> MALE </p>
+<p> After months of spirited debate sparked by the explosive <em onclick="addNewWord(&quot;revelations&quot;, 7962)" style="color:red">revelations</em> of Edward Snowden  the president told Americans he`ll <em onclick="addNewWord(&quot;rein&quot;, 7962)" style="color:red">rein</em> in <em onclick="addNewWord(&quot;NSA&quot;, 7962)" style="color:red">NSA</em> <em onclick="addNewWord(&quot;surveillance&quot;, 7962)" style="color:red">surveillance</em>  but only to a point </p>
+<p> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;BARACK&quot;, 7962)" style="color:red">BARACK</em> <em onclick="addNewWord(&quot;OBAMA&quot;, 7962)" style="color:red">OBAMA</em>  PRESIDENT OF THE UNITED STATES OF AMERICA </p>
+<p> The power of new technologies means that there are fewer and fewer technical <em onclick="addNewWord(&quot;constraints&quot;, 7962)" style="color:red">constraints</em> on what we can do </p>
+<p> That places a special <em onclick="addNewWord(&quot;obligation&quot;, 7962)" style="color:red">obligation</em> on us to ask tough questions about what we should do </p>
+<p> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;UNIDENTIFIED&quot;, 7962)" style="color:red">UNIDENTIFIED</em> MALE </p>
+<p> The most significant changes affect the most <em onclick="addNewWord(&quot;controversial&quot;, 7962)" style="color:red">controversial</em> <em onclick="addNewWord(&quot;surveillance&quot;, 7962)" style="color:red">surveillance</em> program - the bulk collection of Americans` phone records  effective immediately  the <em onclick="addNewWord(&quot;NSA&quot;, 7962)" style="color:red">NSA</em> will need <em onclick="addNewWord(&quot;judicial&quot;, 7962)" style="color:red">judicial</em> approval before searching the data </p>
+<p> The president asked Congress to create a panel of public <em onclick="addNewWord(&quot;advocates&quot;, 7962)" style="color:red">advocates</em> to counter government search requests </p>
+<p> And he asked the <em onclick="addNewWord(&quot;Attorney&quot;, 7962)" style="color:red">Attorney</em> General and intelligence committee to explore moving the data out of <em onclick="addNewWord(&quot;NSA&quot;, 7962)" style="color:red">NSA</em> control </p>
+<p> But the bottom line  the program <em onclick="addNewWord(&quot;won`t&quot;, 7962)" style="color:red">won`t</em> necessarily end </p>
+<p> 
+</p>
+<p>CROWD </p>
+<p> They say (INAUDIBLE) </p>
+<p> 
+</p>
+<p>CROWD </p>
+<p> We say (INAUDIBLE) </p>
+<p> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;UNIDENTIFIED&quot;, 7962)" style="color:red">UNIDENTIFIED</em> MALE </p>
+<p> For the <em onclick="addNewWord(&quot;NSA`s&quot;, 7962)" style="color:red">NSA`s</em> most <em onclick="addNewWord(&quot;ardent&quot;, 7962)" style="color:red">ardent</em> critics that would be a glaring <em onclick="addNewWord(&quot;omission&quot;, 7962)" style="color:red">omission</em> 
+</p>
+<p> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;SEN&quot;, 7962)" style="color:red">SEN</em> 
+</p>
+<p> 
+<em onclick="addNewWord(&quot;RAND&quot;, 7962)" style="color:red">RAND</em> <em onclick="addNewWord(&quot;PAUL&quot;, 7962)" style="color:red">PAUL</em> 
+</p>
+<p> I didn`t hear any lessening of the spying on Americans or collecting records of Americans </p>
+<p> I heard that trust me  I`m going to put some more <em onclick="addNewWord(&quot;safeguards&quot;, 7962)" style="color:red">safeguards</em> in place  but I`m going to keep right on collecting every American`s records </p>
+<p> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;UNIDENTIFIED&quot;, 7962)" style="color:red">UNIDENTIFIED</em> MALE </p>
+<p> The president argues that much of the <em onclick="addNewWord(&quot;surveillance&quot;, 7962)" style="color:red">surveillance</em> is just too important to <em onclick="addNewWord(&quot;scrap&quot;, 7962)" style="color:red">scrap</em> altogether </p>
+<p> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;OBAMA&quot;, 7962)" style="color:red">OBAMA</em> 
+</p>
+<p> Not only because I felt that they made us more secure  but also because nothing in that initial review and nothing that I`ve learned since indicated that our intelligence community has <em onclick="addNewWord(&quot;sought&quot;, 7962)" style="color:red">sought</em> to <em onclick="addNewWord(&quot;violate&quot;, 7962)" style="color:red">violate</em> the law </p>
+<p> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;UNIDENTIFIED&quot;, 7962)" style="color:red">UNIDENTIFIED</em> MALE </p>
+<p> So  do any of the changes make us less safe </p>
+<p> 
+</p>
+<p>PETER <em onclick="addNewWord(&quot;BERGEN&quot;, 7962)" style="color:red">BERGEN</em>  <em onclick="addNewWord(&quot;CNN&quot;, 7962)" style="color:red">CNN</em> <em onclick="addNewWord(&quot;TERRORISM&quot;, 7962)" style="color:red">TERRORISM</em> <em onclick="addNewWord(&quot;ANALYST&quot;, 7962)" style="color:red">ANALYST</em> 
+</p>
+<p> If these programs were stopping huge <em onclick="addNewWord(&quot;terrorist&quot;, 7962)" style="color:red">terrorist</em> attacks  you know  maybe they would - should be more  you know  there should be more concern </p>
+<p> But the fact is that these programs are not </p>
+<p> 
+</p>
+<p>(END VIDEO CLIP) </p>
+<p> 
+</p>
+<p>AZUZ </p>
+<p> Yesterday honored American civil rights leader <em onclick="addNewWord(&quot;Dr&quot;, 7962)" style="color:red">Dr</em> 
+</p>
+<p> 
+<em onclick="addNewWord(&quot;Martin&quot;, 7962)" style="color:red">Martin</em> <em onclick="addNewWord(&quot;Luther&quot;, 7962)" style="color:red">Luther</em> King <em onclick="addNewWord(&quot;Jr&quot;, 7962)" style="color:red">Jr</em> 
+</p>
+<p> It became a federal holiday in 1983  and 11 years later  it became a national day of service  a one of a kind event </p>
+<p> 
+<em onclick="addNewWord(&quot;Dr&quot;, 7962)" style="color:red">Dr</em> 
+</p>
+<p> King once said  everybody can be great  because everybody can serve </p>
+<p> 
+</p>
+<p>President <em onclick="addNewWord(&quot;Obama&quot;, 7962)" style="color:red">Obama</em> <em onclick="addNewWord(&quot;participated&quot;, 7962)" style="color:red">participated</em> in the service project in Washington  D </p>
+<p>C </p>
+<p> You see him here <em onclick="addNewWord(&quot;volunteering&quot;, 7962)" style="color:red">volunteering</em> at D </p>
+<p>C </p>
+<p> central kitchen  in organization that aims to reduce hunger and poverty </p>
+<p> Also  in the U </p>
+<p>S </p>
+<p> capital  the traditional <em onclick="addNewWord(&quot;wreath&quot;, 7962)" style="color:red">wreath</em> laying at the King Memorial </p>
+<p> The National Park Service says millions visited the first full year it was open in 2012  and millions visited last year on the 50th <em onclick="addNewWord(&quot;anniversary&quot;, 7962)" style="color:red">anniversary</em> of <em onclick="addNewWord(&quot;Dr&quot;, 7962)" style="color:red">Dr</em> 
+</p>
+<p> King`s march on Washington </p>
+<p> 
+<em onclick="addNewWord(&quot;Brian&quot;, 7962)" style="color:red">Brian</em> <em onclick="addNewWord(&quot;Todd&quot;, 7962)" style="color:red">Todd</em> looks back at that event </p>
+<p> 
+</p>
+<p>(BEGIN VIDEOTAPE) </p>
+<p> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;BRIAN&quot;, 7962)" style="color:red">BRIAN</em> <em onclick="addNewWord(&quot;TODD&quot;, 7962)" style="color:red">TODD</em>  <em onclick="addNewWord(&quot;CNN&quot;, 7962)" style="color:red">CNN</em> CORRESPONDENT </p>
+<p> Many of them were so young that summer  <em onclick="addNewWord(&quot;Martin&quot;, 7962)" style="color:red">Martin</em> <em onclick="addNewWord(&quot;Luther&quot;, 7962)" style="color:red">Luther</em> King <em onclick="addNewWord(&quot;Jr&quot;, 7962)" style="color:red">Jr</em> 
+</p>
+<p> himself only 34  but they led hundreds of thousands on the march to the nation`s capital that would <em onclick="addNewWord(&quot;pivot&quot;, 7962)" style="color:red">pivot</em> the country toward <em onclick="addNewWord(&quot;irreversible&quot;, 7962)" style="color:red">irreversible</em> change </p>
+<p>  Time  magazine captures that moment in a <em onclick="addNewWord(&quot;tribute&quot;, 7962)" style="color:red">tribute</em> to King </p>
+<p> Time editor <em onclick="addNewWord(&quot;Radhika&quot;, 7962)" style="color:red">Radhika</em> <em onclick="addNewWord(&quot;Jones&quot;, 7962)" style="color:red">Jones</em> says the use of the key players then was a <em onclick="addNewWord(&quot;crucial&quot;, 7962)" style="color:red">crucial</em> component in publishing this <em onclick="addNewWord(&quot;tribute&quot;, 7962)" style="color:red">tribute</em> now </p>
+<p> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;RADHIKA&quot;, 7962)" style="color:red">RADHIKA</em> <em onclick="addNewWord(&quot;JONES&quot;, 7962)" style="color:red">JONES</em>  <em onclick="addNewWord(&quot;EXEC&quot;, 7962)" style="color:red">EXEC</em> 
+</p>
+<p> EDITOR  TIME MAGAZINE </p>
+<p> They are still with us </p>
+<p> They can tell their own stories  and it was so important to us to talk to them directly and here  there are memories of that day </p>
+<p> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;TODD&quot;, 7962)" style="color:red">TODD</em> 
+</p>
+<p> The memories come from people like <em onclick="addNewWord(&quot;Clarence&quot;, 7962)" style="color:red">Clarence</em> <em onclick="addNewWord(&quot;Jones&quot;, 7962)" style="color:red">Jones</em>  King`s <em onclick="addNewWord(&quot;speechwriter&quot;, 7962)" style="color:red">speechwriter</em> 
+</p>
+<p> 
+</p>
+<p>In a <em onclick="addNewWord(&quot;testimonial&quot;, 7962)" style="color:red">testimonial</em> on  Time`s  <em onclick="addNewWord(&quot;website&quot;, 7962)" style="color:red">website</em>  he describes the moment King grabbed his audience </p>
+<p> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;CLARENCE&quot;, 7962)" style="color:red">CLARENCE</em> B </p>
+<p> 
+<em onclick="addNewWord(&quot;JONES&quot;, 7962)" style="color:red">JONES</em>  <em onclick="addNewWord(&quot;MARTIN&quot;, 7962)" style="color:red">MARTIN</em> <em onclick="addNewWord(&quot;LUTHER&quot;, 7962)" style="color:red">LUTHER</em> KING <em onclick="addNewWord(&quot;JR&quot;, 7962)" style="color:red">JR</em> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;`S&quot;, 7962)" style="color:red">`S</em> <em onclick="addNewWord(&quot;SPEECHWRITER&quot;, 7962)" style="color:red">SPEECHWRITER</em> 
+</p>
+<p> I`m listening to his speech  and as I`m listening  I see that he`s really - <em onclick="addNewWord(&quot;Mahalia&quot;, 7962)" style="color:red">Mahalia</em> <em onclick="addNewWord(&quot;Jackson&quot;, 7962)" style="color:red">Jackson</em> interrupted him while he`s speaking </p>
+<p> Tell them about the dream  <em onclick="addNewWord(&quot;Martin&quot;, 7962)" style="color:red">Martin</em> 
+</p>
+<p> Tell them about the dream </p>
+<p> Body language changed </p>
+<p> And he changed what I call the <em onclick="addNewWord(&quot;Baptist&quot;, 7962)" style="color:red">Baptist</em> <em onclick="addNewWord(&quot;preacher`s&quot;, 7962)" style="color:red">preacher`s</em> test task (ph) </p>
+<p> And I say to the person standing next to me  whoever that was  I said these people don`t know it  but they are about ready to go to church </p>
+<p> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;TODD&quot;, 7962)" style="color:red">TODD</em> 
+</p>
+<p> When King`s body language changed  so did the speech and with it  a movement </p>
+<p> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;MARTIN&quot;, 7962)" style="color:red">MARTIN</em> <em onclick="addNewWord(&quot;LUTHER&quot;, 7962)" style="color:red">LUTHER</em> KING <em onclick="addNewWord(&quot;JR&quot;, 7962)" style="color:red">JR</em> 
+</p>
+<p> 
+</p>
+<p> I have a dream that one day this nation will rise up  live up the true meaning of its dream </p>
+<p> We hold this truth to be self- evident that all men are created equal </p>
+<p> 
+</p>
+<p>(END VIDEOTAPE) </p>
+<p> 
+</p>
+<p>AZUZ </p>
+<p> Time for the <em onclick="addNewWord(&quot;CNN&quot;, 7962)" style="color:red">CNN</em> STUDENT NEWS  Roll Call  and this one  for the birds </p>
+<p> We mean the Eagles of <em onclick="addNewWord(&quot;Edgartown&quot;, 7962)" style="color:red">Edgartown</em> School </p>
+<p> They are <em onclick="addNewWord(&quot;parched&quot;, 7962)" style="color:red">parched</em> in <em onclick="addNewWord(&quot;Edgartown&quot;, 7962)" style="color:red">Edgartown</em>  <em onclick="addNewWord(&quot;Massachusetts&quot;, 7962)" style="color:red">Massachusetts</em> 
+</p>
+<p> We mean the Silver Hawks of <em onclick="addNewWord(&quot;Lincoln&quot;, 7962)" style="color:red">Lincoln</em> Southwest High School </p>
+<p> They are taking flight from <em onclick="addNewWord(&quot;Lincoln&quot;, 7962)" style="color:red">Lincoln</em>  <em onclick="addNewWord(&quot;Nebraska&quot;, 7962)" style="color:red">Nebraska</em> 
+</p>
+<p> And we mean the Red Hawks of Liberty High School </p>
+<p> They are <em onclick="addNewWord(&quot;soaring&quot;, 7962)" style="color:red">soaring</em> over <em onclick="addNewWord(&quot;Frisco&quot;, 7962)" style="color:red">Frisco</em>  <em onclick="addNewWord(&quot;Texas&quot;, 7962)" style="color:red">Texas</em> 
+</p>
+<p> 
+</p>
+<p>Germany  Russia  Canada  <em onclick="addNewWord(&quot;Switzerland&quot;, 7962)" style="color:red">Switzerland</em>  all countries associated with winter sports  all countries that have done well in the Olympics <em onclick="addNewWord(&quot;bobsled&quot;, 7962)" style="color:red">bobsled</em> competition </p>
+<p> How about <em onclick="addNewWord(&quot;Jamaica&quot;, 7962)" style="color:red">Jamaica</em> 
+</p>
+<p> The <em onclick="addNewWord(&quot;Caribbean&quot;, 7962)" style="color:red">Caribbean</em> country just got a word Saturday that it has qualified for next month Winter Olympics in Russia </p>
+<p> But that was just one of the challenges the storied team faced </p>
+<p> 
+</p>
+<p>(BEGIN VIDEO CLIP) </p>
+<p> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;UNIDENTIFIED&quot;, 7962)" style="color:red">UNIDENTIFIED</em> MALE </p>
+<p> Get up </p>
+<p> It`s <em onclick="addNewWord(&quot;bobsled&quot;, 7962)" style="color:red">bobsled</em> time </p>
+<p> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;UNIDENTIFIED&quot;, 7962)" style="color:red">UNIDENTIFIED</em> MALE </p>
+<p> For the first time in more than a decade  the biggest <em onclick="addNewWord(&quot;underdogs&quot;, 7962)" style="color:red">underdogs</em> in <em onclick="addNewWord(&quot;bobsledding&quot;, 7962)" style="color:red">bobsledding</em> had to fight the odds and qualify for the Olympic Games </p>
+<p> But the <em onclick="addNewWord(&quot;Jamaican&quot;, 7962)" style="color:red">Jamaican</em> <em onclick="addNewWord(&quot;bobsled&quot;, 7962)" style="color:red">bobsled</em> team isn`t packing their bags just yet </p>
+<p> The problem </p>
+<p> They need a lot of money  fast </p>
+<p> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;WINSTON&quot;, 7962)" style="color:red">WINSTON</em> <em onclick="addNewWord(&quot;WATTS&quot;, 7962)" style="color:red">WATTS</em>  TEAM <em onclick="addNewWord(&quot;CAPTAIN/PILOT&quot;, 7962)" style="color:red">CAPTAIN/PILOT</em> 
+</p>
+<p> That`s why we are looking (INAUDIBLE) we can <em onclick="addNewWord(&quot;fulfill&quot;, 7962)" style="color:red">fulfill</em> the dream </p>
+<p> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;UNIDENTIFIED&quot;, 7962)" style="color:red">UNIDENTIFIED</em> MALE </p>
+<p> The team needs to raise as much $80 000 to cover travel and equipment fees  so they`ve turned the <em onclick="addNewWord(&quot;fundraising&quot;, 7962)" style="color:red">fundraising</em> <em onclick="addNewWord(&quot;websites&quot;, 7962)" style="color:red">websites</em> like <em onclick="addNewWord(&quot;Crowdtilt&quot;, 7962)" style="color:red">Crowdtilt</em> to try and make it happen </p>
+<p> In just under 24 hours  the team raised more than $16 000 and <em onclick="addNewWord(&quot;donations&quot;, 7962)" style="color:red">donations</em> continue to poor in </p>
+<p> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;MARVIN&quot;, 7962)" style="color:red">MARVIN</em> <em onclick="addNewWord(&quot;DIXON&quot;, 7962)" style="color:red">DIXON</em>  <em onclick="addNewWord(&quot;BRAKEMAN&quot;, 7962)" style="color:red">BRAKEMAN</em> 
+</p>
+<p> We`re <em onclick="addNewWord(&quot;Jamaican&quot;, 7962)" style="color:red">Jamaican</em> 
+</p>
+<p> We believe  you know  it`s going to (inaudible) </p>
+<p> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;UNIDENTIFIED&quot;, 7962)" style="color:red">UNIDENTIFIED</em> MALE </p>
+<p> We are not <em onclick="addNewWord(&quot;bobsledding&quot;, 7962)" style="color:red">bobsledding</em> yet </p>
+<p> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;UNIDENTIFIED&quot;, 7962)" style="color:red">UNIDENTIFIED</em> MALE </p>
+<p> Oh  yes  we are </p>
+<p> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;UNIDENTIFIED&quot;, 7962)" style="color:red">UNIDENTIFIED</em> MALE </p>
+<p> The <em onclick="addNewWord(&quot;Jamaican`s&quot;, 7962)" style="color:red">Jamaican`s</em> are among the most famous teams in the sport due in large part to the <em onclick="addNewWord(&quot;popularity&quot;, 7962)" style="color:red">popularity</em> of the <em onclick="addNewWord(&quot;Disney&quot;, 7962)" style="color:red">Disney</em> <em onclick="addNewWord(&quot;classic&quot;, 7962)" style="color:red">classic</em>  Cool Runnings  that <em onclick="addNewWord(&quot;chronicle&quot;, 7962)" style="color:red">chronicle</em> the Olympic journey of the country`s first <em onclick="addNewWord(&quot;bobsled&quot;, 7962)" style="color:red">bobsled</em> team </p>
+<p> 
+</p>
+<p>After missing the last two Winter Olympics  the <em onclick="addNewWord(&quot;Jamaican&quot;, 7962)" style="color:red">Jamaican</em> <em onclick="addNewWord(&quot;bobsledders&quot;, 7962)" style="color:red">bobsledders</em> were determined to qualify for <em onclick="addNewWord(&quot;Sochi&quot;, 7962)" style="color:red">Sochi</em> 
+</p>
+<p> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;DIXON&quot;, 7962)" style="color:red">DIXON</em> 
+</p>
+<p> This is such a really  really great feeling </p>
+<p> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;UNIDENTIFIED&quot;, 7962)" style="color:red">UNIDENTIFIED</em> MALE </p>
+<p> The team who refers to themselves as  Cool Runnings  the <em onclick="addNewWord(&quot;sequel&quot;, 7962)" style="color:red">sequel</em>  knows that the odds are stocked against them </p>
+<p> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;DIXON&quot;, 7962)" style="color:red">DIXON</em> 
+</p>
+<p> A lot of people ask us if we are really crazy </p>
+<p> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;UNIDENTIFIED&quot;, 7962)" style="color:red">UNIDENTIFIED</em> MALE </p>
+<p> But they are hoping that with some help  they`ll have another shot at Olympic glory </p>
+<p> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;DIXON&quot;, 7962)" style="color:red">DIXON</em> 
+</p>
+<p> It`s not many people can say they are from a tropical country  be not there and do a sport  which is winter sports  and we are so good at it </p>
+<p> 
+</p>
+<p>(END VIDEOTAPE) </p>
+<p> 
+</p>
+<p>AZUZ </p>
+<p> 
+<em onclick="addNewWord(&quot;Derek&quot;, 7962)" style="color:red">Derek</em> <em onclick="addNewWord(&quot;Jakons&quot;, 7962)" style="color:red">Jakons</em> (ph) hadn`t seen his mother in eight months </p>
+<p> She`s in a U </p>
+<p>S </p>
+<p> Air Force  and she`s been <em onclick="addNewWord(&quot;deployed&quot;, 7962)" style="color:red">deployed</em> in the Middle East </p>
+<p> She got home last week  but she didn`t immediately tell <em onclick="addNewWord(&quot;Derek&quot;, 7962)" style="color:red">Derek</em> 
+</p>
+<p> She decided to surprise him at a basketball game while he was playing </p>
+<p> 
+</p>
+<p>(BEGIN VIDEO CLIP) </p>
+<p> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;UNIDENTIFIED&quot;, 7962)" style="color:red">UNIDENTIFIED</em> MALE </p>
+<p> So the plan is to call a <em onclick="addNewWord(&quot;fake&quot;, 7962)" style="color:red">fake</em> (inaudible) <em onclick="addNewWord(&quot;tech&quot;, 7962)" style="color:red">tech</em> on the coach  and then we`re going to have <em onclick="addNewWord(&quot;Derek&quot;, 7962)" style="color:red">Derek</em> go out to the line  for two or three throws and then that`s when we have his <em onclick="addNewWord(&quot;mom&quot;, 7962)" style="color:red">mom</em> come from behind and that - will get surprised </p>
+<p> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;UNIDENTIFIED&quot;, 7962)" style="color:red">UNIDENTIFIED</em> FEMALE </p>
+<p> I`m nervous  because I don`t know what his reaction is going to be </p>
+<p> 
+</p>
+<p>(LAUGHTER) </p>
+<p> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;UNIDENTIFIED&quot;, 7962)" style="color:red">UNIDENTIFIED</em> FEMALE </p>
+<p> I`m thinking he`ll say <em onclick="addNewWord(&quot;Mommy&quot;, 7962)" style="color:red">Mommy</em> and give me a hug </p>
+<p> You know  we are at a basketball game  his friends are here  girls are here </p>
+<p> Maybe he`ll cry  but then he`ll be mad at me </p>
+<p> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;UNIDENTIFIED&quot;, 7962)" style="color:red">UNIDENTIFIED</em> MALE </p>
+<p> That`s all right  <em onclick="addNewWord(&quot;Derek&quot;, 7962)" style="color:red">Derek</em> 
+</p>
+<p> 
+</p>
+<p>(LAUGHTER) </p>
+<p> 
+</p>
+<p>(APPLAUSE) </p>
+<p> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;UNIDENTIFIED&quot;, 7962)" style="color:red">UNIDENTIFIED</em> FEMALE </p>
+<p> He cried a little bit </p>
+<p> But that`s OK </p>
+<p> That was his natural reaction </p>
+<p> That was <em onclick="addNewWord(&quot;Derek&quot;, 7962)" style="color:red">Derek</em> 
+</p>
+<p> And that`s really the reaction I thought he would have </p>
+<p> 
+</p>
+<p>
+<em onclick="addNewWord(&quot;UNIDENTIFIED&quot;, 7962)" style="color:red">UNIDENTIFIED</em> MALE </p>
+<p> 
+<em onclick="addNewWord(&quot;Mom&quot;, 7962)" style="color:red">Mom</em>  I missed you </p>
+<p> 
+</p>
+<p>(END VIDEO CLIP) </p>
+<p> 
+</p>
+<p>AZUZ </p>
+<p> She`d missed all of football season and the holidays  so she thought the basketball game was worth a shot </p>
+<p> There was nothing <em onclick="addNewWord(&quot;foul&quot;, 7962)" style="color:red">foul</em> about it in the true sense of the word  it was a <em onclick="addNewWord(&quot;homecoming&quot;, 7962)" style="color:red">homecoming</em> game </p>
+<p> I`m <em onclick="addNewWord(&quot;Carl&quot;, 7962)" style="color:red">Carl</em> Azuz  for <em onclick="addNewWord(&quot;CNN&quot;, 7962)" style="color:red">CNN</em> STUDENT NEWS </p>
 </div>
 
             

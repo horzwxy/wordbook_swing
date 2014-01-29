@@ -29,20 +29,42 @@
 
                 window.event.srcElement.style.color = "black";
 
+                var ems = document.getElementsByTagName("em");
+                for(var i = 0; i < ems.length; i++) {
+                    if(ems[i].innerHTML.toLowerCase() == word.toLowerCase()) {
+                        ems[i].style.color = "black";
+                    }
+                }
+
                 document.getElementById("feedback_list").innerHTML += "<li>add "+ currentState + " word " + word + "</li>";
             }
         ]]>
         </script>
         <style type="text/css">
         <![CDATA[
+            body{
+                margin:0px;
+            }
+
+            #control_bar{
+                position:fixed;
+                clear:left;
+                background-color:white;
+                width:100%;
+            }
+
             #feedback{
                 float:left;
                 width:15%;
             }
 
             #article{
+                margin-top:50px;
                 float:left;
                 width:80%;
+            }
+
+            #main{
             }
         ]]>
         </style>
@@ -53,12 +75,11 @@
             <span class="state_option" onclick="changeState('unfamiliar')">unfamiliar</span>
             <span class="state_option" onclick="changeState('unrecognized')">unrecognized</span>
             <span class="state_option" onclick="changeState('ignored')">ignored</span>
-            <span class="none" onclick="changeState('none')" style="color:red">none</span>
+            <span class="state_option" onclick="changeState('none')" style="color:red">none</span>
+            <hr/>
         </div>
 
-        <hr/>
-
-        <div>
+        <div id="main">
             <div id="article">
 
             </div>

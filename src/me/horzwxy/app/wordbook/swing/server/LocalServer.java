@@ -39,7 +39,7 @@ public class LocalServer extends ServerSocket {
                         handlerMap.get(request.getPattern()).handleRequest(request, callback);
                     }
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    callback.onStateUpdate("socket closed");
                 }
             }
         };
