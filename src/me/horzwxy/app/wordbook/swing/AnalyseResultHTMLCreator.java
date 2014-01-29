@@ -1,5 +1,7 @@
 package me.horzwxy.app.wordbook.swing;
 
+import me.horzwxy.app.wordbook.model.Word;
+import me.horzwxy.app.wordbook.model.WordState;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -63,7 +65,7 @@ public class AnalyseResultHTMLCreator {
         return null;
     }
 
-    public void addSentence(String sentence, List<String> emphasizedWords) {
+    public void addSentence(String sentence, List<Word> emphasizedWords) {
         Node sentenceNode = createSentenceNode(sentence, emphasizedWords);
         articleNode.appendChild(sentenceNode);
     }
@@ -93,14 +95,24 @@ public class AnalyseResultHTMLCreator {
         }
     }
 
-    private Node createSentenceNode(String sentence, List<String> emphasizedWords) {
+    private Node createSentenceNode(String sentence, List<Word> emphasizedWords) {
         Element sentenceNode = document.createElement("p");
         String[] words = sentence.split("[ ,\"]");
         for(String word : words) {
-            if(emphasizedWords.contains(word)) {
+            Word wordExample = new Word(word, null);
+            if(emphasizedWords.contains(wordExample)) {
+                Word wordInstance = emphasizedWords.get(emphasizedWords.indexOf(wordExample));
                 Element element = document.createElement("em");
                 element.setTextContent(word);
-                element.setAttribute("style", "color:red");
+                if(wordInstance.getState().equals(WordState.UNTRACKED)) {
+                    element.setAttribute("style", "color:red");
+                }
+                else if(wordInstance.getState().equals(WordState.UNRECOGNIZED)) {
+                    element.setAttribute("style", "color:blue");
+                }
+                else if(wordInstance.getState().equals(WordState.UNFAMILIAR)) {
+                    element.setAttribute("style", "color:orange");
+                }
                 element.setAttribute("onclick", "addNewWord(\"" + word + "\", " + port + ")");
                 sentenceNode.appendChild(element);
                 sentenceNode.appendChild(document.createTextNode(" "));

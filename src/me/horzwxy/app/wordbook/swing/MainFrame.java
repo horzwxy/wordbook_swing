@@ -106,9 +106,9 @@ public class MainFrame extends JFrame {
                             String[] sentences = line.split("[\\.?!:]");
                             for(String sentence : sentences) {
                                 List<AnalyzeResult> results = analyzer.analyzeSentence(sentence);
-                                List<String> emphasizedWords = new ArrayList<String>();
+                                List<Word> emphasizedWords = new ArrayList<Word>();
                                 for(AnalyzeResult result : results) {
-                                    emphasizedWords.add(result.getWord().getContent());
+                                    emphasizedWords.add(result.getWord());
                                 }
                                 creator.addSentence(sentence, emphasizedWords);
                             }
@@ -131,7 +131,7 @@ public class MainFrame extends JFrame {
         displayStorage.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                printRecords();
+//                printRecords();
                 SentenceEditorHTMLCreator creator = new SentenceEditorHTMLCreator(port, wordLibrary);
                 File outputFile = new File("records.html");
                 creator.outputDocument(outputFile);
