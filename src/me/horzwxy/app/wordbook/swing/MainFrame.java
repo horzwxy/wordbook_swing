@@ -68,7 +68,7 @@ public class MainFrame extends JFrame {
                         HTMLCreator creator = new HTMLCreator();
                         while (reader.ready()) {
                             String line = reader.readLine();
-                            String[] sentences = line.split("/.");
+                            String[] sentences = line.split("[\\.?!:]");
                             for(String sentence : sentences) {
                                 List<AnalyzeResult> results = analyzer.analyzeSentence(sentence);
                                 List<String> emphasizedWords = new ArrayList<String>();
