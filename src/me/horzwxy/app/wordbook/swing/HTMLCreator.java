@@ -24,8 +24,10 @@ public class HTMLCreator {
 
     private Document document;
     private Node articleNode;
+    private int port;
 
-    public HTMLCreator() {
+    public HTMLCreator(int port) {
+        this.port = port;
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder db = null;
         try {
@@ -82,6 +84,7 @@ public class HTMLCreator {
                 Element element = document.createElement("em");
                 element.setTextContent(word);
                 element.setAttribute("style", "color:red");
+                element.setAttribute("onclick", "addNewWord(\"" + word + "\", " + port + ")");
                 sentenceNode.appendChild(element);
                 sentenceNode.appendChild(document.createTextNode(" "));
             }

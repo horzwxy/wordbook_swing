@@ -5,6 +5,7 @@ import me.horzwxy.app.wordbook.analyzer.WordLibrary;
 import me.horzwxy.app.wordbook.analyzer.WordRecognizer;
 import me.horzwxy.app.wordbook.model.AnalyzeResult;
 import me.horzwxy.app.wordbook.model.Word;
+import me.horzwxy.app.wordbook.model.WordState;
 import me.horzwxy.app.wordbook.network.LocalProxy;
 import me.horzwxy.app.wordbook.network.Proxy;
 import me.horzwxy.app.wordbook.network.YinxiangProxy;
@@ -27,6 +28,9 @@ public class MainFrame extends JFrame {
     private Proxy wordbookProxy;
     private SentenceAnalyzer analyzer;
     private File selectedFile;
+    private LocalServer server;
+    private int port;
+    private WordLibrary wordLibrary;
 
     public MainFrame() {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -35,12 +39,31 @@ public class MainFrame extends JFrame {
 
         JPanel controlPanel = new JPanel();
         final JTextField portInput = new JTextField(10);
-        JButton portSubmit = new JButton("set port");
+        portInput.setText("7962");
+        JButton portSubmit = new JButton("start server");
         portSubmit.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int port = Integer.parseInt(portInput.getText());
-                printLog("set port " + port);
+                port = Integer.parseInt(portInput.getText());
+                try {
+                    server = new LocalServer(port, wordLibrary);
+                    server.start();
+                    printLog("server started");
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                    printLog("fail to start server");
+                }
+            }
+        });
+        JButton stopServer = new JButton("stop server");
+        stopServer.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    server.close();
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
             }
         });
         JButton chooseInputFile = new JButton("choose file");
@@ -65,7 +88,7 @@ public class MainFrame extends JFrame {
                 else {
                     try {
                         BufferedReader reader = new BufferedReader(new FileReader(selectedFile));
-                        HTMLCreator creator = new HTMLCreator();
+                        HTMLCreator creator = new HTMLCreator(port);
                         if (reader.ready()) {
                             String line = reader.readLine();
                             String[] sentences = line.split("[\\.?!:]");
@@ -89,6 +112,7 @@ public class MainFrame extends JFrame {
         });
         controlPanel.add(portInput);
         controlPanel.add(portSubmit);
+        controlPanel.add(stopServer);
         controlPanel.add(chooseInputFile);
         controlPanel.add(analyse);
 
@@ -110,11 +134,15 @@ public class MainFrame extends JFrame {
                 Map<String, Word> unfamiliar = wordbookProxy.getUnfamiliarWords();
                 Map<String, Word> unrecognized = wordbookProxy.getUnrecognizedWords();
 
-                base.putAll(ignored);
-                base.putAll(familiar);
-                WordLibrary lib = new WordLibrary(base);
-                WordRecognizer recognizer = new WordRecognizer(lib);
-                analyzer = new SentenceAnalyzer(lib, recognizer);
+                wordLibrary = new WordLibrary();
+                wordLibrary.addWords(base.values(), WordState.BASIC);
+                wordLibrary.addWords(ignored.values(), WordState.IGNORED);
+                wordLibrary.addWords(familiar.values(), WordState.FAMILIAR);
+                wordLibrary.addWords(unfamiliar.values(), WordState.UNFAMILIAR);
+                wordLibrary.addWords(unrecognized.values(), WordState.UNFAMILIAR);
+
+                WordRecognizer recognizer = new WordRecognizer(wordLibrary);
+                analyzer = new SentenceAnalyzer(wordLibrary, recognizer);
 
                 printLog("wordbook proxy started");
             }

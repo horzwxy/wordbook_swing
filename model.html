@@ -1,6 +1,13 @@
 <html>
     <head>
         <title>analyse result</title>
+        <script type="text/javascript">
+            function addNewWord(word, port) {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.open("GET", "http://localhost:" + port + "/addnewword?word=" + word, true);
+                xmlhttp.send();
+            }
+        </script>
     </head>
     <body>
         <div id="article">
