@@ -66,7 +66,7 @@ public class MainFrame extends JFrame {
                     try {
                         BufferedReader reader = new BufferedReader(new FileReader(selectedFile));
                         HTMLCreator creator = new HTMLCreator();
-                        while (reader.ready()) {
+                        if (reader.ready()) {
                             String line = reader.readLine();
                             String[] sentences = line.split("[\\.?!:]");
                             for(String sentence : sentences) {

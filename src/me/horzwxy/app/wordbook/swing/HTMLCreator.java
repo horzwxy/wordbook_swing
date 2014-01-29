@@ -76,7 +76,7 @@ public class HTMLCreator {
 
     private Node createSentenceNode(String sentence, List<String> emphasizedWords) {
         Element sentenceNode = document.createElement("p");
-        String[] words = sentence.split(" ");
+        String[] words = sentence.split("[ ,\"]");
         for(String word : words) {
             if(emphasizedWords.contains(word)) {
                 Element element = document.createElement("em");
