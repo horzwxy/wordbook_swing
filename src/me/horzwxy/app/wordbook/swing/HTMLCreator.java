@@ -68,7 +68,7 @@ public class HTMLCreator {
         articleNode.appendChild(sentenceNode);
     }
 
-    public void outputDocument(String filename) {
+    public void outputDocument(File outputFile) {
         // Use a Transformer for output
         TransformerFactory tFactory =
                 TransformerFactory.newInstance();
@@ -82,7 +82,7 @@ public class HTMLCreator {
         DOMSource source = new DOMSource(document);
         StreamResult result = null;
         try {
-            result = new StreamResult(new FileOutputStream(new File(filename)));
+            result = new StreamResult(new FileOutputStream(outputFile));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

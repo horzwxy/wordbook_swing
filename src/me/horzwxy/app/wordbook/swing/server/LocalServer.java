@@ -5,6 +5,7 @@ import me.horzwxy.app.wordbook.analyzer.WordLibrary;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.HashMap;
@@ -18,9 +19,12 @@ public class LocalServer extends ServerSocket {
     private Thread serverThread;
     private Map<String, RequestHandler> handlerMap;
     private ServerCallback callback;
+    private int port;
 
     public LocalServer(int port, WordLibrary wordLibrary, ServerCallback callback) throws IOException {
         super(port);
+
+        this.port = port;
 
         handlerMap = new HashMap<String, RequestHandler>();
         handlerMap.put("addnewword", new AddWordHandler(wordLibrary));
@@ -37,6 +41,12 @@ public class LocalServer extends ServerSocket {
                         BufferedReader reader = new BufferedReader(new InputStreamReader(client.getInputStream()));
                         SimpleHttpRequest request = new SimpleHttpRequest(reader.readLine());
                         handlerMap.get(request.getPattern()).handleRequest(request, callback);
+
+                        PrintWriter writer = new PrintWriter(client.getOutputStream());
+                        writer.println("HTTP/1.1 200 OK");
+                        writer.println("Access-Control-Allow-Origin: null");
+                        writer.println();
+                        writer.close();
                     }
                 } catch (IOException e) {
                     callback.onStateUpdate("socket closed");
