@@ -40,14 +40,17 @@ public class LocalServer extends ServerSocket {
                     while(true) {
                         Socket client = accept();
                         BufferedReader reader = new BufferedReader(new InputStreamReader(client.getInputStream()));
-                        SimpleHttpRequest request = new SimpleHttpRequest(reader.readLine());
-                        handlerMap.get(request.getPattern()).handleRequest(request, callback);
+                        String requestLine = reader.readLine();
+                        if(requestLine != null) {
+                            SimpleHttpRequest request = new SimpleHttpRequest(requestLine);
+                            handlerMap.get(request.getPattern()).handleRequest(request, callback);
 
-                        PrintWriter writer = new PrintWriter(client.getOutputStream());
-                        writer.println("HTTP/1.1 200 OK");
-                        writer.println("Access-Control-Allow-Origin: null");
-                        writer.println();
-                        writer.close();
+                            PrintWriter writer = new PrintWriter(client.getOutputStream());
+                            writer.println("HTTP/1.1 200 OK");
+                            writer.println("Access-Control-Allow-Origin: null");
+                            writer.println();
+                            writer.close();
+                        }
                     }
                 } catch (IOException e) {
                     callback.onStateUpdate("socket closed");

@@ -8,6 +8,7 @@ import me.horzwxy.app.wordbook.model.Word;
 import me.horzwxy.app.wordbook.model.WordState;
 import me.horzwxy.app.wordbook.network.LocalProxy;
 import me.horzwxy.app.wordbook.network.Proxy;
+import me.horzwxy.app.wordbook.network.YinxiangProxy;
 import me.horzwxy.app.wordbook.swing.server.LocalServer;
 
 import javax.swing.*;
@@ -33,6 +34,19 @@ public class MainFrame extends JFrame {
     private WordLibrary wordLibrary;
     private final JScrollBar scrollBar;
     private JPanel mainPanel;
+    private SentenceBundle sentenceBundle;
+    private final JLabel wordOfSentence;
+    private final JTextArea sentenceEditor;
+
+    public SentenceBundle getSentenceBundle() {
+        return sentenceBundle;
+    }
+
+    public void setSentenceBundle(SentenceBundle sentenceBundle) {
+        this.sentenceBundle = sentenceBundle;
+        wordOfSentence.setText(sentenceBundle.word.getContent());
+        sentenceEditor.setText(sentenceBundle.sentence);
+    }
 
     public MainFrame() {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -131,10 +145,17 @@ public class MainFrame extends JFrame {
         displayStorage.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-//                printRecords();
-                SentenceEditorHTMLCreator creator = new SentenceEditorHTMLCreator(port, wordLibrary);
-                File outputFile = new File("records.html");
-                creator.outputDocument(outputFile);
+                Map<WordState, Collection<Word>> wordListMap = new HashMap<WordState, Collection<Word>>();
+                for(WordState state : WordState.values()) {
+                    if(state == WordState.BASIC) {
+                        continue;
+                    }
+                    wordListMap.put(state, wordLibrary.getWords(state));
+                }
+                Map<String, String> attrMap = new HashMap<String, String>();
+                attrMap.put("port", port + "");
+                File outputFile = new File("records.xml");
+                XMLCreator.generateWordList(wordListMap, attrMap, outputFile);
 
                 DesktopApi.browse(outputFile.toURI());
             }
@@ -188,13 +209,30 @@ public class MainFrame extends JFrame {
         }.start();
 
         mainPanel = new JPanel();
-        JScrollPane mainScrollPane = new JScrollPane(mainPanel);
+        mainPanel.setLayout(new FlowLayout());
+        wordOfSentence = new JLabel();
+        wordOfSentence.setText("some word");
+        mainPanel.add(wordOfSentence);
+        sentenceEditor = new JTextArea("test");
+        sentenceEditor.setColumns(30);
+        sentenceEditor.setRows(5);
+        mainPanel.add(sentenceEditor);
+        JButton sentenceSubmit = new JButton("update");
+        sentenceSubmit.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                sentenceBundle.word.getSentences().remove(sentenceBundle.sentence);
+                sentenceBundle.word.getSentences().add(sentenceEditor.getText());
+                printLog("update example sentence of " + sentenceBundle.word.getContent());
+            }
+        });
+        mainPanel.add(sentenceSubmit);
 
         Container contentPane = this.getContentPane();
-        contentPane.setLayout(new BorderLayout());
+        // BorderLayout is the default LayoutManager of JFrame's content pane
         contentPane.add(controlPanel, BorderLayout.NORTH);
         contentPane.add(jsp, BorderLayout.WEST);
-        contentPane.add(mainScrollPane, BorderLayout.CENTER);
+        contentPane.add(mainPanel, BorderLayout.CENTER);
     }
 
     private void printLog(String newLine) {
