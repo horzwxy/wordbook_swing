@@ -8,6 +8,13 @@ import me.horzwxy.app.wordbook.swing.ui.FrameModel;
 public class Launcher {
 
     public static void main(String[] args) {
-        FrameModel.getFrame().setVisible(true);
+        ControllerModel cm = ControllerModel.getController();
+        // frame and its controller
+        FrameModel fm = FrameModel.getFrame();
+        SwingController sc = cm.getSwingController();
+        sc.setFrame(fm);
+        fm.setSwingController(sc);
+        // start frame
+        fm.setVisible(true);
     }
 }

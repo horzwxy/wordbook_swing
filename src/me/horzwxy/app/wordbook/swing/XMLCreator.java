@@ -61,10 +61,17 @@ public class XMLCreator {
                 contentNode.appendChild(document.createTextNode(word.getContent()));
                 wordNode.appendChild(contentNode);
 
-                for(String sentence : word.getSentences()) {
-                    Node sentenceNode = document.createElement("sentence");
-                    sentenceNode.appendChild(document.createTextNode(sentence));
-                    wordNode.appendChild(sentenceNode);
+                if(state != WordState.FAMILIAR) {
+                    for(String sentence : word.getSentences()) {
+                        Node sentenceNode = document.createElement("sentence");
+                        Node sentenceContentNode = document.createElement("sentenceContent");
+                        sentenceContentNode.appendChild(document.createTextNode(sentence));
+                        sentenceNode.appendChild(sentenceContentNode);
+                        Node sentenceHashNode = document.createElement("sentenceHash");
+                        sentenceHashNode.appendChild(document.createTextNode(sentence.hashCode() + ""));
+                        sentenceNode.appendChild(sentenceHashNode);
+                        wordNode.appendChild(sentenceNode);
+                    }
                 }
 
                 sublistNode.appendChild(wordNode);

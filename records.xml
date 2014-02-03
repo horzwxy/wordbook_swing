@@ -1,10 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?xml-stylesheet type="text/xsl" href="/home/horz/workspace-java/wordbook_swing/models/wordlist.xsl"?><wordlist port="0">
-<word_sublist type="UNRECOGNIZED"/>
+<?xml-stylesheet type="text/xsl" href="/home/horz/workspace-java/wordbook_swing/models/wordlist.xsl"?><wordlist port="7962">
+<word_sublist type="FAMILIAR">
+<word>
+<content>commercial-free</content>
+</word>
+<word>
+<content>Korean</content>
+</word>
+<word>
+<content>high-ranking</content>
+</word>
+<word>
+<content>privacy</content>
+</word>
+<word>
+<content>UNIDENTIFIED</content>
+</word>
+<word>
+<content>terrorist</content>
+</word>
+<word>
+<content>Korea</content>
+</word>
+<word>
+<content>info</content>
+</word>
+</word_sublist>
 <word_sublist type="IGNORED">
 <word>
 <content>NSA</content>
-<sentence> And he asked the Attorney General and intelligence committee to explore moving the data out of NSA control</sentence>
 </word>
 <word>
 <content>Carl</content>
@@ -17,70 +41,43 @@
 </word>
 <word>
 <content>Snowden</content>
-<sentence> After months of spirited debate sparked by the explosive revelations of Edward Snowden, the president told Americans he`ll rein in NSA surveillance, but only to a point</sentence>
 </word>
 <word>
 <content>CNN</content>
 </word>
 <word>
 <content>Obama</content>
-<sentence>President Obama participated in the service project in Washington, D</sentence>
 </word>
 <word>
 <content>Bae</content>
 </word>
 <word>
 <content>Edward</content>
-<sentence> After months of spirited debate sparked by the explosive revelations of Edward Snowden, the president told Americans he`ll rein in NSA surveillance, but only to a point</sentence>
 </word>
 </word_sublist>
-<word_sublist type="FAMILIAR">
-<word>
-<content>commercial-free</content>
-<sentence> Your commercial-free source for news for the classroom</sentence>
-</word>
-<word>
-<content>Korean</content>
-<sentence> Bae was sentenced to 15 years in the North Korean labor camp</sentence>
-</word>
-<word>
-<content>high-ranking</content>
-<sentence> My director is always a high-ranking military officer</sentence>
-</word>
-<word>
-<content>privacy</content>
-<sentence> Other see it as a significant invasion of Americans` privacy</sentence>
-</word>
-<word>
-<content>UNIDENTIFIED</content>
-<sentence>UNIDENTIFIED MALE</sentence>
-</word>
-<word>
-<content>terrorist</content>
-<sentence> If these programs were stopping huge terrorist attacks, you know, maybe they would - should be more, you know, there should be more concern</sentence>
-</word>
-<word>
-<content>Korea</content>
-<sentence> North Korea has forced prisoners to make statements like that in the past</sentence>
-</word>
-<word>
-<content>info</content>
-<sentence> He`s a former NSA worker who revealed secret information about the agency, that it collects Americans` phone records and email info, among other data</sentence>
-</word>
-</word_sublist>
+<word_sublist type="UNRECOGNIZED"/>
 <word_sublist type="UNTRACKED"/>
 <word_sublist type="UNFAMILIAR">
 <word>
-<content>revealed</content>
-<sentence> He`s a former NSA worker who revealed secret information about the agency, that it collects Americans` phone records and email info, among other data</sentence>
-</word>
-<word>
 <content>rein</content>
-<sentence> After months of spirited debate sparked by the explosive revelations of Edward Snowden, the president told Americans he`ll rein in NSA surveillance, but only to a point</sentence>
+<sentence>
+<sentenceContent> After months of spirited debate sparked by the explosive revelations of Edward Snowden, the president told Americans he`ll rein in NSA surveillance, but only to a point</sentenceContent>
+<sentenceHash>-268190001</sentenceHash>
+</sentence>
 </word>
 <word>
 <content>revelations</content>
-<sentence> After months of spirited debate sparked by the explosive revelations of Edward Snowden, the president told Americans he`ll rein in NSA surveillance, but only to a point</sentence>
+<sentence>
+<sentenceContent> After months of spirited debate sparked by the explosive revelations of Edward Snowden, the president told Americans he`ll rein in NSA surveillance, but only to a point</sentenceContent>
+<sentenceHash>-268190001</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>revealed</content>
+<sentence>
+<sentenceContent> He`s a former NSA worker who revealed secret information about the agency, that it collects Americans` phone records and email info, among other data.</sentenceContent>
+<sentenceHash>-1957131314</sentenceHash>
+</sentence>
 </word>
 </word_sublist>
 </wordlist>

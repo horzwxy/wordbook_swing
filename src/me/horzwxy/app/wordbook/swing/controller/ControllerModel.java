@@ -12,6 +12,7 @@ import me.horzwxy.app.wordbook.model.Word;
 import me.horzwxy.app.wordbook.model.WordState;
 import me.horzwxy.app.wordbook.network.LocalProxy;
 import me.horzwxy.app.wordbook.network.Proxy;
+import me.horzwxy.app.wordbook.network.YinxiangProxy;
 import me.horzwxy.app.wordbook.swing.AnalyseResultHTMLCreator;
 import me.horzwxy.app.wordbook.swing.XMLCreator;
 
@@ -156,6 +157,7 @@ class DefaultController extends ControllerModel {
             localServer.createContext("/updatesentence", updateSentenceHandler);
             localServer.setExecutor(null); // creates a default executor
             localServer.start();
+            swingController.displayLog("server started.");
         } catch (IOException e1) {
             e1.printStackTrace();
             swingController.displayLog("fail to start server: " + e1.getMessage());
@@ -187,6 +189,7 @@ class DefaultController extends ControllerModel {
             while ((line = reader.readLine()) != null) {
                 String[] sentences = line.split("[\\.?!:]");
                 for(String sentence : sentences) {
+                    sentence += ".";
                     List<AnalyzeResult> results = analyzer.analyzeSentence(sentence);
                     List<Word> emphasizedWords = new ArrayList<Word>();
                     for(AnalyzeResult result : results) {
@@ -229,9 +232,7 @@ class DefaultController extends ControllerModel {
     }
 
     private void initProxy() {
-        swingController.displayLog("starting wordbook proxy");
-
-        wordbookProxy = new LocalProxy();
+        wordbookProxy = new YinxiangProxy();
 
         Map<String, Word> base = wordbookProxy.getBasicWords();
         Map<String, Word> ignored = wordbookProxy.getIgnoredWords();
@@ -248,8 +249,6 @@ class DefaultController extends ControllerModel {
 
         WordRecognizer recognizer = new WordRecognizer(wordLibrary);
         analyzer = new SentenceAnalyzer(wordLibrary, recognizer);
-
-        swingController.displayLog("wordbook proxy started");
     }
 
     private void displaySentence(String wordContent, int sentenceHash) {

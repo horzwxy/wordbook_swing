@@ -24,7 +24,7 @@ public class DefaultFrame extends FrameModel {
 
     DefaultFrame() {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setSize(600, 300);
+        setSize(800, 300);
         setTitle("new word manager");
 
         JPanel controlPanel = new JPanel();
@@ -74,7 +74,7 @@ public class DefaultFrame extends FrameModel {
         JButton displayStorage = new ActionButton("display records", new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                swingController.generateStorageSummary(null);
+                swingController.generateStorageSummary(new File("records.xml"));
             }
         });
         JButton updateStorage = new ActionButton("update records", new ActionListener() {
@@ -93,8 +93,7 @@ public class DefaultFrame extends FrameModel {
         controlPanel.add(updateStorage);
 
         feedbackPane = new JTextPane();
-        feedbackPane.setSize(600, 200);
-        feedbackPane.setText("Ready.");
+        feedbackPane.setText("Ready.\t\t");
         JScrollPane jsp = new JScrollPane(feedbackPane);
         scrollBar = jsp.getVerticalScrollBar();
 
@@ -104,13 +103,14 @@ public class DefaultFrame extends FrameModel {
         wordOfSentence.setText("some word");
         mainPanel.add(wordOfSentence);
         sentenceEditor = new JTextArea("test");
+        sentenceEditor.setLineWrap(true);
         sentenceEditor.setColumns(30);
         sentenceEditor.setRows(5);
         mainPanel.add(sentenceEditor);
         JButton sentenceSubmit = new ActionButton("update", new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // todo
+                swingController.updateSentence(sentenceEditor.getText());
             }
         });
         mainPanel.add(sentenceSubmit);
