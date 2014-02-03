@@ -1,29 +1,62 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?xml-stylesheet type="text/xsl" href="/home/horz/workspace-java/wordbook_swing/models/wordlist.xsl"?><wordlist port="7962">
-<word_sublist type="FAMILIAR">
+<word_sublist type="UNRECOGNIZED">
 <word>
-<content>commercial-free</content>
+<content>devout</content>
+<sentence>
+<sentenceContent> His mother thinks it might be because Bae is a devout Christian.</sentenceContent>
+<sentenceHash>1997631914</sentenceHash>
+</sentence>
 </word>
 <word>
-<content>Korean</content>
+<content>atheist</content>
+<sentence>
+<sentenceContent> And that he didn`t understand the rules of North Korea, an atheist country.</sentenceContent>
+<sentenceHash>-1512642361</sentenceHash>
+</sentence>
 </word>
 <word>
-<content>high-ranking</content>
+<content>plead</content>
+<sentence>
+<sentenceContent>"I would like to plead with the U.</sentenceContent>
+<sentenceHash>1909894158</sentenceHash>
+</sentence>
 </word>
 <word>
-<content>privacy</content>
+<content>worsening</content>
+<sentence>
+<sentenceContent> government, press and my family to stop worsening my situation by making wild rumors against North Korea and releasing materials related to me, which are not based on the facts.</sentenceContent>
+<sentenceHash>1057659029</sentenceHash>
+</sentence>
 </word>
 <word>
-<content>UNIDENTIFIED</content>
+<content>rumors</content>
+<sentence>
+<sentenceContent> government, press and my family to stop worsening my situation by making wild rumors against North Korea and releasing materials related to me, which are not based on the facts.</sentenceContent>
+<sentenceHash>1057659029</sentenceHash>
+</sentence>
 </word>
 <word>
-<content>terrorist</content>
+<content>surveillance</content>
+<sentence>
+<sentenceContent> The president argues that much of the surveillance is just too important to scrap altogether.</sentenceContent>
+<sentenceHash>-357222454</sentenceHash>
+</sentence>
+<sentence>
+<sentenceContent> After months of spirited debate sparked by the explosive revelations of Edward Snowden, the president told Americans he`ll rein in NSA surveillance, but only to a point.</sentenceContent>
+<sentenceHash>276044607</sentenceHash>
+</sentence>
+<sentence>
+<sentenceContent> The most significant changes affect the most controversial surveillance program - the bulk collection of Americans` phone records, effective immediately, the NSA will need judicial approval before searching the data.</sentenceContent>
+<sentenceHash>-792973043</sentenceHash>
+</sentence>
 </word>
 <word>
-<content>Korea</content>
-</word>
-<word>
-<content>info</content>
+<content>obligation</content>
+<sentence>
+<sentenceContent> That places a special obligation on us to ask tough questions about what we should do.</sentenceContent>
+<sentenceHash>-1809444607</sentenceHash>
+</sentence>
 </word>
 </word_sublist>
 <word_sublist type="IGNORED">
@@ -54,22 +87,27 @@
 <word>
 <content>Edward</content>
 </word>
+<word>
+<content>BARACK</content>
+<sentence>
+<sentenceContent>BARACK OBAMA, PRESIDENT OF THE UNITED STATES OF AMERICA.</sentenceContent>
+<sentenceHash>-809354660</sentenceHash>
+</sentence>
+</word>
 </word_sublist>
-<word_sublist type="UNRECOGNIZED"/>
-<word_sublist type="UNTRACKED"/>
 <word_sublist type="UNFAMILIAR">
 <word>
 <content>rein</content>
 <sentence>
-<sentenceContent> After months of spirited debate sparked by the explosive revelations of Edward Snowden, the president told Americans he`ll rein in NSA surveillance, but only to a point</sentenceContent>
-<sentenceHash>-268190001</sentenceHash>
+<sentenceContent> After months of spirited debate sparked by the explosive revelations of Edward Snowden, the president told Americans he`ll rein in NSA surveillance, but only to a point.</sentenceContent>
+<sentenceHash>276044607</sentenceHash>
 </sentence>
 </word>
 <word>
 <content>revelations</content>
 <sentence>
-<sentenceContent> After months of spirited debate sparked by the explosive revelations of Edward Snowden, the president told Americans he`ll rein in NSA surveillance, but only to a point</sentenceContent>
-<sentenceHash>-268190001</sentenceHash>
+<sentenceContent> After months of spirited debate sparked by the explosive revelations of Edward Snowden, the president told Americans he`ll rein in NSA surveillance, but only to a point.</sentenceContent>
+<sentenceHash>276044607</sentenceHash>
 </sentence>
 </word>
 <word>
@@ -77,6 +115,2093 @@
 <sentence>
 <sentenceContent> He`s a former NSA worker who revealed secret information about the agency, that it collects Americans` phone records and email info, among other data.</sentenceContent>
 <sentenceHash>-1957131314</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>constraints</content>
+<sentence>
+<sentenceContent> The power of new technologies means that there are fewer and fewer technical constraints on what we can do.</sentenceContent>
+<sentenceHash>467461216</sentenceHash>
+</sentence>
+</word>
+</word_sublist>
+<word_sublist type="FAMILIAR">
+<word>
+<content>commercial-free</content>
+</word>
+<word>
+<content>Korean</content>
+</word>
+<word>
+<content>high-ranking</content>
+</word>
+<word>
+<content>privacy</content>
+</word>
+<word>
+<content>UNIDENTIFIED</content>
+</word>
+<word>
+<content>terrorist</content>
+</word>
+<word>
+<content>Korea</content>
+</word>
+<word>
+<content>info</content>
+</word>
+</word_sublist>
+<word_sublist type="UNTRACKED">
+<word>
+<content>CLIP</content>
+<sentence>
+<sentenceContent>(BEGIN VIDEO CLIP).</sentenceContent>
+<sentenceHash>1707165753</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>CLIP</content>
+<sentence>
+<sentenceContent>(END VIDEO CLIP).</sentenceContent>
+<sentenceHash>-1648163001</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>CLIP</content>
+<sentence>
+<sentenceContent>(BEGIN VIDEO CLIP).</sentenceContent>
+<sentenceHash>1707165753</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>inaudible</content>
+<sentence>
+<sentenceContent> No secret (inaudible).</sentenceContent>
+<sentenceHash>660016587</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>controversial</content>
+<sentence>
+<sentenceContent> The most significant changes affect the most controversial surveillance program - the bulk collection of Americans` phone records, effective immediately, the NSA will need judicial approval before searching the data.</sentenceContent>
+<sentenceHash>-792973043</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>surveillance</content>
+<sentence>
+<sentenceContent> The most significant changes affect the most controversial surveillance program - the bulk collection of Americans` phone records, effective immediately, the NSA will need judicial approval before searching the data.</sentenceContent>
+<sentenceHash>-792973043</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>judicial</content>
+<sentence>
+<sentenceContent> The most significant changes affect the most controversial surveillance program - the bulk collection of Americans` phone records, effective immediately, the NSA will need judicial approval before searching the data.</sentenceContent>
+<sentenceHash>-792973043</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>advocates</content>
+<sentence>
+<sentenceContent> The president asked Congress to create a panel of public advocates to counter government search requests.</sentenceContent>
+<sentenceHash>-545277527</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Attorney</content>
+<sentence>
+<sentenceContent> And he asked the Attorney General and intelligence committee to explore moving the data out of NSA control.</sentenceContent>
+<sentenceHash>1292866391</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>won`t</content>
+<sentence>
+<sentenceContent> But the bottom line, the program won`t necessarily end.</sentenceContent>
+<sentenceHash>-381100841</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>INAUDIBLE</content>
+<sentence>
+<sentenceContent> They say (INAUDIBLE).</sentenceContent>
+<sentenceHash>-370493529</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>INAUDIBLE</content>
+<sentence>
+<sentenceContent> We say (INAUDIBLE).</sentenceContent>
+<sentenceHash>919046081</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>ardent</content>
+<sentence>
+<sentenceContent> For the NSA`s most ardent critics that would be a glaring omission.</sentenceContent>
+<sentenceHash>-741174238</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>omission</content>
+<sentence>
+<sentenceContent> For the NSA`s most ardent critics that would be a glaring omission.</sentenceContent>
+<sentenceHash>-741174238</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>SEN</content>
+<sentence>
+<sentenceContent>SEN.</sentenceContent>
+<sentenceHash>2541426</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>RAND</content>
+<sentence>
+<sentenceContent> RAND PAUL.</sentenceContent>
+<sentenceHash>1885433163</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>PAUL</content>
+<sentence>
+<sentenceContent> RAND PAUL.</sentenceContent>
+<sentenceHash>1885433163</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>safeguards</content>
+<sentence>
+<sentenceContent> I heard that trust me, I`m going to put some more safeguards in place, but I`m going to keep right on collecting every American`s records.</sentenceContent>
+<sentenceHash>-33399880</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>surveillance</content>
+<sentence>
+<sentenceContent> The president argues that much of the surveillance is just too important to scrap altogether.</sentenceContent>
+<sentenceHash>-357222454</sentenceHash>
+</sentence>
+<sentence>
+<sentenceContent> After months of spirited debate sparked by the explosive revelations of Edward Snowden, the president told Americans he`ll rein in NSA surveillance, but only to a point.</sentenceContent>
+<sentenceHash>276044607</sentenceHash>
+</sentence>
+<sentence>
+<sentenceContent> The most significant changes affect the most controversial surveillance program - the bulk collection of Americans` phone records, effective immediately, the NSA will need judicial approval before searching the data.</sentenceContent>
+<sentenceHash>-792973043</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>scrap</content>
+<sentence>
+<sentenceContent> The president argues that much of the surveillance is just too important to scrap altogether.</sentenceContent>
+<sentenceHash>-357222454</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>sought</content>
+<sentence>
+<sentenceContent> Not only because I felt that they made us more secure, but also because nothing in that initial review and nothing that I`ve learned since indicated that our intelligence community has sought to violate the law.</sentenceContent>
+<sentenceHash>1435684484</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>violate</content>
+<sentence>
+<sentenceContent> Not only because I felt that they made us more secure, but also because nothing in that initial review and nothing that I`ve learned since indicated that our intelligence community has sought to violate the law.</sentenceContent>
+<sentenceHash>1435684484</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>BERGEN</content>
+<sentence>
+<sentenceContent>PETER BERGEN, CNN TERRORISM ANALYST.</sentenceContent>
+<sentenceHash>383582659</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>TERRORISM</content>
+<sentence>
+<sentenceContent>PETER BERGEN, CNN TERRORISM ANALYST.</sentenceContent>
+<sentenceHash>383582659</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>ANALYST</content>
+<sentence>
+<sentenceContent>PETER BERGEN, CNN TERRORISM ANALYST.</sentenceContent>
+<sentenceHash>383582659</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>CLIP</content>
+<sentence>
+<sentenceContent>(END VIDEO CLIP).</sentenceContent>
+<sentenceHash>-1648163001</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Dr</content>
+<sentence>
+<sentenceContent> Yesterday honored American civil rights leader Dr.</sentenceContent>
+<sentenceHash>1236264602</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Martin</content>
+<sentence>
+<sentenceContent> Martin Luther King Jr.</sentenceContent>
+<sentenceHash>1645491342</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Luther</content>
+<sentence>
+<sentenceContent> Martin Luther King Jr.</sentenceContent>
+<sentenceHash>1645491342</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Jr</content>
+<sentence>
+<sentenceContent> Martin Luther King Jr.</sentenceContent>
+<sentenceHash>1645491342</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Dr</content>
+<sentence>
+<sentenceContent> Dr.</sentenceContent>
+<sentenceHash>1022240</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>participated</content>
+<sentence>
+<sentenceContent>President Obama participated in the service project in Washington, D.</sentenceContent>
+<sentenceHash>3926697</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>volunteering</content>
+<sentence>
+<sentenceContent> You see him here volunteering at D.</sentenceContent>
+<sentenceHash>-1711001475</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>wreath</content>
+<sentence>
+<sentenceContent> capital, the traditional wreath laying at the King Memorial.</sentenceContent>
+<sentenceHash>888932340</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>th</content>
+<sentence>
+<sentenceContent> The National Park Service says millions visited the first full year it was open in 2012, and millions visited last year on the 50th anniversary of Dr.</sentenceContent>
+<sentenceHash>678785165</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>anniversary</content>
+<sentence>
+<sentenceContent> The National Park Service says millions visited the first full year it was open in 2012, and millions visited last year on the 50th anniversary of Dr.</sentenceContent>
+<sentenceHash>678785165</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Dr</content>
+<sentence>
+<sentenceContent> The National Park Service says millions visited the first full year it was open in 2012, and millions visited last year on the 50th anniversary of Dr.</sentenceContent>
+<sentenceHash>678785165</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Brian</content>
+<sentence>
+<sentenceContent> Brian Todd looks back at that event.</sentenceContent>
+<sentenceHash>-905753342</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Todd</content>
+<sentence>
+<sentenceContent> Brian Todd looks back at that event.</sentenceContent>
+<sentenceHash>-905753342</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>VIDEOTAPE</content>
+<sentence>
+<sentenceContent>(BEGIN VIDEOTAPE).</sentenceContent>
+<sentenceHash>987863459</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>BRIAN</content>
+<sentence>
+<sentenceContent>BRIAN TODD, CNN CORRESPONDENT.</sentenceContent>
+<sentenceHash>-26079688</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>TODD</content>
+<sentence>
+<sentenceContent>BRIAN TODD, CNN CORRESPONDENT.</sentenceContent>
+<sentenceHash>-26079688</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Martin</content>
+<sentence>
+<sentenceContent> Many of them were so young that summer, Martin Luther King Jr.</sentenceContent>
+<sentenceHash>2129243585</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Luther</content>
+<sentence>
+<sentenceContent> Many of them were so young that summer, Martin Luther King Jr.</sentenceContent>
+<sentenceHash>2129243585</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Jr</content>
+<sentence>
+<sentenceContent> Many of them were so young that summer, Martin Luther King Jr.</sentenceContent>
+<sentenceHash>2129243585</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>pivot</content>
+<sentence>
+<sentenceContent> himself only 34, but they led hundreds of thousands on the march to the nation`s capital that would pivot the country toward irreversible change.</sentenceContent>
+<sentenceHash>-700782149</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>irreversible</content>
+<sentence>
+<sentenceContent> himself only 34, but they led hundreds of thousands on the march to the nation`s capital that would pivot the country toward irreversible change.</sentenceContent>
+<sentenceHash>-700782149</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>tribute</content>
+<sentence>
+<sentenceContent> "Time" magazine captures that moment in a tribute to King.</sentenceContent>
+<sentenceHash>1925939650</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Radhika</content>
+<sentence>
+<sentenceContent> Time editor Radhika Jones says the use of the key players then was a crucial component in publishing this tribute now.</sentenceContent>
+<sentenceHash>-1774263656</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Jones</content>
+<sentence>
+<sentenceContent> Time editor Radhika Jones says the use of the key players then was a crucial component in publishing this tribute now.</sentenceContent>
+<sentenceHash>-1774263656</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>crucial</content>
+<sentence>
+<sentenceContent> Time editor Radhika Jones says the use of the key players then was a crucial component in publishing this tribute now.</sentenceContent>
+<sentenceHash>-1774263656</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>tribute</content>
+<sentence>
+<sentenceContent> Time editor Radhika Jones says the use of the key players then was a crucial component in publishing this tribute now.</sentenceContent>
+<sentenceHash>-1774263656</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>RADHIKA</content>
+<sentence>
+<sentenceContent>RADHIKA JONES, EXEC.</sentenceContent>
+<sentenceHash>-1324028186</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>JONES</content>
+<sentence>
+<sentenceContent>RADHIKA JONES, EXEC.</sentenceContent>
+<sentenceHash>-1324028186</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>EXEC</content>
+<sentence>
+<sentenceContent>RADHIKA JONES, EXEC.</sentenceContent>
+<sentenceHash>-1324028186</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>TODD</content>
+<sentence>
+<sentenceContent>TODD.</sentenceContent>
+<sentenceHash>79996755</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Clarence</content>
+<sentence>
+<sentenceContent> The memories come from people like Clarence Jones, King`s speechwriter.</sentenceContent>
+<sentenceHash>2009330551</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Jones</content>
+<sentence>
+<sentenceContent> The memories come from people like Clarence Jones, King`s speechwriter.</sentenceContent>
+<sentenceHash>2009330551</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>speechwriter</content>
+<sentence>
+<sentenceContent> The memories come from people like Clarence Jones, King`s speechwriter.</sentenceContent>
+<sentenceHash>2009330551</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>testimonial</content>
+<sentence>
+<sentenceContent>In a testimonial on "Time`s" website, he describes the moment King grabbed his audience.</sentenceContent>
+<sentenceHash>1936598899</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>website</content>
+<sentence>
+<sentenceContent>In a testimonial on "Time`s" website, he describes the moment King grabbed his audience.</sentenceContent>
+<sentenceHash>1936598899</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>CLARENCE</content>
+<sentence>
+<sentenceContent>CLARENCE B.</sentenceContent>
+<sentenceHash>874572295</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>JONES</content>
+<sentence>
+<sentenceContent> JONES, MARTIN LUTHER KING JR.</sentenceContent>
+<sentenceHash>-98521127</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>MARTIN</content>
+<sentence>
+<sentenceContent> JONES, MARTIN LUTHER KING JR.</sentenceContent>
+<sentenceHash>-98521127</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>LUTHER</content>
+<sentence>
+<sentenceContent> JONES, MARTIN LUTHER KING JR.</sentenceContent>
+<sentenceHash>-98521127</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>JR</content>
+<sentence>
+<sentenceContent> JONES, MARTIN LUTHER KING JR.</sentenceContent>
+<sentenceHash>-98521127</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>`S</content>
+<sentence>
+<sentenceContent>`S SPEECHWRITER.</sentenceContent>
+<sentenceHash>965964172</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>SPEECHWRITER</content>
+<sentence>
+<sentenceContent>`S SPEECHWRITER.</sentenceContent>
+<sentenceHash>965964172</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Mahalia</content>
+<sentence>
+<sentenceContent> I`m listening to his speech, and as I`m listening, I see that he`s really - Mahalia Jackson interrupted him while he`s speaking.</sentenceContent>
+<sentenceHash>-330634056</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Jackson</content>
+<sentence>
+<sentenceContent> I`m listening to his speech, and as I`m listening, I see that he`s really - Mahalia Jackson interrupted him while he`s speaking.</sentenceContent>
+<sentenceHash>-330634056</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Martin</content>
+<sentence>
+<sentenceContent> Tell them about the dream, Martin.</sentenceContent>
+<sentenceHash>265057523</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Baptist</content>
+<sentence>
+<sentenceContent> And he changed what I call the Baptist preacher`s test task (ph).</sentenceContent>
+<sentenceHash>724867672</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>preacher`s</content>
+<sentence>
+<sentenceContent> And he changed what I call the Baptist preacher`s test task (ph).</sentenceContent>
+<sentenceHash>724867672</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>ph</content>
+<sentence>
+<sentenceContent> And he changed what I call the Baptist preacher`s test task (ph).</sentenceContent>
+<sentenceHash>724867672</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>TODD</content>
+<sentence>
+<sentenceContent>TODD.</sentenceContent>
+<sentenceHash>79996755</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>MARTIN</content>
+<sentence>
+<sentenceContent>MARTIN LUTHER KING JR.</sentenceContent>
+<sentenceHash>982169710</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>LUTHER</content>
+<sentence>
+<sentenceContent>MARTIN LUTHER KING JR.</sentenceContent>
+<sentenceHash>982169710</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>JR</content>
+<sentence>
+<sentenceContent>MARTIN LUTHER KING JR.</sentenceContent>
+<sentenceHash>982169710</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>VIDEOTAPE</content>
+<sentence>
+<sentenceContent>(END VIDEOTAPE).</sentenceContent>
+<sentenceHash>-1891319595</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Edgartown</content>
+<sentence>
+<sentenceContent> We mean the Eagles of Edgartown School.</sentenceContent>
+<sentenceHash>1455331445</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>parched</content>
+<sentence>
+<sentenceContent> They are parched in Edgartown, Massachusetts.</sentenceContent>
+<sentenceHash>-1115671085</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Edgartown</content>
+<sentence>
+<sentenceContent> They are parched in Edgartown, Massachusetts.</sentenceContent>
+<sentenceHash>-1115671085</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Massachusetts</content>
+<sentence>
+<sentenceContent> They are parched in Edgartown, Massachusetts.</sentenceContent>
+<sentenceHash>-1115671085</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Lincoln</content>
+<sentence>
+<sentenceContent> We mean the Silver Hawks of Lincoln Southwest High School.</sentenceContent>
+<sentenceHash>457183445</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Lincoln</content>
+<sentence>
+<sentenceContent> They are taking flight from Lincoln, Nebraska.</sentenceContent>
+<sentenceHash>-772397302</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Nebraska</content>
+<sentence>
+<sentenceContent> They are taking flight from Lincoln, Nebraska.</sentenceContent>
+<sentenceHash>-772397302</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>soaring</content>
+<sentence>
+<sentenceContent> They are soaring over Frisco, Texas.</sentenceContent>
+<sentenceHash>-653378776</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Frisco</content>
+<sentence>
+<sentenceContent> They are soaring over Frisco, Texas.</sentenceContent>
+<sentenceHash>-653378776</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Texas</content>
+<sentence>
+<sentenceContent> They are soaring over Frisco, Texas.</sentenceContent>
+<sentenceHash>-653378776</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Switzerland</content>
+<sentence>
+<sentenceContent>Germany, Russia, Canada, Switzerland, all countries associated with winter sports, all countries that have done well in the Olympics bobsled competition.</sentenceContent>
+<sentenceHash>1025699392</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>bobsled</content>
+<sentence>
+<sentenceContent>Germany, Russia, Canada, Switzerland, all countries associated with winter sports, all countries that have done well in the Olympics bobsled competition.</sentenceContent>
+<sentenceHash>1025699392</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Jamaica</content>
+<sentence>
+<sentenceContent> How about Jamaica.</sentenceContent>
+<sentenceHash>1604694901</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Caribbean</content>
+<sentence>
+<sentenceContent> The Caribbean country just got a word Saturday that it has qualified for next month Winter Olympics in Russia.</sentenceContent>
+<sentenceHash>-1087795913</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>CLIP</content>
+<sentence>
+<sentenceContent>(BEGIN VIDEO CLIP).</sentenceContent>
+<sentenceHash>1707165753</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>bobsled</content>
+<sentence>
+<sentenceContent> It`s bobsled time.</sentenceContent>
+<sentenceHash>1349035820</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>underdogs</content>
+<sentence>
+<sentenceContent> For the first time in more than a decade, the biggest underdogs in bobsledding had to fight the odds and qualify for the Olympic Games.</sentenceContent>
+<sentenceHash>1581471853</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>bobsledding</content>
+<sentence>
+<sentenceContent> For the first time in more than a decade, the biggest underdogs in bobsledding had to fight the odds and qualify for the Olympic Games.</sentenceContent>
+<sentenceHash>1581471853</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Jamaican</content>
+<sentence>
+<sentenceContent> But the Jamaican bobsled team isn`t packing their bags just yet.</sentenceContent>
+<sentenceHash>-216198086</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>bobsled</content>
+<sentence>
+<sentenceContent> But the Jamaican bobsled team isn`t packing their bags just yet.</sentenceContent>
+<sentenceHash>-216198086</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>WINSTON</content>
+<sentence>
+<sentenceContent>WINSTON WATTS, TEAM CAPTAIN/PILOT.</sentenceContent>
+<sentenceHash>-1817935381</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>WATTS</content>
+<sentence>
+<sentenceContent>WINSTON WATTS, TEAM CAPTAIN/PILOT.</sentenceContent>
+<sentenceHash>-1817935381</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>CAPTAIN/PILOT</content>
+<sentence>
+<sentenceContent>WINSTON WATTS, TEAM CAPTAIN/PILOT.</sentenceContent>
+<sentenceHash>-1817935381</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>INAUDIBLE</content>
+<sentence>
+<sentenceContent> That`s why we are looking (INAUDIBLE) we can fulfill the dream.</sentenceContent>
+<sentenceHash>24192179</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>fulfill</content>
+<sentence>
+<sentenceContent> That`s why we are looking (INAUDIBLE) we can fulfill the dream.</sentenceContent>
+<sentenceHash>24192179</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>fundraising</content>
+<sentence>
+<sentenceContent> The team needs to raise as much $80,000 to cover travel and equipment fees, so they`ve turned the fundraising websites like Crowdtilt to try and make it happen.</sentenceContent>
+<sentenceHash>607891866</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>websites</content>
+<sentence>
+<sentenceContent> The team needs to raise as much $80,000 to cover travel and equipment fees, so they`ve turned the fundraising websites like Crowdtilt to try and make it happen.</sentenceContent>
+<sentenceHash>607891866</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Crowdtilt</content>
+<sentence>
+<sentenceContent> The team needs to raise as much $80,000 to cover travel and equipment fees, so they`ve turned the fundraising websites like Crowdtilt to try and make it happen.</sentenceContent>
+<sentenceHash>607891866</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>donations</content>
+<sentence>
+<sentenceContent> In just under 24 hours, the team raised more than $16,000 and donations continue to poor in.</sentenceContent>
+<sentenceHash>782258848</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>MARVIN</content>
+<sentence>
+<sentenceContent>MARVIN DIXON, BRAKEMAN.</sentenceContent>
+<sentenceHash>-1522513988</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>DIXON</content>
+<sentence>
+<sentenceContent>MARVIN DIXON, BRAKEMAN.</sentenceContent>
+<sentenceHash>-1522513988</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>BRAKEMAN</content>
+<sentence>
+<sentenceContent>MARVIN DIXON, BRAKEMAN.</sentenceContent>
+<sentenceHash>-1522513988</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Jamaican</content>
+<sentence>
+<sentenceContent> We`re Jamaican.</sentenceContent>
+<sentenceHash>1737598561</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>inaudible</content>
+<sentence>
+<sentenceContent> We believe, you know, it`s going to (inaudible).</sentenceContent>
+<sentenceHash>1147091533</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>bobsledding</content>
+<sentence>
+<sentenceContent> We are not bobsledding yet.</sentenceContent>
+<sentenceHash>639689638</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Jamaican`s</content>
+<sentence>
+<sentenceContent> The Jamaican`s are among the most famous teams in the sport due in large part to the popularity of the Disney classic "Cool Runnings" that chronicle the Olympic journey of the country`s first bobsled team.</sentenceContent>
+<sentenceHash>-1666262051</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>popularity</content>
+<sentence>
+<sentenceContent> The Jamaican`s are among the most famous teams in the sport due in large part to the popularity of the Disney classic "Cool Runnings" that chronicle the Olympic journey of the country`s first bobsled team.</sentenceContent>
+<sentenceHash>-1666262051</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Disney</content>
+<sentence>
+<sentenceContent> The Jamaican`s are among the most famous teams in the sport due in large part to the popularity of the Disney classic "Cool Runnings" that chronicle the Olympic journey of the country`s first bobsled team.</sentenceContent>
+<sentenceHash>-1666262051</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>classic</content>
+<sentence>
+<sentenceContent> The Jamaican`s are among the most famous teams in the sport due in large part to the popularity of the Disney classic "Cool Runnings" that chronicle the Olympic journey of the country`s first bobsled team.</sentenceContent>
+<sentenceHash>-1666262051</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>chronicle</content>
+<sentence>
+<sentenceContent> The Jamaican`s are among the most famous teams in the sport due in large part to the popularity of the Disney classic "Cool Runnings" that chronicle the Olympic journey of the country`s first bobsled team.</sentenceContent>
+<sentenceHash>-1666262051</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>bobsled</content>
+<sentence>
+<sentenceContent> The Jamaican`s are among the most famous teams in the sport due in large part to the popularity of the Disney classic "Cool Runnings" that chronicle the Olympic journey of the country`s first bobsled team.</sentenceContent>
+<sentenceHash>-1666262051</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Jamaican</content>
+<sentence>
+<sentenceContent>After missing the last two Winter Olympics, the Jamaican bobsledders were determined to qualify for Sochi.</sentenceContent>
+<sentenceHash>35620749</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>bobsledders</content>
+<sentence>
+<sentenceContent>After missing the last two Winter Olympics, the Jamaican bobsledders were determined to qualify for Sochi.</sentenceContent>
+<sentenceHash>35620749</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Sochi</content>
+<sentence>
+<sentenceContent>After missing the last two Winter Olympics, the Jamaican bobsledders were determined to qualify for Sochi.</sentenceContent>
+<sentenceHash>35620749</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>DIXON</content>
+<sentence>
+<sentenceContent>DIXON.</sentenceContent>
+<sentenceHash>2016899292</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>sequel</content>
+<sentence>
+<sentenceContent> The team who refers to themselves as "Cool Runnings" the sequel, knows that the odds are stocked against them.</sentenceContent>
+<sentenceHash>653761223</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>DIXON</content>
+<sentence>
+<sentenceContent>DIXON.</sentenceContent>
+<sentenceHash>2016899292</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>DIXON</content>
+<sentence>
+<sentenceContent>DIXON.</sentenceContent>
+<sentenceHash>2016899292</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>VIDEOTAPE</content>
+<sentence>
+<sentenceContent>(END VIDEOTAPE).</sentenceContent>
+<sentenceHash>-1891319595</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Derek</content>
+<sentence>
+<sentenceContent> Derek Jakons (ph) hadn`t seen his mother in eight months.</sentenceContent>
+<sentenceHash>560807266</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Jakons</content>
+<sentence>
+<sentenceContent> Derek Jakons (ph) hadn`t seen his mother in eight months.</sentenceContent>
+<sentenceHash>560807266</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>ph</content>
+<sentence>
+<sentenceContent> Derek Jakons (ph) hadn`t seen his mother in eight months.</sentenceContent>
+<sentenceHash>560807266</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>deployed</content>
+<sentence>
+<sentenceContent> Air Force, and she`s been deployed in the Middle East.</sentenceContent>
+<sentenceHash>-138738405</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Derek</content>
+<sentence>
+<sentenceContent> She got home last week, but she didn`t immediately tell Derek.</sentenceContent>
+<sentenceHash>-108921141</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>CLIP</content>
+<sentence>
+<sentenceContent>(BEGIN VIDEO CLIP).</sentenceContent>
+<sentenceHash>1707165753</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>fake</content>
+<sentence>
+<sentenceContent> So the plan is to call a fake (inaudible) tech on the coach, and then we`re going to have Derek go out to the line, for two or three throws and then that`s when we have his mom come from behind and that - will get surprised.</sentenceContent>
+<sentenceHash>1531253242</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>inaudible</content>
+<sentence>
+<sentenceContent> So the plan is to call a fake (inaudible) tech on the coach, and then we`re going to have Derek go out to the line, for two or three throws and then that`s when we have his mom come from behind and that - will get surprised.</sentenceContent>
+<sentenceHash>1531253242</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>tech</content>
+<sentence>
+<sentenceContent> So the plan is to call a fake (inaudible) tech on the coach, and then we`re going to have Derek go out to the line, for two or three throws and then that`s when we have his mom come from behind and that - will get surprised.</sentenceContent>
+<sentenceHash>1531253242</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Derek</content>
+<sentence>
+<sentenceContent> So the plan is to call a fake (inaudible) tech on the coach, and then we`re going to have Derek go out to the line, for two or three throws and then that`s when we have his mom come from behind and that - will get surprised.</sentenceContent>
+<sentenceHash>1531253242</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>mom</content>
+<sentence>
+<sentenceContent> So the plan is to call a fake (inaudible) tech on the coach, and then we`re going to have Derek go out to the line, for two or three throws and then that`s when we have his mom come from behind and that - will get surprised.</sentenceContent>
+<sentenceHash>1531253242</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Mommy</content>
+<sentence>
+<sentenceContent> I`m thinking he`ll say Mommy and give me a hug.</sentenceContent>
+<sentenceHash>-909760138</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Derek</content>
+<sentence>
+<sentenceContent> That`s all right, Derek.</sentenceContent>
+<sentenceHash>1571829922</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>APPLAUSE</content>
+<sentence>
+<sentenceContent>(APPLAUSE).</sentenceContent>
+<sentenceHash>1044088190</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Derek</content>
+<sentence>
+<sentenceContent> That was Derek.</sentenceContent>
+<sentenceHash>1709023143</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Mom</content>
+<sentence>
+<sentenceContent> Mom, I missed you.</sentenceContent>
+<sentenceHash>-389342754</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>CLIP</content>
+<sentence>
+<sentenceContent>(END VIDEO CLIP).</sentenceContent>
+<sentenceHash>-1648163001</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>foul</content>
+<sentence>
+<sentenceContent> There was nothing foul about it in the true sense of the word, it was a homecoming game.</sentenceContent>
+<sentenceHash>-1203184397</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>homecoming</content>
+<sentence>
+<sentenceContent> There was nothing foul about it in the true sense of the word, it was a homecoming game.</sentenceContent>
+<sentenceHash>-1203184397</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>CLIP</content>
+<sentence>
+<sentenceContent>(BEGIN VIDEO CLIP).</sentenceContent>
+<sentenceHash>1707165753</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>CLIP</content>
+<sentence>
+<sentenceContent>(END VIDEO CLIP).</sentenceContent>
+<sentenceHash>-1648163001</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>CLIP</content>
+<sentence>
+<sentenceContent>(BEGIN VIDEO CLIP).</sentenceContent>
+<sentenceHash>1707165753</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>inaudible</content>
+<sentence>
+<sentenceContent> No secret (inaudible).</sentenceContent>
+<sentenceHash>660016587</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>controversial</content>
+<sentence>
+<sentenceContent> The most significant changes affect the most controversial surveillance program - the bulk collection of Americans` phone records, effective immediately, the NSA will need judicial approval before searching the data.</sentenceContent>
+<sentenceHash>-792973043</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>judicial</content>
+<sentence>
+<sentenceContent> The most significant changes affect the most controversial surveillance program - the bulk collection of Americans` phone records, effective immediately, the NSA will need judicial approval before searching the data.</sentenceContent>
+<sentenceHash>-792973043</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>advocates</content>
+<sentence>
+<sentenceContent> The president asked Congress to create a panel of public advocates to counter government search requests.</sentenceContent>
+<sentenceHash>-545277527</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Attorney</content>
+<sentence>
+<sentenceContent> And he asked the Attorney General and intelligence committee to explore moving the data out of NSA control.</sentenceContent>
+<sentenceHash>1292866391</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>won`t</content>
+<sentence>
+<sentenceContent> But the bottom line, the program won`t necessarily end.</sentenceContent>
+<sentenceHash>-381100841</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>INAUDIBLE</content>
+<sentence>
+<sentenceContent> They say (INAUDIBLE).</sentenceContent>
+<sentenceHash>-370493529</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>INAUDIBLE</content>
+<sentence>
+<sentenceContent> We say (INAUDIBLE).</sentenceContent>
+<sentenceHash>919046081</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>ardent</content>
+<sentence>
+<sentenceContent> For the NSA`s most ardent critics that would be a glaring omission.</sentenceContent>
+<sentenceHash>-741174238</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>omission</content>
+<sentence>
+<sentenceContent> For the NSA`s most ardent critics that would be a glaring omission.</sentenceContent>
+<sentenceHash>-741174238</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>SEN</content>
+<sentence>
+<sentenceContent>SEN.</sentenceContent>
+<sentenceHash>2541426</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>RAND</content>
+<sentence>
+<sentenceContent> RAND PAUL.</sentenceContent>
+<sentenceHash>1885433163</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>PAUL</content>
+<sentence>
+<sentenceContent> RAND PAUL.</sentenceContent>
+<sentenceHash>1885433163</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>safeguards</content>
+<sentence>
+<sentenceContent> I heard that trust me, I`m going to put some more safeguards in place, but I`m going to keep right on collecting every American`s records.</sentenceContent>
+<sentenceHash>-33399880</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>scrap</content>
+<sentence>
+<sentenceContent> The president argues that much of the surveillance is just too important to scrap altogether.</sentenceContent>
+<sentenceHash>-357222454</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>sought</content>
+<sentence>
+<sentenceContent> Not only because I felt that they made us more secure, but also because nothing in that initial review and nothing that I`ve learned since indicated that our intelligence community has sought to violate the law.</sentenceContent>
+<sentenceHash>1435684484</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>violate</content>
+<sentence>
+<sentenceContent> Not only because I felt that they made us more secure, but also because nothing in that initial review and nothing that I`ve learned since indicated that our intelligence community has sought to violate the law.</sentenceContent>
+<sentenceHash>1435684484</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>BERGEN</content>
+<sentence>
+<sentenceContent>PETER BERGEN, CNN TERRORISM ANALYST.</sentenceContent>
+<sentenceHash>383582659</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>TERRORISM</content>
+<sentence>
+<sentenceContent>PETER BERGEN, CNN TERRORISM ANALYST.</sentenceContent>
+<sentenceHash>383582659</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>ANALYST</content>
+<sentence>
+<sentenceContent>PETER BERGEN, CNN TERRORISM ANALYST.</sentenceContent>
+<sentenceHash>383582659</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>CLIP</content>
+<sentence>
+<sentenceContent>(END VIDEO CLIP).</sentenceContent>
+<sentenceHash>-1648163001</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Dr</content>
+<sentence>
+<sentenceContent> Yesterday honored American civil rights leader Dr.</sentenceContent>
+<sentenceHash>1236264602</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Martin</content>
+<sentence>
+<sentenceContent> Martin Luther King Jr.</sentenceContent>
+<sentenceHash>1645491342</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Luther</content>
+<sentence>
+<sentenceContent> Martin Luther King Jr.</sentenceContent>
+<sentenceHash>1645491342</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Jr</content>
+<sentence>
+<sentenceContent> Martin Luther King Jr.</sentenceContent>
+<sentenceHash>1645491342</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Dr</content>
+<sentence>
+<sentenceContent> Dr.</sentenceContent>
+<sentenceHash>1022240</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>participated</content>
+<sentence>
+<sentenceContent>President Obama participated in the service project in Washington, D.</sentenceContent>
+<sentenceHash>3926697</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>volunteering</content>
+<sentence>
+<sentenceContent> You see him here volunteering at D.</sentenceContent>
+<sentenceHash>-1711001475</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>wreath</content>
+<sentence>
+<sentenceContent> capital, the traditional wreath laying at the King Memorial.</sentenceContent>
+<sentenceHash>888932340</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>th</content>
+<sentence>
+<sentenceContent> The National Park Service says millions visited the first full year it was open in 2012, and millions visited last year on the 50th anniversary of Dr.</sentenceContent>
+<sentenceHash>678785165</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>anniversary</content>
+<sentence>
+<sentenceContent> The National Park Service says millions visited the first full year it was open in 2012, and millions visited last year on the 50th anniversary of Dr.</sentenceContent>
+<sentenceHash>678785165</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Dr</content>
+<sentence>
+<sentenceContent> The National Park Service says millions visited the first full year it was open in 2012, and millions visited last year on the 50th anniversary of Dr.</sentenceContent>
+<sentenceHash>678785165</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Brian</content>
+<sentence>
+<sentenceContent> Brian Todd looks back at that event.</sentenceContent>
+<sentenceHash>-905753342</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Todd</content>
+<sentence>
+<sentenceContent> Brian Todd looks back at that event.</sentenceContent>
+<sentenceHash>-905753342</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>VIDEOTAPE</content>
+<sentence>
+<sentenceContent>(BEGIN VIDEOTAPE).</sentenceContent>
+<sentenceHash>987863459</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>BRIAN</content>
+<sentence>
+<sentenceContent>BRIAN TODD, CNN CORRESPONDENT.</sentenceContent>
+<sentenceHash>-26079688</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>TODD</content>
+<sentence>
+<sentenceContent>BRIAN TODD, CNN CORRESPONDENT.</sentenceContent>
+<sentenceHash>-26079688</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Martin</content>
+<sentence>
+<sentenceContent> Many of them were so young that summer, Martin Luther King Jr.</sentenceContent>
+<sentenceHash>2129243585</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Luther</content>
+<sentence>
+<sentenceContent> Many of them were so young that summer, Martin Luther King Jr.</sentenceContent>
+<sentenceHash>2129243585</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Jr</content>
+<sentence>
+<sentenceContent> Many of them were so young that summer, Martin Luther King Jr.</sentenceContent>
+<sentenceHash>2129243585</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>pivot</content>
+<sentence>
+<sentenceContent> himself only 34, but they led hundreds of thousands on the march to the nation`s capital that would pivot the country toward irreversible change.</sentenceContent>
+<sentenceHash>-700782149</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>irreversible</content>
+<sentence>
+<sentenceContent> himself only 34, but they led hundreds of thousands on the march to the nation`s capital that would pivot the country toward irreversible change.</sentenceContent>
+<sentenceHash>-700782149</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>tribute</content>
+<sentence>
+<sentenceContent> "Time" magazine captures that moment in a tribute to King.</sentenceContent>
+<sentenceHash>1925939650</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Radhika</content>
+<sentence>
+<sentenceContent> Time editor Radhika Jones says the use of the key players then was a crucial component in publishing this tribute now.</sentenceContent>
+<sentenceHash>-1774263656</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Jones</content>
+<sentence>
+<sentenceContent> Time editor Radhika Jones says the use of the key players then was a crucial component in publishing this tribute now.</sentenceContent>
+<sentenceHash>-1774263656</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>crucial</content>
+<sentence>
+<sentenceContent> Time editor Radhika Jones says the use of the key players then was a crucial component in publishing this tribute now.</sentenceContent>
+<sentenceHash>-1774263656</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>tribute</content>
+<sentence>
+<sentenceContent> Time editor Radhika Jones says the use of the key players then was a crucial component in publishing this tribute now.</sentenceContent>
+<sentenceHash>-1774263656</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>RADHIKA</content>
+<sentence>
+<sentenceContent>RADHIKA JONES, EXEC.</sentenceContent>
+<sentenceHash>-1324028186</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>JONES</content>
+<sentence>
+<sentenceContent>RADHIKA JONES, EXEC.</sentenceContent>
+<sentenceHash>-1324028186</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>EXEC</content>
+<sentence>
+<sentenceContent>RADHIKA JONES, EXEC.</sentenceContent>
+<sentenceHash>-1324028186</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>TODD</content>
+<sentence>
+<sentenceContent>TODD.</sentenceContent>
+<sentenceHash>79996755</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Clarence</content>
+<sentence>
+<sentenceContent> The memories come from people like Clarence Jones, King`s speechwriter.</sentenceContent>
+<sentenceHash>2009330551</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Jones</content>
+<sentence>
+<sentenceContent> The memories come from people like Clarence Jones, King`s speechwriter.</sentenceContent>
+<sentenceHash>2009330551</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>speechwriter</content>
+<sentence>
+<sentenceContent> The memories come from people like Clarence Jones, King`s speechwriter.</sentenceContent>
+<sentenceHash>2009330551</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>testimonial</content>
+<sentence>
+<sentenceContent>In a testimonial on "Time`s" website, he describes the moment King grabbed his audience.</sentenceContent>
+<sentenceHash>1936598899</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>website</content>
+<sentence>
+<sentenceContent>In a testimonial on "Time`s" website, he describes the moment King grabbed his audience.</sentenceContent>
+<sentenceHash>1936598899</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>CLARENCE</content>
+<sentence>
+<sentenceContent>CLARENCE B.</sentenceContent>
+<sentenceHash>874572295</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>JONES</content>
+<sentence>
+<sentenceContent> JONES, MARTIN LUTHER KING JR.</sentenceContent>
+<sentenceHash>-98521127</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>MARTIN</content>
+<sentence>
+<sentenceContent> JONES, MARTIN LUTHER KING JR.</sentenceContent>
+<sentenceHash>-98521127</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>LUTHER</content>
+<sentence>
+<sentenceContent> JONES, MARTIN LUTHER KING JR.</sentenceContent>
+<sentenceHash>-98521127</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>JR</content>
+<sentence>
+<sentenceContent> JONES, MARTIN LUTHER KING JR.</sentenceContent>
+<sentenceHash>-98521127</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>`S</content>
+<sentence>
+<sentenceContent>`S SPEECHWRITER.</sentenceContent>
+<sentenceHash>965964172</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>SPEECHWRITER</content>
+<sentence>
+<sentenceContent>`S SPEECHWRITER.</sentenceContent>
+<sentenceHash>965964172</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Mahalia</content>
+<sentence>
+<sentenceContent> I`m listening to his speech, and as I`m listening, I see that he`s really - Mahalia Jackson interrupted him while he`s speaking.</sentenceContent>
+<sentenceHash>-330634056</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Jackson</content>
+<sentence>
+<sentenceContent> I`m listening to his speech, and as I`m listening, I see that he`s really - Mahalia Jackson interrupted him while he`s speaking.</sentenceContent>
+<sentenceHash>-330634056</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Martin</content>
+<sentence>
+<sentenceContent> Tell them about the dream, Martin.</sentenceContent>
+<sentenceHash>265057523</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Baptist</content>
+<sentence>
+<sentenceContent> And he changed what I call the Baptist preacher`s test task (ph).</sentenceContent>
+<sentenceHash>724867672</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>preacher`s</content>
+<sentence>
+<sentenceContent> And he changed what I call the Baptist preacher`s test task (ph).</sentenceContent>
+<sentenceHash>724867672</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>ph</content>
+<sentence>
+<sentenceContent> And he changed what I call the Baptist preacher`s test task (ph).</sentenceContent>
+<sentenceHash>724867672</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>TODD</content>
+<sentence>
+<sentenceContent>TODD.</sentenceContent>
+<sentenceHash>79996755</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>MARTIN</content>
+<sentence>
+<sentenceContent>MARTIN LUTHER KING JR.</sentenceContent>
+<sentenceHash>982169710</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>LUTHER</content>
+<sentence>
+<sentenceContent>MARTIN LUTHER KING JR.</sentenceContent>
+<sentenceHash>982169710</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>JR</content>
+<sentence>
+<sentenceContent>MARTIN LUTHER KING JR.</sentenceContent>
+<sentenceHash>982169710</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>VIDEOTAPE</content>
+<sentence>
+<sentenceContent>(END VIDEOTAPE).</sentenceContent>
+<sentenceHash>-1891319595</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Edgartown</content>
+<sentence>
+<sentenceContent> We mean the Eagles of Edgartown School.</sentenceContent>
+<sentenceHash>1455331445</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>parched</content>
+<sentence>
+<sentenceContent> They are parched in Edgartown, Massachusetts.</sentenceContent>
+<sentenceHash>-1115671085</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Edgartown</content>
+<sentence>
+<sentenceContent> They are parched in Edgartown, Massachusetts.</sentenceContent>
+<sentenceHash>-1115671085</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Massachusetts</content>
+<sentence>
+<sentenceContent> They are parched in Edgartown, Massachusetts.</sentenceContent>
+<sentenceHash>-1115671085</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Lincoln</content>
+<sentence>
+<sentenceContent> We mean the Silver Hawks of Lincoln Southwest High School.</sentenceContent>
+<sentenceHash>457183445</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Lincoln</content>
+<sentence>
+<sentenceContent> They are taking flight from Lincoln, Nebraska.</sentenceContent>
+<sentenceHash>-772397302</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Nebraska</content>
+<sentence>
+<sentenceContent> They are taking flight from Lincoln, Nebraska.</sentenceContent>
+<sentenceHash>-772397302</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>soaring</content>
+<sentence>
+<sentenceContent> They are soaring over Frisco, Texas.</sentenceContent>
+<sentenceHash>-653378776</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Frisco</content>
+<sentence>
+<sentenceContent> They are soaring over Frisco, Texas.</sentenceContent>
+<sentenceHash>-653378776</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Texas</content>
+<sentence>
+<sentenceContent> They are soaring over Frisco, Texas.</sentenceContent>
+<sentenceHash>-653378776</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Switzerland</content>
+<sentence>
+<sentenceContent>Germany, Russia, Canada, Switzerland, all countries associated with winter sports, all countries that have done well in the Olympics bobsled competition.</sentenceContent>
+<sentenceHash>1025699392</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>bobsled</content>
+<sentence>
+<sentenceContent>Germany, Russia, Canada, Switzerland, all countries associated with winter sports, all countries that have done well in the Olympics bobsled competition.</sentenceContent>
+<sentenceHash>1025699392</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Jamaica</content>
+<sentence>
+<sentenceContent> How about Jamaica.</sentenceContent>
+<sentenceHash>1604694901</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Caribbean</content>
+<sentence>
+<sentenceContent> The Caribbean country just got a word Saturday that it has qualified for next month Winter Olympics in Russia.</sentenceContent>
+<sentenceHash>-1087795913</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>CLIP</content>
+<sentence>
+<sentenceContent>(BEGIN VIDEO CLIP).</sentenceContent>
+<sentenceHash>1707165753</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>bobsled</content>
+<sentence>
+<sentenceContent> It`s bobsled time.</sentenceContent>
+<sentenceHash>1349035820</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>underdogs</content>
+<sentence>
+<sentenceContent> For the first time in more than a decade, the biggest underdogs in bobsledding had to fight the odds and qualify for the Olympic Games.</sentenceContent>
+<sentenceHash>1581471853</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>bobsledding</content>
+<sentence>
+<sentenceContent> For the first time in more than a decade, the biggest underdogs in bobsledding had to fight the odds and qualify for the Olympic Games.</sentenceContent>
+<sentenceHash>1581471853</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Jamaican</content>
+<sentence>
+<sentenceContent> But the Jamaican bobsled team isn`t packing their bags just yet.</sentenceContent>
+<sentenceHash>-216198086</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>bobsled</content>
+<sentence>
+<sentenceContent> But the Jamaican bobsled team isn`t packing their bags just yet.</sentenceContent>
+<sentenceHash>-216198086</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>WINSTON</content>
+<sentence>
+<sentenceContent>WINSTON WATTS, TEAM CAPTAIN/PILOT.</sentenceContent>
+<sentenceHash>-1817935381</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>WATTS</content>
+<sentence>
+<sentenceContent>WINSTON WATTS, TEAM CAPTAIN/PILOT.</sentenceContent>
+<sentenceHash>-1817935381</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>CAPTAIN/PILOT</content>
+<sentence>
+<sentenceContent>WINSTON WATTS, TEAM CAPTAIN/PILOT.</sentenceContent>
+<sentenceHash>-1817935381</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>INAUDIBLE</content>
+<sentence>
+<sentenceContent> That`s why we are looking (INAUDIBLE) we can fulfill the dream.</sentenceContent>
+<sentenceHash>24192179</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>fulfill</content>
+<sentence>
+<sentenceContent> That`s why we are looking (INAUDIBLE) we can fulfill the dream.</sentenceContent>
+<sentenceHash>24192179</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>fundraising</content>
+<sentence>
+<sentenceContent> The team needs to raise as much $80,000 to cover travel and equipment fees, so they`ve turned the fundraising websites like Crowdtilt to try and make it happen.</sentenceContent>
+<sentenceHash>607891866</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>websites</content>
+<sentence>
+<sentenceContent> The team needs to raise as much $80,000 to cover travel and equipment fees, so they`ve turned the fundraising websites like Crowdtilt to try and make it happen.</sentenceContent>
+<sentenceHash>607891866</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Crowdtilt</content>
+<sentence>
+<sentenceContent> The team needs to raise as much $80,000 to cover travel and equipment fees, so they`ve turned the fundraising websites like Crowdtilt to try and make it happen.</sentenceContent>
+<sentenceHash>607891866</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>donations</content>
+<sentence>
+<sentenceContent> In just under 24 hours, the team raised more than $16,000 and donations continue to poor in.</sentenceContent>
+<sentenceHash>782258848</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>MARVIN</content>
+<sentence>
+<sentenceContent>MARVIN DIXON, BRAKEMAN.</sentenceContent>
+<sentenceHash>-1522513988</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>DIXON</content>
+<sentence>
+<sentenceContent>MARVIN DIXON, BRAKEMAN.</sentenceContent>
+<sentenceHash>-1522513988</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>BRAKEMAN</content>
+<sentence>
+<sentenceContent>MARVIN DIXON, BRAKEMAN.</sentenceContent>
+<sentenceHash>-1522513988</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Jamaican</content>
+<sentence>
+<sentenceContent> We`re Jamaican.</sentenceContent>
+<sentenceHash>1737598561</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>inaudible</content>
+<sentence>
+<sentenceContent> We believe, you know, it`s going to (inaudible).</sentenceContent>
+<sentenceHash>1147091533</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>bobsledding</content>
+<sentence>
+<sentenceContent> We are not bobsledding yet.</sentenceContent>
+<sentenceHash>639689638</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Jamaican`s</content>
+<sentence>
+<sentenceContent> The Jamaican`s are among the most famous teams in the sport due in large part to the popularity of the Disney classic "Cool Runnings" that chronicle the Olympic journey of the country`s first bobsled team.</sentenceContent>
+<sentenceHash>-1666262051</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>popularity</content>
+<sentence>
+<sentenceContent> The Jamaican`s are among the most famous teams in the sport due in large part to the popularity of the Disney classic "Cool Runnings" that chronicle the Olympic journey of the country`s first bobsled team.</sentenceContent>
+<sentenceHash>-1666262051</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Disney</content>
+<sentence>
+<sentenceContent> The Jamaican`s are among the most famous teams in the sport due in large part to the popularity of the Disney classic "Cool Runnings" that chronicle the Olympic journey of the country`s first bobsled team.</sentenceContent>
+<sentenceHash>-1666262051</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>classic</content>
+<sentence>
+<sentenceContent> The Jamaican`s are among the most famous teams in the sport due in large part to the popularity of the Disney classic "Cool Runnings" that chronicle the Olympic journey of the country`s first bobsled team.</sentenceContent>
+<sentenceHash>-1666262051</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>chronicle</content>
+<sentence>
+<sentenceContent> The Jamaican`s are among the most famous teams in the sport due in large part to the popularity of the Disney classic "Cool Runnings" that chronicle the Olympic journey of the country`s first bobsled team.</sentenceContent>
+<sentenceHash>-1666262051</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>bobsled</content>
+<sentence>
+<sentenceContent> The Jamaican`s are among the most famous teams in the sport due in large part to the popularity of the Disney classic "Cool Runnings" that chronicle the Olympic journey of the country`s first bobsled team.</sentenceContent>
+<sentenceHash>-1666262051</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Jamaican</content>
+<sentence>
+<sentenceContent>After missing the last two Winter Olympics, the Jamaican bobsledders were determined to qualify for Sochi.</sentenceContent>
+<sentenceHash>35620749</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>bobsledders</content>
+<sentence>
+<sentenceContent>After missing the last two Winter Olympics, the Jamaican bobsledders were determined to qualify for Sochi.</sentenceContent>
+<sentenceHash>35620749</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Sochi</content>
+<sentence>
+<sentenceContent>After missing the last two Winter Olympics, the Jamaican bobsledders were determined to qualify for Sochi.</sentenceContent>
+<sentenceHash>35620749</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>DIXON</content>
+<sentence>
+<sentenceContent>DIXON.</sentenceContent>
+<sentenceHash>2016899292</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>sequel</content>
+<sentence>
+<sentenceContent> The team who refers to themselves as "Cool Runnings" the sequel, knows that the odds are stocked against them.</sentenceContent>
+<sentenceHash>653761223</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>DIXON</content>
+<sentence>
+<sentenceContent>DIXON.</sentenceContent>
+<sentenceHash>2016899292</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>DIXON</content>
+<sentence>
+<sentenceContent>DIXON.</sentenceContent>
+<sentenceHash>2016899292</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>VIDEOTAPE</content>
+<sentence>
+<sentenceContent>(END VIDEOTAPE).</sentenceContent>
+<sentenceHash>-1891319595</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Derek</content>
+<sentence>
+<sentenceContent> Derek Jakons (ph) hadn`t seen his mother in eight months.</sentenceContent>
+<sentenceHash>560807266</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Jakons</content>
+<sentence>
+<sentenceContent> Derek Jakons (ph) hadn`t seen his mother in eight months.</sentenceContent>
+<sentenceHash>560807266</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>ph</content>
+<sentence>
+<sentenceContent> Derek Jakons (ph) hadn`t seen his mother in eight months.</sentenceContent>
+<sentenceHash>560807266</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>deployed</content>
+<sentence>
+<sentenceContent> Air Force, and she`s been deployed in the Middle East.</sentenceContent>
+<sentenceHash>-138738405</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Derek</content>
+<sentence>
+<sentenceContent> She got home last week, but she didn`t immediately tell Derek.</sentenceContent>
+<sentenceHash>-108921141</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>CLIP</content>
+<sentence>
+<sentenceContent>(BEGIN VIDEO CLIP).</sentenceContent>
+<sentenceHash>1707165753</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>fake</content>
+<sentence>
+<sentenceContent> So the plan is to call a fake (inaudible) tech on the coach, and then we`re going to have Derek go out to the line, for two or three throws and then that`s when we have his mom come from behind and that - will get surprised.</sentenceContent>
+<sentenceHash>1531253242</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>inaudible</content>
+<sentence>
+<sentenceContent> So the plan is to call a fake (inaudible) tech on the coach, and then we`re going to have Derek go out to the line, for two or three throws and then that`s when we have his mom come from behind and that - will get surprised.</sentenceContent>
+<sentenceHash>1531253242</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>tech</content>
+<sentence>
+<sentenceContent> So the plan is to call a fake (inaudible) tech on the coach, and then we`re going to have Derek go out to the line, for two or three throws and then that`s when we have his mom come from behind and that - will get surprised.</sentenceContent>
+<sentenceHash>1531253242</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Derek</content>
+<sentence>
+<sentenceContent> So the plan is to call a fake (inaudible) tech on the coach, and then we`re going to have Derek go out to the line, for two or three throws and then that`s when we have his mom come from behind and that - will get surprised.</sentenceContent>
+<sentenceHash>1531253242</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>mom</content>
+<sentence>
+<sentenceContent> So the plan is to call a fake (inaudible) tech on the coach, and then we`re going to have Derek go out to the line, for two or three throws and then that`s when we have his mom come from behind and that - will get surprised.</sentenceContent>
+<sentenceHash>1531253242</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Mommy</content>
+<sentence>
+<sentenceContent> I`m thinking he`ll say Mommy and give me a hug.</sentenceContent>
+<sentenceHash>-909760138</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Derek</content>
+<sentence>
+<sentenceContent> That`s all right, Derek.</sentenceContent>
+<sentenceHash>1571829922</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>APPLAUSE</content>
+<sentence>
+<sentenceContent>(APPLAUSE).</sentenceContent>
+<sentenceHash>1044088190</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Derek</content>
+<sentence>
+<sentenceContent> That was Derek.</sentenceContent>
+<sentenceHash>1709023143</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>Mom</content>
+<sentence>
+<sentenceContent> Mom, I missed you.</sentenceContent>
+<sentenceHash>-389342754</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>CLIP</content>
+<sentence>
+<sentenceContent>(END VIDEO CLIP).</sentenceContent>
+<sentenceHash>-1648163001</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>foul</content>
+<sentence>
+<sentenceContent> There was nothing foul about it in the true sense of the word, it was a homecoming game.</sentenceContent>
+<sentenceHash>-1203184397</sentenceHash>
+</sentence>
+</word>
+<word>
+<content>homecoming</content>
+<sentence>
+<sentenceContent> There was nothing foul about it in the true sense of the word, it was a homecoming game.</sentenceContent>
+<sentenceHash>-1203184397</sentenceHash>
 </sentence>
 </word>
 </word_sublist>
