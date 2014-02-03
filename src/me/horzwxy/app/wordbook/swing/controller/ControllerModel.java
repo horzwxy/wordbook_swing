@@ -1,5 +1,6 @@
 package me.horzwxy.app.wordbook.swing.controller;
 
+import com.sun.corba.se.spi.orbutil.fsm.Input;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
@@ -14,10 +15,8 @@ import me.horzwxy.app.wordbook.network.Proxy;
 import me.horzwxy.app.wordbook.swing.AnalyseResultHTMLCreator;
 import me.horzwxy.app.wordbook.swing.XMLCreator;
 
-import java.awt.*;
 import java.io.*;
 import java.net.InetSocketAddress;
-import java.net.URI;
 import java.util.*;
 import java.util.List;
 
@@ -43,11 +42,13 @@ class DefaultController extends ControllerModel {
     private Proxy wordbookProxy;
     private WordLibrary wordLibrary;
     private SentenceAnalyzer analyzer;
+    private UpdateSentenceData updateSentenceData;
 
     private final SwingController swingController = new SwingController() {
+
         @Override
         public void displaySentence(Word word, String sentence) {
-
+            getFrame().displaySentence(word, sentence);
         }
 
         @Override
@@ -76,20 +77,51 @@ class DefaultController extends ControllerModel {
         }
 
         @Override
-        public void updateSentence(Word word, String originalSentence, String newSentence) {
-
+        public void updateSentence(String newSentence) {
+            DefaultController.this.updateSentence(newSentence);
         }
+
+
     };
     private final HttpHandler addWordHandler = new HttpHandler() {
         @Override
         public void handle(HttpExchange httpExchange) throws IOException {
+            Map<String, String> attrs = Tool.parseParameters(httpExchange.getRequestURI().getQuery());
+            WordState state = WordState.valueOf(attrs.get("state").toUpperCase());
+            DefaultController.this.addWord(attrs.get("word"), state);
 
+            InputStream is = httpExchange.getRequestBody();
+            while(is.read() > 0) {
+                // nothing, keep reading
+            }
+            is.close();
+
+            String response = "This is the response";
+            httpExchange.sendResponseHeaders(200, response.length());
+            OutputStream os = httpExchange.getResponseBody();
+            os.write(response.getBytes());
+            os.close();
         }
     };
     private final HttpHandler updateSentenceHandler = new HttpHandler() {
         @Override
         public void handle(HttpExchange httpExchange) throws IOException {
+            Map<String, String> attrs = Tool.parseParameters(httpExchange.getRequestURI().getQuery());
+            String wordContent = attrs.get("word");
+            int sentenceHash = Integer.parseInt(attrs.get("hash"));
+            DefaultController.this.displaySentence(wordContent, sentenceHash);
 
+            InputStream is = httpExchange.getRequestBody();
+            while(is.read() > 0) {
+                // nothing, keep reading
+            }
+            is.close();
+
+            String response = "This is the response";
+            httpExchange.sendResponseHeaders(200, response.length());
+            OutputStream os = httpExchange.getResponseBody();
+            os.write(response.getBytes());
+            os.close();
         }
     };
 
@@ -138,8 +170,13 @@ class DefaultController extends ControllerModel {
         swingController.displayLog("server has stopped");
     }
 
-    private void addWord() {
+    private void addWord(String wordContent, WordState state) {
+        Word word = wordLibrary.getWord(wordContent.toLowerCase());
+        WordState originalState = word.getState();
+        word.setState(state);
+        wordLibrary.updateWord(word, originalState);
 
+        swingController.displayLog("add word " + word.getContent() + "/" + word.getState());
     }
 
     private void analyse(File file) {
@@ -215,7 +252,45 @@ class DefaultController extends ControllerModel {
         swingController.displayLog("wordbook proxy started");
     }
 
-    private void updateSentence(Word word, String originalSentence, String newSentence) {
+    private void displaySentence(String wordContent, int sentenceHash) {
+        Word word = wordLibrary.getWord(wordContent.toLowerCase());
+        for(String sentence : word.getSentences()) {
+            if(sentence.hashCode() == sentenceHash) {
+                updateSentenceData = new UpdateSentenceData(word, sentence.hashCode());
+                swingController.displaySentence(word, sentence);
+                break;
+            }
+        }
+    }
 
+    private void updateSentence(String newSentence) {
+        Word word = updateSentenceData.getWord();
+        for(int i = 0; i < word.getSentences().size(); i++) {
+            String sentence = word.getSentences().get(i);
+            if(sentence.hashCode() == updateSentenceData.getOriginalSentenceHash()) {
+                word.getSentences().remove(i);
+                word.getSentences().add(newSentence);
+                swingController.displayLog("update sentence of " + word.getContent());
+                return;
+            }
+        }
+    }
+
+    private static class UpdateSentenceData {
+        private Word word;
+        private int originalSentenceHash;
+
+        UpdateSentenceData(Word word, int originalSentenceHash) {
+            this.word = word;
+            this.originalSentenceHash = originalSentenceHash;
+        }
+
+        public Word getWord() {
+            return word;
+        }
+
+        public int getOriginalSentenceHash() {
+            return originalSentenceHash;
+        }
     }
 }

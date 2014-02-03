@@ -12,6 +12,10 @@ public abstract class SwingController {
 
     private FrameModel frame;
 
+    protected FrameModel getFrame() {
+        return this.frame;
+    }
+
     public void setFrame(FrameModel frame) {
         this.frame = frame;
     }
@@ -40,7 +44,7 @@ public abstract class SwingController {
 
     public abstract void displaySentence(Word word, String sentence);
 
-    public abstract void updateSentence(Word word, String originalSentence, String newSentence);
+    public abstract void updateSentence(String newSentence);
 
     /**
      * Display log on the frame.
