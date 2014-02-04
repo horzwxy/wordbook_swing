@@ -1,6 +1,5 @@
 package me.horzwxy.app.wordbook.swing.controller;
 
-import com.sun.corba.se.spi.orbutil.fsm.Input;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
@@ -10,7 +9,6 @@ import me.horzwxy.app.wordbook.analyzer.WordRecognizer;
 import me.horzwxy.app.wordbook.model.AnalyzeResult;
 import me.horzwxy.app.wordbook.model.Word;
 import me.horzwxy.app.wordbook.model.WordState;
-import me.horzwxy.app.wordbook.network.LocalProxy;
 import me.horzwxy.app.wordbook.network.Proxy;
 import me.horzwxy.app.wordbook.network.YinxiangProxy;
 import me.horzwxy.app.wordbook.swing.AnalyseResultHTMLCreator;
@@ -92,7 +90,7 @@ class DefaultController extends ControllerModel {
         public void handle(HttpExchange httpExchange) throws IOException {
             Map<String, String> attrs = Tool.parseParameters(httpExchange.getRequestURI().getQuery());
             WordState state = WordState.valueOf(attrs.get("state").toUpperCase());
-            DefaultController.this.addWord(attrs.get("word"), state);
+            DefaultController.this.addWord(attrs.get("word"), attrs.get("form"), state);
 
             InputStream is = httpExchange.getRequestBody();
             while(is.read() > 0) {
@@ -175,11 +173,12 @@ class DefaultController extends ControllerModel {
         swingController.displayLog("server has stopped");
     }
 
-    private void addWord(String wordContent, WordState state) {
+    private void addWord(String wordContent, String form, WordState state) {
         Word word = wordLibrary.getWord(wordContent.toLowerCase());
+        wordLibrary.updateWordContent(word, form);
         WordState originalState = word.getState();
         word.setState(state);
-        wordLibrary.updateWord(word, originalState);
+        wordLibrary.updateWordState(word, originalState);
 
         swingController.displayLog("add word " + word.getContent() + "/" + word.getState());
     }
@@ -198,14 +197,17 @@ class DefaultController extends ControllerModel {
                     for(AnalyzeResult result : results) {
                         emphasizedWords.add(result.getWord());
                     }
-                    creator.addSentence(sentence, emphasizedWords);
+                    creator.addSentence(sentence, emphasizedWords, results);
                 }
             }
 
             File outputFile = new File("1-21.html");
             creator.outputDocument(outputFile);
 
-            Tool.browse(outputFile.toURI());
+            Tool.runProgram("google-chrome",
+                    "--allow-file-access-from-files",
+                    "--disable-web-security",
+                    outputFile.toURI().toString());
 
         } catch (FileNotFoundException e1) {
             e1.printStackTrace();

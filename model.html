@@ -1,3 +1,4 @@
+
 <html>
     <head>
         <title>analyse result</title>
@@ -18,25 +19,52 @@
                 document.getElementById("feedback_list").innerHTML += "<li>change state to " + newState + "</li>";
             }
 
-            function addNewWord(word, port) {
+            function addNewWord(word, possibleForms) {
                 if(currentState == 'none') {
                     return;
                 }
 
+                var formPicker = document.getElementById("form_picker");
+				formPicker.style.visibility = "visible";
+
+				formPicker.innerHTML = "<ul>";
+
+				for(var i = 0; i < possibleForms.length; i++) {
+				    formPicker.innerHTML += "<li onclick=\"sendAddWordRequest('" + word + "','" + possibleForms[i] + "')\">" + possibleForms[i] + "</li>";
+				}
+
+				formPicker.innerHTML += "</ul>";
+
+				var marginLeft = window.event.srcElement.offsetLeft + window.event.srcElement.offsetWidth;
+				if((marginLeft + formPicker.offsetWidth ) >= window.innerWidth) {
+				    marginLeft = window.event.srcElement.offsetLeft - formPicker.offsetWidth;
+				    marginLeft = (marginLeft >= 0) ? marginLeft : 0;
+				}
+				var marginTop = window.event.srcElement.offsetTop - formPicker.offsetHeight;
+				if(marginTop < 0) {
+				    marginTop = window.event.srcElement.offsetTop + window.event.srcElement.offsetHeight;
+				}
+				formPicker.style.left = marginLeft;
+				formPicker.style.top = marginTop;
+            }
+
+            function sendAddWordRequest(originalWord, form, state) {
+                var port = parseInt( document.getElementById("port").innerHTML );
+
                 var xmlhttp = new XMLHttpRequest();
-                xmlhttp.open("GET", "http://localhost:" + port + "/addnewword?word=" + word + "&state=" + currentState, true);
+                xmlhttp.open("GET", "http://localhost:" + port + "/addnewword?word=" + originalWord + "&form=" + form + "&state=" + currentState, true);
                 xmlhttp.send();
 
                 window.event.srcElement.style.color = "black";
 
                 var ems = document.getElementsByTagName("em");
                 for(var i = 0; i < ems.length; i++) {
-                    if(ems[i].innerHTML.toLowerCase() == word.toLowerCase()) {
+                    if(ems[i].innerHTML.toLowerCase() == originalWord.toLowerCase()) {
                         ems[i].style.color = "black";
                     }
                 }
 
-                document.getElementById("feedback_list").innerHTML += "<li>add "+ currentState + " word " + word + "</li>";
+                document.getElementById("feedback_list").innerHTML += "<li>add "+ currentState + " word " + form + "</li>";
             }
         ]]>
         </script>
@@ -66,6 +94,17 @@
 
             #main{
             }
+
+            .hidden {
+                display: none;
+            }
+
+            #form_picker {
+                background-color: grey;
+                color: white;
+                position: absolute;
+                visibility: hidden;
+            }
         ]]>
         </style>
     </head>
@@ -89,6 +128,12 @@
                     <li>(feedback)</li>
                 </ul>
             </div>
+
+            <div id="form_picker">
+
+            </div>
         </div>
+
+        <span id="port" class="hidden"></span>
     </body>
 </html>

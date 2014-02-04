@@ -1,5 +1,6 @@
 package me.horzwxy.app.wordbook.swing;
 
+import me.horzwxy.app.wordbook.model.AnalyzeResult;
 import me.horzwxy.app.wordbook.model.Word;
 import me.horzwxy.app.wordbook.model.WordState;
 import org.w3c.dom.Document;
@@ -42,7 +43,10 @@ public class AnalyseResultHTMLCreator {
         try {
             document = db.parse(new File("model.html"));
             NodeList divs = document.getElementsByTagName("div");
-            articleNode = getArticleNode(divs);
+            articleNode = getNodeById(divs, "article");
+            NodeList spans = document.getElementsByTagName("span");
+            Node portNode = getNodeById(spans, "port");
+            portNode.appendChild(document.createTextNode(port + ""));
         } catch (SAXException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -50,13 +54,13 @@ public class AnalyseResultHTMLCreator {
         }
     }
 
-    private Node getArticleNode(NodeList divs) {
+    private Node getNodeById(NodeList divs, String id) {
         for(int i = 0; i < divs.getLength(); i++) {
             for(int j = 0; j < divs.item(i).getAttributes().getLength(); j++) {
                 String attrName = divs.item(i).getAttributes().item(j).getNodeName();
                 String attrValue = divs.item(i).getAttributes().item(j).getNodeValue();
 
-                if(attrName.equals("id") && attrValue.equals("article")) {
+                if(attrName.equals("id") && attrValue.equals(id)) {
                     return divs.item(i);
                 }
             }
@@ -65,8 +69,8 @@ public class AnalyseResultHTMLCreator {
         return null;
     }
 
-    public void addSentence(String sentence, List<Word> emphasizedWords) {
-        Node sentenceNode = createSentenceNode(sentence, emphasizedWords);
+    public void addSentence(String sentence, List<Word> emphasizedWords, List<AnalyzeResult> results) {
+        Node sentenceNode = createSentenceNode(sentence, emphasizedWords, results);
         articleNode.appendChild(sentenceNode);
     }
 
@@ -95,7 +99,7 @@ public class AnalyseResultHTMLCreator {
         }
     }
 
-    private Node createSentenceNode(String sentence, List<Word> emphasizedWords) {
+    private Node createSentenceNode(String sentence, List<Word> emphasizedWords, List<AnalyzeResult> results) {
         Element sentenceNode = document.createElement("p");
         String[] words = sentence.split("[ ,\"]");
         for(String word : words) {
@@ -113,7 +117,22 @@ public class AnalyseResultHTMLCreator {
                 else if(wordInstance.getState().equals(WordState.UNFAMILIAR)) {
                     element.setAttribute("style", "color:orange");
                 }
-                element.setAttribute("onclick", "addNewWord(\"" + word + "\", " + port + ")");
+
+                AnalyzeResult analyzeResult = null;
+                for(AnalyzeResult result : results) {
+                    if(result.getWord() == wordInstance) {
+                        analyzeResult = result;
+                        break;
+                    }
+                }
+
+                String formsString = "[";
+                for(String form : analyzeResult.getPossibleForms()) {
+                    formsString += "'" + form + "',";
+                }
+                formsString = formsString.substring(0, formsString.length() - 1) + "]";
+
+                element.setAttribute("onclick", "addNewWord(\"" + word + "\"," + formsString + ")");
                 sentenceNode.appendChild(element);
                 sentenceNode.appendChild(document.createTextNode(" "));
             }
