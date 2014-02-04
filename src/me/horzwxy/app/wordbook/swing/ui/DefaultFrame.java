@@ -114,6 +114,13 @@ public class DefaultFrame extends FrameModel {
             }
         });
         mainPanel.add(sentenceSubmit);
+        JButton sentenceRemove = new ActionButton("remove", new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                swingController.deleteSentence();
+            }
+        });
+        mainPanel.add(sentenceRemove);
 
         Container contentPane = this.getContentPane();
         // BorderLayout is the default LayoutManager of JFrame's content pane

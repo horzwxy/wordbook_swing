@@ -46,6 +46,8 @@ public abstract class SwingController {
 
     public abstract void updateSentence(String newSentence);
 
+    public abstract void deleteSentence();
+
     /**
      * Display log on the frame.
      * @param log

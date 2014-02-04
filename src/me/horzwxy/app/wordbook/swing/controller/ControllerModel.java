@@ -82,7 +82,10 @@ class DefaultController extends ControllerModel {
             DefaultController.this.updateSentence(newSentence);
         }
 
-
+        @Override
+        public void deleteSentence() {
+            DefaultController.this.deleteSentence();
+        }
     };
     private final HttpHandler addWordHandler = new HttpHandler() {
         @Override
@@ -290,6 +293,17 @@ class DefaultController extends ControllerModel {
 
         public int getOriginalSentenceHash() {
             return originalSentenceHash;
+        }
+    }
+
+    private void deleteSentence() {
+        Word word = updateSentenceData.getWord();
+        for(int i = 0; i < word.getSentences().size(); i++) {
+            if(word.getSentences().get(i).hashCode() == updateSentenceData.getOriginalSentenceHash()) {
+                word.getSentences().remove(i);
+                swingController.displayLog("a sentence has removed");
+                return;
+            }
         }
     }
 }
