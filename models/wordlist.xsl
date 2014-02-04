@@ -13,12 +13,8 @@
                 </style>
                 <script type="text/javascript">
                     <![CDATA[
-                        function displaySentence() {
+                        function displaySentence(hash, word) {
                             var port = document.getElementById("port").innerHTML;
-                            var e = window.event.srcElement.parentNode;
-                            e.style = "color:red";
-                            var hash = e.childNodes[2].innerHTML;
-                            var word = e.childNodes[3].innerHTML;
                             var xmlhttp = new XMLHttpRequest();
                             xmlhttp.open("GET", "http://localhost:" + port + "/updatesentence?word=" + word + "&hash=" + hash, true);
                             xmlhttp.send();
@@ -37,15 +33,9 @@
                                 </div>
                                 <ul class="sentences">
                                     <xsl:for-each select="sentence">
-                                        <li class="sentence_item" onclick="displaySentence()">
+                                        <li class="sentence_item" onclick="displaySentence({@hash}, '{../content}')">
                                             <span class="sentence" >
-                                                <xsl:value-of select="sentenceContent"/>
-                                            </span>
-                                            <span class="hidden">
-                                                <xsl:value-of select="sentenceHash"/>
-                                            </span>
-                                            <span class="hidden">
-                                                <xsl:value-of select="../content"/>
+                                                <xsl:value-of select="."/>
                                             </span>
                                         </li>
                                     </xsl:for-each>

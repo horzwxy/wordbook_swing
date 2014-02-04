@@ -63,13 +63,9 @@ public class XMLCreator {
 
                 if(state != WordState.FAMILIAR) {
                     for(String sentence : word.getSentences()) {
-                        Node sentenceNode = document.createElement("sentence");
-                        Node sentenceContentNode = document.createElement("sentenceContent");
-                        sentenceContentNode.appendChild(document.createTextNode(sentence));
-                        sentenceNode.appendChild(sentenceContentNode);
-                        Node sentenceHashNode = document.createElement("sentenceHash");
-                        sentenceHashNode.appendChild(document.createTextNode(sentence.hashCode() + ""));
-                        sentenceNode.appendChild(sentenceHashNode);
+                        Element sentenceNode = document.createElement("sentence");
+                        sentenceNode.appendChild(document.createTextNode(sentence));
+                        sentenceNode.setAttribute("hash", sentence.hashCode() + "");
                         wordNode.appendChild(sentenceNode);
                     }
                 }

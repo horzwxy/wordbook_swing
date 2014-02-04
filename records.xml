@@ -1,33 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?xml-stylesheet type="text/xsl" href="/home/horz/workspace-java/wordbook_swing/models/wordlist.xsl"?><wordlist port="7962">
-<word_sublist type="UNRECOGNIZED"/>
-<word_sublist type="UNTRACKED"/>
-<word_sublist type="FAMILIAR">
-<word>
-<content>commercial-free</content>
-</word>
-<word>
-<content>Korean</content>
-</word>
-<word>
-<content>high-ranking</content>
-</word>
-<word>
-<content>privacy</content>
-</word>
-<word>
-<content>UNIDENTIFIED</content>
-</word>
-<word>
-<content>terrorist</content>
-</word>
-<word>
-<content>Korea</content>
-</word>
-<word>
-<content>info</content>
-</word>
-</word_sublist>
 <word_sublist type="IGNORED">
 <word>
 <content>NSA</content>
@@ -60,91 +32,80 @@
 <content>Edward</content>
 </word>
 </word_sublist>
+<word_sublist type="FAMILIAR">
+<word>
+<content>commercial-free</content>
+</word>
+<word>
+<content>Korean</content>
+</word>
+<word>
+<content>high-ranking</content>
+</word>
+<word>
+<content>privacy</content>
+</word>
+<word>
+<content>UNIDENTIFIED</content>
+</word>
+<word>
+<content>terrorist</content>
+</word>
+<word>
+<content>Korea</content>
+</word>
+<word>
+<content>info</content>
+</word>
+</word_sublist>
+<word_sublist type="UNRECOGNIZED"/>
 <word_sublist type="UNFAMILIAR">
 <word>
 <content>rein</content>
-<sentence>
-<sentenceContent> After months of spirited debate sparked by the explosive revelations of Edward Snowden, the president told Americans he`ll rein in NSA surveillance, but only to a point.</sentenceContent>
-<sentenceHash>276044607</sentenceHash>
-</sentence>
+<sentence hash="276044607"> After months of spirited debate sparked by the explosive revelations of Edward Snowden, the president told Americans he`ll rein in NSA surveillance, but only to a point.</sentence>
 </word>
 <word>
 <content>revelations</content>
-<sentence>
-<sentenceContent> After months of spirited debate sparked by the explosive revelations of Edward Snowden, the president told Americans he`ll rein in NSA surveillance, but only to a point.</sentenceContent>
-<sentenceHash>276044607</sentenceHash>
-</sentence>
+<sentence hash="276044607"> After months of spirited debate sparked by the explosive revelations of Edward Snowden, the president told Americans he`ll rein in NSA surveillance, but only to a point.</sentence>
 </word>
 <word>
 <content>revealed</content>
-<sentence>
-<sentenceContent> He`s a former NSA worker who revealed secret information about the agency, that it collects Americans` phone records and email info, among other data.</sentenceContent>
-<sentenceHash>-1957131314</sentenceHash>
-</sentence>
+<sentence hash="-1957131314"> He`s a former NSA worker who revealed secret information about the agency, that it collects Americans` phone records and email info, among other data.</sentence>
 </word>
 <word>
 <content>constraints</content>
-<sentence>
-<sentenceContent> The power of new technologies means that there are fewer and fewer technical constraints on what we can do.</sentenceContent>
-<sentenceHash>467461216</sentenceHash>
-</sentence>
+<sentence hash="467461216"> The power of new technologies means that there are fewer and fewer technical constraints on what we can do.</sentence>
 </word>
 <word>
 <content>obligation</content>
-<sentence>
-<sentenceContent> That places a special obligation on us to ask tough questions about what we should do.</sentenceContent>
-<sentenceHash>-1809444607</sentenceHash>
-</sentence>
+<sentence hash="-1809444607"> That places a special obligation on us to ask tough questions about what we should do.</sentence>
 </word>
 <word>
 <content>devout</content>
-<sentence>
-<sentenceContent> His mother thinks it might be because Bae is a devout Christian.</sentenceContent>
-<sentenceHash>1997631914</sentenceHash>
-</sentence>
+<sentence hash="1997631914"> His mother thinks it might be because Bae is a devout Christian.</sentence>
 </word>
 <word>
 <content>surveillance</content>
-<sentence>
-<sentenceContent> The president argues that much of the surveillance is just too important to scrap altogether.</sentenceContent>
-<sentenceHash>-357222454</sentenceHash>
-</sentence>
-<sentence>
-<sentenceContent> After months of spirited debate sparked by the explosive revelations of Edward Snowden, the president told Americans he`ll rein in NSA surveillance, but only to a point.</sentenceContent>
-<sentenceHash>276044607</sentenceHash>
-</sentence>
-<sentence>
-<sentenceContent> The most significant changes affect the most controversial surveillance program - the bulk collection of Americans` phone records, effective immediately, the NSA will need judicial approval before searching the data.</sentenceContent>
-<sentenceHash>-792973043</sentenceHash>
-</sentence>
+<sentence hash="-357222454"> The president argues that much of the surveillance is just too important to scrap altogether.</sentence>
+<sentence hash="276044607"> After months of spirited debate sparked by the explosive revelations of Edward Snowden, the president told Americans he`ll rein in NSA surveillance, but only to a point.</sentence>
+<sentence hash="-792973043"> The most significant changes affect the most controversial surveillance program - the bulk collection of Americans` phone records, effective immediately, the NSA will need judicial approval before searching the data.</sentence>
 </word>
 <word>
 <content>plead</content>
-<sentence>
-<sentenceContent>"I would like to plead with the U.</sentenceContent>
-<sentenceHash>1909894158</sentenceHash>
-</sentence>
+<sentence hash="1909894158">"I would like to plead with the U.</sentence>
 </word>
 <word>
 <content>rumors</content>
-<sentence>
-<sentenceContent> government, press and my family to stop worsening my situation by making wild rumors against North Korea and releasing materials related to me, which are not based on the facts.</sentenceContent>
-<sentenceHash>1057659029</sentenceHash>
-</sentence>
+<sentence hash="1057659029"> government, press and my family to stop worsening my situation by making wild rumors against North Korea and releasing materials related to me, which are not based on the facts.</sentence>
 </word>
 <word>
 <content>worsening</content>
-<sentence>
-<sentenceContent> government, press and my family to stop worsening my situation by making wild rumors against North Korea and releasing materials related to me, which are not based on the facts.</sentenceContent>
-<sentenceHash>1057659029</sentenceHash>
-</sentence>
+<sentence hash="1057659029"> government, press and my family to stop worsening my situation by making wild rumors against North Korea and releasing materials related to me, which are not based on the facts.</sentence>
 </word>
 <word>
 <content>atheist</content>
-<sentence>
-<sentenceContent> And that he didn`t understand the rules of North Korea, an atheist country.</sentenceContent>
-<sentenceHash>-1512642361</sentenceHash>
-</sentence>
+<sentence hash="-1512642361"> And that he didn`t understand the rules of North Korea, an atheist country.</sentence>
 </word>
 </word_sublist>
+<word_sublist type="UNTRACKED"/>
 </wordlist>
