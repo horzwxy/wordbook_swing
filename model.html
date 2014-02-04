@@ -27,7 +27,7 @@
                 var formPicker = document.getElementById("form_picker");
 				formPicker.style.visibility = "visible";
 
-				formPicker.innerHTML = "<ul>";
+				formPicker.innerHTML = "<p>" + currentState + "</p><ul>";
 
 				for(var i = 0; i < possibleForms.length; i++) {
 				    formPicker.innerHTML += "<li onclick=\"sendAddWordRequest('" + word + "','" + possibleForms[i] + "')\">" + possibleForms[i] + "</li>";
