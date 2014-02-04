@@ -155,6 +155,18 @@ public class Tool {
         }
     }
 
+    public static void runProgram(String programName, String... args) {
+        String[] wholeArgs = new String[args.length + 1];
+        wholeArgs[0] = programName;
+        for(int i = 0; i < args.length; i++) {
+            wholeArgs[i + 1] = args[i];
+        }
+        try {
+            Runtime.getRuntime().exec(wholeArgs);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     private static boolean runCommand(String command, String args, String file) {
 

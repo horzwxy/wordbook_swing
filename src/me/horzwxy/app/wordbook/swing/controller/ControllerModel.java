@@ -226,7 +226,10 @@ class DefaultController extends ControllerModel {
         attrMap.put("port", localServer.getAddress().getPort() + "");
         XMLCreator.generateWordList(wordListMap, attrMap, outputFile);
 
-        Tool.browse(outputFile.toURI());
+        Tool.runProgram("google-chrome",
+                "--allow-file-access-from-files",
+                "--disable-web-security",
+                outputFile.toURI().toString());
     }
 
     private void updateRecords() {
