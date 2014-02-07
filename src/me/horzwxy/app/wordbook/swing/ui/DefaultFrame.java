@@ -83,6 +83,12 @@ public class DefaultFrame extends FrameModel {
                 swingController.updateRecords();
             }
         });
+        JButton markAndUpload = new ActionButton("mark & upload", new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                swingController.markAndUpload(selectedFile);
+            }
+        });
 
         controlPanel.add(portInput);
         controlPanel.add(portSubmit);
@@ -91,6 +97,7 @@ public class DefaultFrame extends FrameModel {
         controlPanel.add(analyse);
         controlPanel.add(displayStorage);
         controlPanel.add(updateStorage);
+        controlPanel.add(markAndUpload);
 
         feedbackPane = new JTextPane();
         feedbackPane.setText("Ready.\t\t");

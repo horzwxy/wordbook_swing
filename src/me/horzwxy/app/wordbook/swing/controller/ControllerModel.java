@@ -14,6 +14,7 @@ import me.horzwxy.app.wordbook.network.YinxiangProxy;
 import me.horzwxy.app.wordbook.swing.AnalyseResultHTMLCreator;
 import me.horzwxy.app.wordbook.swing.XMLCreator;
 
+import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.*;
 import java.net.InetSocketAddress;
 import java.util.*;
@@ -83,6 +84,11 @@ class DefaultController extends ControllerModel {
         @Override
         public void deleteSentence() {
             DefaultController.this.deleteSentence();
+        }
+
+        @Override
+        public void markAndUpload(File file) {
+            DefaultController.this.markAndUpload(file);
         }
     };
     private final HttpHandler addWordHandler = new HttpHandler() {
@@ -309,6 +315,16 @@ class DefaultController extends ControllerModel {
                 swingController.displayLog("a sentence has removed");
                 return;
             }
+        }
+    }
+
+    private void markAndUpload(File file) {
+        String noteContent = XMLCreator.generateMarkArticle(wordLibrary, file);
+        if(((YinxiangProxy)wordbookProxy).uploadMarkedArticle(noteContent)) {
+            swingController.displayLog("uploading article succeeded.");
+        }
+        else {
+            swingController.displayLog("failed to upload article.");
         }
     }
 }

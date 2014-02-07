@@ -5,7 +5,8 @@
         
 <title>analyse result</title>
         
-<script type="text/javascript">
+<script src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
         
             currentState = "none";
 
@@ -19,11 +20,22 @@
                     }
                 }
 
-                document.getElementById("feedback_list").innerHTML += "<li>change state to " + newState + "</li>";
             }
 
             function addNewWord(word, possibleForms) {
+                document.getElementById("reference").innerHTML = "loading...";
+                var margintop = window.event.srcElement.offsetTop;
+                document.getElementById("reference").style.top = margintop;
+
                 if(currentState == 'none') {
+                    jQuery.ajax({
+                        url: "http://www.iciba.com/" + word,
+                        type : "GET",
+                        dataType : "html",
+                        success: function(data) {
+                            $("#reference").html( jQuery(data).find("#dict_tab_101").html() );
+                        }
+                    });
                     return;
                 }
 
@@ -67,7 +79,6 @@
                     }
                 }
 
-                document.getElementById("feedback_list").innerHTML += "<li>add "+ currentState + " word " + form + "</li>";
             }
         
         </script>
@@ -85,15 +96,16 @@
                 width:100%;
             }
 
-            #feedback{
-                float:left;
-                width:15%;
+            #reference{
+                width:30%;
+                position:absolute;
+                display:inline-block;
             }
 
             #article{
                 margin-top:50px;
-                float:left;
-                width:80%;
+                width:65%;
+                display:inline-block;
             }
 
             #main{
@@ -135,292 +147,221 @@
 
             
 <p>CARL AZUZ  CNN ANCHOR. </p>
-<p> Welcome to CNN STUDENT NEWS. </p>
-<p> Your commercial-free source for news for the classroom. </p>
-<p> I`m Carl Azuz. </p>
-<p> And the first story we are covering today involves a man named Kenneth Bae. </p>
-<p> He is a U. </p>
+<p> Technology is the theme this Wednesday on CNN STUDENT NEWS. </p>
+<p> Thank you for watching. </p>
+<p> We`ve got reports involving Internet connectivity and Internet <em onclick="addNewWord(&quot;behemoth&quot;,['behemoth'])" style="color:blue">behemoth</em> safety for travelers. </p>
+<p> We want to get to it as soon as we can dig out from all of this snow. </p>
+<p> Well  not in Atlanta. </p>
+<p> But the U. </p>
 <p>S. </p>
-<p> citizen. </p>
-<p> In 2012  he was arrested in North Korea where he gave tours to people who wanted to visit. </p>
-<p> Bae was sentenced to 15 years in the North Korean labor camp. </p>
-<p> We don`t know exactly why. </p>
-<p> North Korea says he was trying to take down the country`s government. </p>
-<p> His mother thinks it might be because Bae is a <em onclick="addNewWord(&quot;devout&quot;,['devout'])" style="color:orange">devout</em> Christian. </p>
-<p> And that he didn`t understand the rules of North Korea  an <em onclick="addNewWord(&quot;atheist&quot;,['atheist'])" style="color:orange">atheist</em> country. </p>
-<p> On Monday  Bae gave a statement that said he committed a serious crime against North Korea. </p>
-<p>. </p>
-<p>(BEGIN VIDEO CLIP). </p>
-<p>. </p>
-<p> I would like to <em onclick="addNewWord(&quot;plead&quot;,['plead'])" style="color:orange">plead</em> with the U. </p>
-<p>S. </p>
-<p> government  press and my family to stop <em onclick="addNewWord(&quot;worsening&quot;,['worsening','worsen','worsene'])" style="color:orange">worsening</em> my situation by making wild <em onclick="addNewWord(&quot;rumors&quot;,['rumors','rumor'])" style="color:orange">rumors</em> against North Korea and releasing materials related to me  which are not based on the facts. </p>
-<p>. </p>
-<p>(END VIDEO CLIP). </p>
-<p>. </p>
-<p>AZUZ. </p>
-<p> We don`t know if Bae was speaking sincerely  though. </p>
-<p> North Korea has forced prisoners to make statements like that in the past. </p>
-<p>. </p>
-<p>UNIDENTIFIED FEMALE. </p>
-<p> See if you can I. </p>
-<p>D. </p>
-<p> me. </p>
-<p> I`m a U. </p>
-<p>S. </p>
-<p> government agency that was established in 1952. </p>
-<p> My director is always a high-ranking military officer. </p>
-<p> I`m America`s most secret intelligence agency. </p>
-<p> I`m the National Security Agency  responsible for collecting foreign information and keeping U. </p>
-<p>S. </p>
-<p> information secure. </p>
-<p>. </p>
-<p>AZUZ. </p>
-<p> We`ve talked about Edward Snowden. </p>
-<p> He`s a former NSA worker who <em onclick="addNewWord(&quot;revealed&quot;,['revealed','reveal','reveale'])" style="color:orange">revealed</em> secret information about the agency  that it collects Americans` phone records and email info  among other data. </p>
-<p> Some believe  this helps keep the country safer and monitor potential terrorist activity. </p>
-<p> Other see it as a significant invasion of Americans` privacy. </p>
-<p> Well  President Obama recently announced that he`d made major changes in the way the NSA gathers information. </p>
-<p> But he`s not stopping the agency from gathering it. </p>
-<p>. </p>
-<p>(BEGIN VIDEO CLIP). </p>
-<p>. </p>
-<p>CROWD. </p>
-<p> No secret (inaudible). </p>
-<p>. </p>
-<p>UNIDENTIFIED MALE. </p>
-<p> After months of spirited debate sparked by the explosive <em onclick="addNewWord(&quot;revelations&quot;,['revelations','revelation'])" style="color:orange">revelations</em> of Edward Snowden  the president told Americans he`ll <em onclick="addNewWord(&quot;rein&quot;,['rein'])" style="color:orange">rein</em> in NSA <em onclick="addNewWord(&quot;surveillance&quot;,['surveillance'])" style="color:orange">surveillance</em>  but only to a point. </p>
-<p>. </p>
-<p>BARACK OBAMA  PRESIDENT OF THE UNITED STATES OF AMERICA. </p>
-<p> The power of new technologies means that there are fewer and fewer technical <em onclick="addNewWord(&quot;constraints&quot;,['constraints','constraint'])" style="color:orange">constraints</em> on what we can do. </p>
-<p> That places a special <em onclick="addNewWord(&quot;obligation&quot;,['obligation'])" style="color:orange">obligation</em> on us to ask tough questions about what we should do. </p>
-<p>. </p>
-<p>UNIDENTIFIED MALE. </p>
-<p> The most significant changes affect the most controversial <em onclick="addNewWord(&quot;surveillance&quot;,['surveillance'])" style="color:orange">surveillance</em> program - the bulk collection of Americans` phone records  effective immediately  the NSA will need <em onclick="addNewWord(&quot;judicial&quot;,['judicial'])" style="color:orange">judicial</em> approval before searching the data. </p>
-<p> The president asked Congress to create a panel of public advocates to counter government search requests. </p>
-<p> And he asked the <em onclick="addNewWord(&quot;Attorney&quot;,['attorney'])" style="color:red">Attorney</em> General and intelligence committee to explore moving the data out of NSA control. </p>
-<p> But the bottom line  the program <em onclick="addNewWord(&quot;won`t&quot;,['won't','wo'])" style="color:red">won`t</em> necessarily end. </p>
-<p>. </p>
-<p>CROWD. </p>
-<p> They say (INAUDIBLE). </p>
-<p>. </p>
-<p>CROWD. </p>
-<p> We say (INAUDIBLE). </p>
-<p>. </p>
-<p>UNIDENTIFIED MALE. </p>
-<p> For the NSA`s most <em onclick="addNewWord(&quot;ardent&quot;,['ardent'])" style="color:red">ardent</em> critics that would be a glaring omission. </p>
-<p>. </p>
-<p>SEN. </p>
-<p> 
-<em onclick="addNewWord(&quot;RAND&quot;,['rand'])" style="color:red">RAND</em> PAUL. </p>
-<p> I didn`t hear any lessening of the spying on Americans or collecting records of Americans. </p>
-<p> I heard that trust me  I`m going to put some more safeguards in place  but I`m going to keep right on collecting every American`s records. </p>
-<p>. </p>
-<p>UNIDENTIFIED MALE. </p>
-<p> The president argues that much of the <em onclick="addNewWord(&quot;surveillance&quot;,['surveillance'])" style="color:orange">surveillance</em> is just too important to <em onclick="addNewWord(&quot;scrap&quot;,['scrap'])" style="color:red">scrap</em> altogether. </p>
-<p>. </p>
-<p>OBAMA. </p>
-<p> Not only because I felt that they made us more secure  but also because nothing in that initial review and nothing that I`ve learned since indicated that our intelligence community has <em onclick="addNewWord(&quot;sought&quot;,['sought'])" style="color:red">sought</em> to <em onclick="addNewWord(&quot;violate&quot;,['violate'])" style="color:orange">violate</em> the law. </p>
-<p>. </p>
-<p>UNIDENTIFIED MALE. </p>
-<p> So  do any of the changes make us less safe. </p>
-<p>. </p>
-<p>PETER <em onclick="addNewWord(&quot;BERGEN&quot;,['bergen'])" style="color:red">BERGEN</em>  CNN <em onclick="addNewWord(&quot;TERRORISM&quot;,['terrorism'])" style="color:red">TERRORISM</em> ANALYST. </p>
-<p> If these programs were stopping huge terrorist attacks  you know  maybe they would - should be more  you know  there should be more concern. </p>
-<p> But the fact is that these programs are not. </p>
-<p>. </p>
-<p>(END VIDEO CLIP). </p>
-<p>. </p>
-<p>AZUZ. </p>
-<p> Yesterday honored American civil rights leader Dr. </p>
-<p> 
-<em onclick="addNewWord(&quot;Martin&quot;,['martin'])" style="color:red">Martin</em> <em onclick="addNewWord(&quot;Luther&quot;,['luther','luth','luthe'])" style="color:red">Luther</em> King Jr. </p>
-<p> It became a federal holiday in 1983  and 11 years later  it became a national day of service  a one of a kind event. </p>
-<p> Dr. </p>
-<p> King once said  everybody can be great  because everybody can serve. </p>
-<p>. </p>
-<p>President Obama <em onclick="addNewWord(&quot;participated&quot;,['participated','participat','participate'])" style="color:red">participated</em> in the service project in Washington  D. </p>
-<p>C. </p>
-<p> You see him here <em onclick="addNewWord(&quot;volunteering&quot;,['volunteering','volunteer','volunteere'])" style="color:red">volunteering</em> at D. </p>
-<p>C. </p>
-<p> central kitchen  in organization that aims to reduce hunger and poverty. </p>
-<p> Also  in the U. </p>
-<p>S. </p>
-<p> capital  the traditional <em onclick="addNewWord(&quot;wreath&quot;,['wreath'])" style="color:red">wreath</em> laying at the King Memorial. </p>
-<p> The National Park Service says millions visited the first full year it was open in 2012  and millions visited last year on the 50th <em onclick="addNewWord(&quot;anniversary&quot;,['anniversary'])" style="color:red">anniversary</em> of Dr. </p>
-<p> King`s march on Washington. </p>
-<p> 
-<em onclick="addNewWord(&quot;Brian&quot;,['brian'])" style="color:red">Brian</em> <em onclick="addNewWord(&quot;Todd&quot;,['todd'])" style="color:red">Todd</em> looks back at that event. </p>
+<p> Midwest and Northeast are getting are one-two punch this week. </p>
+<p> Sounds familiar. </p>
+<p> They`ve had a <em onclick="addNewWord(&quot;wicked&quot;,['wicked','wick','wicke'])" style="color:blue">wicked</em> winter. </p>
+<p> This time around  some Northeast streets could be under ice. </p>
+<p> Last year  the Farmer`s Almanac had predicted a bitterly cold winter for the region  and a major storm right around the time of the Super Bowl. </p>
+<p> Looks like they`ve got it right. </p>
+<p> Preparations for it might have taken a <em onclick="addNewWord(&quot;toll&quot;,['toll'])" style="color:blue">toll</em> on other parts of the Northeast. </p>
 <p>. </p>
 <p>(BEGIN VIDEOTAPE). </p>
 <p>. </p>
-<p>
-<em onclick="addNewWord(&quot;BRIAN&quot;,['brian'])" style="color:red">BRIAN</em> <em onclick="addNewWord(&quot;TODD&quot;,['todd'])" style="color:red">TODD</em>  CNN CORRESPONDENT. </p>
-<p> Many of them were so young that summer  <em onclick="addNewWord(&quot;Martin&quot;,['martin'])" style="color:red">Martin</em> <em onclick="addNewWord(&quot;Luther&quot;,['luther','luth','luthe'])" style="color:red">Luther</em> King Jr. </p>
-<p> himself only 34  but they led hundreds of thousands on the march to the nation`s capital that would <em onclick="addNewWord(&quot;pivot&quot;,['pivot'])" style="color:red">pivot</em> the country toward <em onclick="addNewWord(&quot;irreversible&quot;,['irreversible'])" style="color:red">irreversible</em> change. </p>
-<p>  Time  magazine captures that moment in a <em onclick="addNewWord(&quot;tribute&quot;,['tribute'])" style="color:red">tribute</em> to King. </p>
-<p> Time editor <em onclick="addNewWord(&quot;Radhika&quot;,['radhika'])" style="color:red">Radhika</em> <em onclick="addNewWord(&quot;Jones&quot;,['jones','jone','jon'])" style="color:red">Jones</em> says the use of the key players then was a <em onclick="addNewWord(&quot;crucial&quot;,['crucial'])" style="color:red">crucial</em> component in publishing this <em onclick="addNewWord(&quot;tribute&quot;,['tribute'])" style="color:red">tribute</em> now. </p>
-<p>. </p>
-<p>
-<em onclick="addNewWord(&quot;RADHIKA&quot;,['radhika'])" style="color:red">RADHIKA</em> <em onclick="addNewWord(&quot;JONES&quot;,['jones','jone','jon'])" style="color:red">JONES</em>  EXEC. </p>
-<p> EDITOR  TIME MAGAZINE. </p>
-<p> They are still with us. </p>
-<p> They can tell their own stories  and it was so important to us to talk to them directly and here  there are memories of that day. </p>
-<p>. </p>
-<p>TODD. </p>
-<p> The memories come from people like <em onclick="addNewWord(&quot;Clarence&quot;,['clarence'])" style="color:red">Clarence</em> <em onclick="addNewWord(&quot;Jones&quot;,['jones','jone','jon'])" style="color:red">Jones</em>  King`s speechwriter. </p>
-<p>. </p>
-<p>In a <em onclick="addNewWord(&quot;testimonial&quot;,['testimonial'])" style="color:red">testimonial</em> on  Time`s  <em onclick="addNewWord(&quot;website&quot;,['website'])" style="color:red">website</em>  he describes the moment King grabbed his audience. </p>
-<p>. </p>
-<p>
-<em onclick="addNewWord(&quot;CLARENCE&quot;,['clarence'])" style="color:red">CLARENCE</em> B. </p>
-<p> 
-<em onclick="addNewWord(&quot;JONES&quot;,['jones','jone','jon'])" style="color:red">JONES</em>  <em onclick="addNewWord(&quot;MARTIN&quot;,['martin'])" style="color:red">MARTIN</em> <em onclick="addNewWord(&quot;LUTHER&quot;,['luther','luth','luthe'])" style="color:red">LUTHER</em> KING JR. </p>
-<p>
-<em onclick="addNewWord(&quot;`S&quot;,[''s',''])" style="color:red">`S</em> SPEECHWRITER. </p>
-<p> I`m listening to his speech  and as I`m listening  I see that he`s really - <em onclick="addNewWord(&quot;Mahalia&quot;,['mahalia'])" style="color:red">Mahalia</em> <em onclick="addNewWord(&quot;Jackson&quot;,['jackson'])" style="color:red">Jackson</em> interrupted him while he`s speaking. </p>
-<p> Tell them about the dream  Martin. </p>
-<p> Tell them about the dream. </p>
-<p> Body language changed. </p>
-<p> And he changed what I call the <em onclick="addNewWord(&quot;Baptist&quot;,['baptist'])" style="color:red">Baptist</em> <em onclick="addNewWord(&quot;preacher`s&quot;,['preacher's','preacher','preach','preache'])" style="color:red">preacher`s</em> test task (ph). </p>
-<p> And I say to the person standing next to me  whoever that was  I said these people don`t know it  but they are about ready to go to church. </p>
-<p>. </p>
-<p>TODD. </p>
-<p> When King`s body language changed  so did the speech and with it  a movement. </p>
-<p>. </p>
-<p>
-<em onclick="addNewWord(&quot;MARTIN&quot;,['martin'])" style="color:red">MARTIN</em> <em onclick="addNewWord(&quot;LUTHER&quot;,['luther','luth','luthe'])" style="color:red">LUTHER</em> KING JR. </p>
-<p>. </p>
-<p> I have a dream that one day this nation will rise up  live up the true meaning of its dream. </p>
-<p> We hold this truth to be self- evident that all men are created equal. </p>
-<p>. </p>
-<p>(END VIDEOTAPE). </p>
-<p>. </p>
-<p>AZUZ. </p>
-<p> Time for the CNN STUDENT NEWS  Roll Call  and this one  for the birds. </p>
-<p> We mean the Eagles of <em onclick="addNewWord(&quot;Edgartown&quot;,['edgartown'])" style="color:red">Edgartown</em> School. </p>
-<p> They are <em onclick="addNewWord(&quot;parched&quot;,['parched','parch','parche'])" style="color:red">parched</em> in <em onclick="addNewWord(&quot;Edgartown&quot;,['edgartown'])" style="color:red">Edgartown</em>  Massachusetts. </p>
-<p> We mean the Silver Hawks of <em onclick="addNewWord(&quot;Lincoln&quot;,['lincoln'])" style="color:red">Lincoln</em> Southwest High School. </p>
-<p> They are taking flight from <em onclick="addNewWord(&quot;Lincoln&quot;,['lincoln'])" style="color:red">Lincoln</em>  Nebraska. </p>
-<p> And we mean the Red Hawks of Liberty High School. </p>
-<p> They are <em onclick="addNewWord(&quot;soaring&quot;,['soaring','soar','soare'])" style="color:red">soaring</em> over <em onclick="addNewWord(&quot;Frisco&quot;,['frisco'])" style="color:red">Frisco</em>  Texas. </p>
-<p>. </p>
-<p>Germany  Russia  Canada  <em onclick="addNewWord(&quot;Switzerland&quot;,['switzerland'])" style="color:red">Switzerland</em>  all countries associated with winter sports  all countries that have done well in the Olympics <em onclick="addNewWord(&quot;bobsled&quot;,['bobsled','bobsl','bobsle'])" style="color:red">bobsled</em> competition. </p>
-<p> How about Jamaica. </p>
-<p> The <em onclick="addNewWord(&quot;Caribbean&quot;,['caribbean'])" style="color:red">Caribbean</em> country just got a word Saturday that it has qualified for next month Winter Olympics in Russia. </p>
-<p> But that was just one of the challenges the storied team faced. </p>
-<p>. </p>
-<p>(BEGIN VIDEO CLIP). </p>
+<p>UNIDENTIFIED MALE. </p>
+<p> Millions along the East Coast are digging out of Monday`s record breaking snowstorm. </p>
 <p>. </p>
 <p>UNIDENTIFIED MALE. </p>
-<p> Get up. </p>
-<p> It`s <em onclick="addNewWord(&quot;bobsled&quot;,['bobsled','bobsl','bobsle'])" style="color:red">bobsled</em> time. </p>
+<p> Snow is coming down faster than we can plough it. </p>
 <p>. </p>
 <p>UNIDENTIFIED MALE. </p>
-<p> For the first time in more than a decade  the biggest <em onclick="addNewWord(&quot;underdogs&quot;,['underdogs','underdog'])" style="color:red">underdogs</em> in <em onclick="addNewWord(&quot;bobsledding&quot;,['bobsledding','bobsledd','bobsledde','bobsled'])" style="color:red">bobsledding</em> had to fight the odds and qualify for the Olympic Games. </p>
-<p> But the <em onclick="addNewWord(&quot;Jamaican&quot;,['jamaican'])" style="color:red">Jamaican</em> <em onclick="addNewWord(&quot;bobsled&quot;,['bobsled','bobsl','bobsle'])" style="color:red">bobsled</em> team isn`t packing their bags just yet. </p>
-<p> The problem. </p>
-<p> They need a lot of money  fast. </p>
-<p>. </p>
-<p>
-<em onclick="addNewWord(&quot;WINSTON&quot;,['winston'])" style="color:red">WINSTON</em> <em onclick="addNewWord(&quot;WATTS&quot;,['watts','watt'])" style="color:red">WATTS</em>  TEAM CAPTAIN/PILOT. </p>
-<p> That`s why we are looking (INAUDIBLE) we can <em onclick="addNewWord(&quot;fulfill&quot;,['fulfill'])" style="color:red">fulfill</em> the dream. </p>
+<p> The winter storm transforming New York Central Park into a winter wonderland in just hours  setting a new daily record of eight inches. </p>
 <p>. </p>
 <p>UNIDENTIFIED MALE. </p>
-<p> The team needs to raise as much $80 000 to cover travel and equipment fees  so they`ve turned the <em onclick="addNewWord(&quot;fundraising&quot;,['fundraising','fundrais','fundraise'])" style="color:red">fundraising</em> <em onclick="addNewWord(&quot;websites&quot;,['websites','website','websit'])" style="color:red">websites</em> like <em onclick="addNewWord(&quot;Crowdtilt&quot;,['crowdtilt'])" style="color:red">Crowdtilt</em> to try and make it happen. </p>
-<p> In just under 24 hours  the team raised more than $16 000 and <em onclick="addNewWord(&quot;donations&quot;,['donations','donation'])" style="color:red">donations</em> continue to poor in. </p>
-<p>. </p>
-<p>
-<em onclick="addNewWord(&quot;MARVIN&quot;,['marvin'])" style="color:red">MARVIN</em> <em onclick="addNewWord(&quot;DIXON&quot;,['dixon'])" style="color:red">DIXON</em>  BRAKEMAN. </p>
-<p> We`re Jamaican. </p>
-<p> We believe  you know  it`s going to (inaudible). </p>
+<p> I think I`m ready for the summer. </p>
 <p>. </p>
 <p>UNIDENTIFIED MALE. </p>
-<p> We are not <em onclick="addNewWord(&quot;bobsledding&quot;,['bobsledding','bobsledd','bobsledde','bobsled'])" style="color:red">bobsledding</em> yet. </p>
-<p>. </p>
-<p>UNIDENTIFIED MALE. </p>
-<p> Oh  yes  we are. </p>
-<p>. </p>
-<p>UNIDENTIFIED MALE. </p>
-<p> The <em onclick="addNewWord(&quot;Jamaican`s&quot;,['jamaican's','jamaican'])" style="color:red">Jamaican`s</em> are among the most famous teams in the sport due in large part to the <em onclick="addNewWord(&quot;popularity&quot;,['popularity'])" style="color:red">popularity</em> of the <em onclick="addNewWord(&quot;Disney&quot;,['disney'])" style="color:red">Disney</em> <em onclick="addNewWord(&quot;classic&quot;,['classic'])" style="color:red">classic</em>  Cool Runnings  that <em onclick="addNewWord(&quot;chronicle&quot;,['chronicle'])" style="color:red">chronicle</em> the Olympic journey of the country`s first <em onclick="addNewWord(&quot;bobsled&quot;,['bobsled','bobsl','bobsle'])" style="color:red">bobsled</em> team. </p>
-<p>. </p>
-<p>After missing the last two Winter Olympics  the <em onclick="addNewWord(&quot;Jamaican&quot;,['jamaican'])" style="color:red">Jamaican</em> <em onclick="addNewWord(&quot;bobsledders&quot;,['bobsledders','bobsledder'])" style="color:red">bobsledders</em> were determined to qualify for Sochi. </p>
-<p>. </p>
-<p>DIXON. </p>
-<p> This is such a really  really great feeling. </p>
-<p>. </p>
-<p>UNIDENTIFIED MALE. </p>
-<p> The team who refers to themselves as  Cool Runnings  the <em onclick="addNewWord(&quot;sequel&quot;,['sequel'])" style="color:red">sequel</em>  knows that the odds are stocked against them. </p>
-<p>. </p>
-<p>DIXON. </p>
-<p> A lot of people ask us if we are really crazy. </p>
-<p>. </p>
-<p>UNIDENTIFIED MALE. </p>
-<p> But they are hoping that with some help  they`ll have another shot at Olympic glory. </p>
-<p>. </p>
-<p>DIXON. </p>
-<p> It`s not many people can say they are from a tropical country  be not there and do a sport  which is winter sports  and we are so good at it. </p>
-<p>. </p>
-<p>(END VIDEOTAPE). </p>
-<p>. </p>
-<p>AZUZ. </p>
-<p> 
-<em onclick="addNewWord(&quot;Derek&quot;,['derek'])" style="color:red">Derek</em> <em onclick="addNewWord(&quot;Jakons&quot;,['jakons','jakon'])" style="color:red">Jakons</em> (ph) hadn`t seen his mother in eight months. </p>
-<p> She`s in a U. </p>
-<p>S. </p>
-<p> Air Force  and she`s been <em onclick="addNewWord(&quot;deployed&quot;,['deployed','deploy','deploye'])" style="color:red">deployed</em> in the Middle East. </p>
-<p> She got home last week  but she didn`t immediately tell Derek. </p>
-<p> She decided to surprise him at a basketball game while he was playing. </p>
-<p>. </p>
-<p>(BEGIN VIDEO CLIP). </p>
-<p>. </p>
-<p>UNIDENTIFIED MALE. </p>
-<p> So the plan is to call a <em onclick="addNewWord(&quot;fake&quot;,['fake'])" style="color:red">fake</em> (inaudible) <em onclick="addNewWord(&quot;tech&quot;,['tech'])" style="color:red">tech</em> on the coach  and then we`re going to have <em onclick="addNewWord(&quot;Derek&quot;,['derek'])" style="color:red">Derek</em> go out to the line  for two or three throws and then that`s when we have his <em onclick="addNewWord(&quot;mom&quot;,['mom'])" style="color:red">mom</em> come from behind and that - will get surprised. </p>
+<p> For thousands of travelers heading home from Sunday Super Bowl  the airports were anything  but a wonderland. </p>
+<p> And more than 2 000 flights canceled on Monday due to the storm. </p>
 <p>. </p>
 <p>UNIDENTIFIED FEMALE. </p>
-<p> I`m nervous  because I don`t know what his reaction is going to be. </p>
-<p>. </p>
-<p>(LAUGHTER). </p>
-<p>. </p>
-<p>UNIDENTIFIED FEMALE. </p>
-<p> I`m thinking he`ll say <em onclick="addNewWord(&quot;Mommy&quot;,['mommy'])" style="color:red">Mommy</em> and give me a hug. </p>
-<p> You know  we are at a basketball game  his friends are here  girls are here. </p>
-<p> Maybe he`ll cry  but then he`ll be mad at me. </p>
+<p> We`re trying to get to Chicago. </p>
+<p> My flights are a couple of hours delayed. </p>
+<p> We are just hoping it will actually take off. </p>
 <p>. </p>
 <p>UNIDENTIFIED MALE. </p>
-<p> That`s all right  Derek. </p>
+<p> Parts of New Jersey pummeled with nine inches  forcing Governor Christie to issue a state of emergency. </p>
+<p> Central New Jersey officials blaming the Super Bowl for impacting their ability to battle the snow. </p>
 <p>. </p>
-<p>(LAUGHTER). </p>
-<p>. </p>
-<p>(APPLAUSE). </p>
-<p>. </p>
-<p>UNIDENTIFIED FEMALE. </p>
-<p> He cried a little bit. </p>
-<p> But that`s OK. </p>
-<p> That was his natural reaction. </p>
-<p> That was Derek. </p>
-<p> And that`s really the reaction I thought he would have. </p>
+<p>ROBERT BIANCO  SUPERINTENDENT FOR PUBLIC WORKS  MONTCLAIR  NEW JERSEY. </p>
+<p> Most of the salt in this general area has been going towards the middle (ph) lands for the Super Bowl. </p>
+<p> The local municipalities in the counties have been struggling to get it. </p>
+<p> And this has been going on since the middle of December. </p>
 <p>. </p>
 <p>UNIDENTIFIED MALE. </p>
-<p> 
-<em onclick="addNewWord(&quot;Mom&quot;,['mom'])" style="color:red">Mom</em>  I missed you. </p>
+<p> A new winter storm will pack a one two punch into Wednesday. </p>
+<p> With heavy snow and ice forecast in more than two dozen states. </p>
+<p> Kansas City <em onclick="addNewWord(&quot;bracing&quot;,['bracing','brac','brace'])" style="color:blue">bracing</em> for ten inches of snow. </p>
 <p>. </p>
 <p>(END VIDEO CLIP). </p>
 <p>. </p>
 <p>AZUZ. </p>
-<p> She`d missed all of football season and the holidays  so she thought the basketball game was worth a shot. </p>
-<p> There was nothing <em onclick="addNewWord(&quot;foul&quot;,['foul'])" style="color:red">foul</em> about it in the true sense of the word  it was a <em onclick="addNewWord(&quot;homecoming&quot;,['homecoming','homecom','homecome'])" style="color:red">homecoming</em> game. </p>
-<p> I`m Carl Azuz  for CNN STUDENT NEWS. </p>
+<p> The Obama administration believes that for American students to compete with other students around the world  they need to have the same technology as students in some other countries. </p>
+<p>. </p>
+<p>(BEGIN VIDEO CLIP). </p>
+<p>. </p>
+<p>BARACK OBAMA  PRESIDENT OF THE UNITED STATES OF AMERICA. </p>
+<p> Technology can help. </p>
+<p> It`s a tool. </p>
+<p> It`s just one more tool. </p>
+<p> So  today the average school has about the same Internet bandwidth as the average American home. </p>
+<p> But it serves 200 times as a many people. </p>
+<p> Only around 30 percent of our students have true high speed Internet in the classroom. </p>
+<p>. </p>
+<p>(END VIDEO CLIP). </p>
+<p>. </p>
+<p>AZUZ. </p>
+<p> The president asked for and got commitments from companies like Verizon  Apple  <em onclick="addNewWord(&quot;AT&amp;T&quot;,['at&amp;t'])" style="color:red">AT&amp;T</em>  Microsoft and Sprint. </p>
+<p> They promise to give or discount millions of dollars-worth of services and devices to students. </p>
+<p> The government is also putting $2 billion toward high speed Internet in schools. </p>
+<p> The White House says the money is already set aside and it <em onclick="addNewWord(&quot;won`t&quot;,['won't','wo'])" style="color:red">won`t</em> add to the deficit. </p>
+<p>. </p>
+<p>Not everyone agrees that all electronic technologies good for students. </p>
+<p> Some experts are concerned about its potential effects on younger kids` attention spans. </p>
+<p>. </p>
+<p>Staying online. </p>
+<p> Facebook turned ten years old yesterday. </p>
+<p> At Facebook. </p>
+<p>com/cnnstudentnews  we are asking what you think of that. </p>
+<p> Carol is surprised it`s lasted this long and still thrives. </p>
+<p> Abel or Abel says that`s pretty old for Internet age and it shows how fast time is going. </p>
+<p> One out of every six people in the world uses Facebook. </p>
+<p> And Facebook knows a lot about its users. </p>
+<p> How old you are  where you live  go to school or work and what you like. </p>
+<p> The things you`re talking about with your friends  the things you share with them and what you click on. </p>
+<p> It`s <em onclick="addNewWord(&quot;incredibly&quot;,['incredibly'])" style="color:blue">incredibly</em> valuable information. </p>
+<p> Facebook makes 19 percent of its money by selling ads  and your info helps it to do that. </p>
+<p>. </p>
+<p>How else has Facebook changed their lives. </p>
+<p>. </p>
+<p>(BEGIN VIDEOTAPE). </p>
+<p>. </p>
+<p>DOUG GROSS  CNN CORRESPONDENT. </p>
+<p> So  Facebook is turning ten years old and it really is an <em onclick="addNewWord(&quot;unprecedented&quot;,['unprecedented','unprecedent','unprecedente'])" style="color:blue">unprecedented</em> story in sort of Internet history as well as social media history. </p>
+<p> To tell the story  you can start with one number  1. </p>
+<p>2 billion. </p>
+<p> That`s how many active monthly users Facebook has. </p>
+<p> Compare that to Twitter that has 250 million and you <em onclick="addNewWord(&quot;literally&quot;,['literally'])" style="color:blue">literally</em> can take (inaudible) user base at almost a billion more. </p>
+<p> That`s how many you have for Facebook. </p>
+<p> And that really plays a party on why it`s changed so many people`s lives. </p>
+<p>. </p>
+<p>This year number really is part of the story. </p>
+<p> Facebook has allowed people in the way they`ve never been able to before to reach people from parts of their lives they thought were totally gone. </p>
+<p> To find people from elementary school  high school  college  find old teachers  find old friends they never thought they`d meet again. </p>
+<p> Sure  MySpace was out there first  sure  Friendster was around first  but this isn`t just your college and young adults and high school students. </p>
+<p> This is everybody. </p>
+<p> This is your aunt  your uncle  your grandma. </p>
+<p> So  the ability to find and connect with people on Facebook is something we`ve never seen in Internet history. </p>
+<p>. </p>
+<p>You just think about the things we do differently because of Facebook now. </p>
+<p> Birth announcements  wedding announcements  pictures of the kids - things like that. </p>
+<p> Even in the era of email  you`d have to sort of make your lists  send these things out. </p>
+<p> Now  you can really with one click sort of make these major life announcement to everybody you care about - to your family  your friends - they are all there. </p>
+<p> If you are a Web-enabled person in 2014  odds are you have a Facebook account  and that means we can find each other in ways that we never could have considered before  even in the Internet age. </p>
+<p>. </p>
+<p>(END VIDEOTAPE). </p>
+<p>. </p>
+<p>UNIDENTIFIED FEMALE. </p>
+<p> Time for the  Shoutout. </p>
+<p>  Where would you find a <em onclick="addNewWord(&quot;flywheel&quot;,['flywheel'])" style="color:blue">flywheel</em>  <em onclick="addNewWord(&quot;pitman&quot;,['pitman'])" style="color:blue">pitman</em> arm and a <em onclick="addNewWord(&quot;crank&quot;,['crank'])" style="color:blue">crank</em> case. </p>
+<p> If you think you know it  shout it out. </p>
+<p> Are they in a sewing machine  <em onclick="addNewWord(&quot;loom&quot;,['loom'])" style="color:blue">loom</em>  wireless controller or automobile. </p>
+<p> You`ve got three seconds  go. </p>
+<p>. </p>
+<p>Anyone who`s ridden in the school bus has experience with these - they are all auto parts. </p>
+<p> That`s your answer and that`s your shoutout. </p>
+<p>. </p>
+<p>AZUZ. </p>
+<p> Something else that could be coming soon to a vehicle near you. </p>
+<p> More technology. </p>
+<p> The kind that could help your car talk to others around it. </p>
+<p> Unlike some proposed cars of the futures it would not actually do the driving for you. </p>
+<p> But it could warn you about what other drivers are doing. </p>
+<p> The U. </p>
+<p>S. </p>
+<p> government may require this feature in the future  but it would add to the cost of the car. </p>
+<p>. </p>
+<p>(BEGIN VIDEOTAPE). </p>
+<p>. </p>
+<p>ANNOUNCER. </p>
+<p> Warning. </p>
+<p> Vehicle breaking ahead. </p>
+<p>. </p>
+<p>RENE MARSH  CNN CORRESPONDENT. </p>
+<p> It`s the vehicle of the future  cars that talk to the driver and each other. </p>
+<p> The federal government wants it on the road soon  pushing for technology that would warn drivers of danger coming from any direction. </p>
+<p>. </p>
+<p>ANNOUNCER. </p>
+<p> Coming along. </p>
+<p> The light is green. </p>
+<p> Everything looks fine. </p>
+<p>. </p>
+<p>UNIDENTIFIED MALE. </p>
+<p> And all of a sudden  we get that warning that says  you know  look out. </p>
+<p>. </p>
+<p>MARSH. </p>
+<p> It`s called vehicle to vehicle technology. </p>
+<p> Cars would send wireless message to each other within about 300 yard radius. </p>
+<p> Communicating information like speed  direction and GPS position ten times per second. </p>
+<p>. </p>
+<p>ANTHONY FOXX  SECRETARY OF TRANSPORTATION. </p>
+<p> When cars share this information  they can account for all the vehicles around them. </p>
+<p> Which means they are able to identify possible crashes. </p>
+<p>. </p>
+<p>MARSH. </p>
+<p> The technology sees around corners  over hills and through other vehicle. </p>
+<p> So let`s just say  five cars ahead of me  the driver slams on the brakes. </p>
+<p> Well  that car sends my car a message giving me enough time to react. </p>
+<p>. </p>
+<p>33 000 Americans are killed and 2. </p>
+<p>3 million injured in car crashes every year. </p>
+<p> The Department of Transportation predicts  talking cars could prevent up to 80 percent of crashes involving sober drivers. </p>
+<p>. </p>
+<p>Five major car companies have been working with DoT on developing and testing the technology. </p>
+<p> 3 000 cars in Ann Arbor  Michigan are already using it as part of the government pilot test. </p>
+<p> Sometime after 2016  the federal government hopes your car will be able to communicate with you. </p>
+<p>. </p>
+<p>Well  the DoT hopes to propose the rule by 2016  but it will still need the public to weigh in before anything is finalized. </p>
+<p> The bottom line is  it`s a <em onclick="addNewWord(&quot;lengthy&quot;,['lengthy'])" style="color:blue">lengthy</em> process to get something like this mandated. </p>
+<p>. </p>
+<p>Now  as for privacy  the government says that data sent between cars doesn`t record personal information  so your privacy should not be compromised. </p>
+<p> Rene Marsh  CNN  Washington. </p>
+<p>. </p>
+<p>(END VIDEOTAPE). </p>
+<p>. </p>
+<p>AZUZ. </p>
+<p> On our  Roll Call   worldwide Wednesday is when we recognize some of the international schools using our show. </p>
+<p> So  without further <em onclick="addNewWord(&quot;ado&quot;,['ado'])" style="color:blue">ado</em>  hello to the students of Spangdahlem Middle School. </p>
+<p> They are online watching CNN STUDENT NEWS in Spangdahlem  Germany. </p>
+<p>. </p>
+<p>Over to South America  to Dourados City  Brazil. </p>
+<p> Shoutout to our viewers at Escola  Biegas (ph). </p>
+<p>. </p>
+<p>And across the Pacific  we`re happy to see you in Miyazaki City  Japan. </p>
+<p> It`s the home of our friends at Miyazaki or Miya High School. </p>
+<p>. </p>
+<p>Landing today`s show at the <em onclick="addNewWord(&quot;culmination&quot;,['culmination'])" style="color:blue">culmination</em> of <em onclick="addNewWord(&quot;mechanic&quot;,['mechanic'])" style="color:blue">mechanic</em> capability  the A-packs of <em onclick="addNewWord(&quot;advancement&quot;,['advancement'])" style="color:blue">advancement</em> and technology  the paper airplane. </p>
+<p> But not just any 8. </p>
+<p>5 by 11 origami. </p>
+<p> This thing is made out of manila (ph) folders  built to scale  detailed to perfection you can almost feel the <em onclick="addNewWord(&quot;turbulence&quot;,['turbulence'])" style="color:blue">turbulence</em>  you all. </p>
+<p> It`s four feet long. </p>
+<p> It took a 22 year old <em onclick="addNewWord(&quot;aviation&quot;,['aviation'])" style="color:blue">aviation</em> enthusiasts  about 400 manila folders and 10 000 hours to folge (ph). </p>
+<p> Should we say build. </p>
+<p>. </p>
+<p>It <em onclick="addNewWord(&quot;won`t&quot;,['won't','wo'])" style="color:red">won`t</em> actually fly  so we`ve got the idea  we`ll get off the ground with others. </p>
+<p> That thing is <em onclick="addNewWord(&quot;intricate&quot;,['intricate'])" style="color:blue">intricate</em>  from the nose to detail. </p>
+<p> Though it`s <em onclick="addNewWord(&quot;monochromatic&quot;,['monochromatic'])" style="color:blue">monochromatic</em>  it`s still a great looking <em onclick="addNewWord(&quot;runway&quot;,['runway'])" style="color:blue">runway</em> model  no  it`s lightweight  it still tips the scale and thanks to those images  we could show it to you for free without any pay per view charges. </p>
+<p> I`m Carl Azuz and I`m taking off. </p>
 </div>
 
             
-<div id="feedback">
-                
-<ul id="feedback_list">
-                    
-<li>(feedback)</li>
-                
-</ul>
+<div id="reference">
             
 </div>
 

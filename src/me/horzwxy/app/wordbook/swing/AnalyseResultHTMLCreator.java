@@ -108,10 +108,14 @@ public class AnalyseResultHTMLCreator {
                 Word wordInstance = emphasizedWords.get(emphasizedWords.indexOf(wordExample));
                 Element element = document.createElement("em");
                 element.setTextContent(word);
+                if(wordInstance.getContent().equals("")) {
+
+                }
                 if(wordInstance.getState().equals(WordState.UNTRACKED)) {
                     element.setAttribute("style", "color:red");
                 }
                 else if(wordInstance.getState().equals(WordState.UNRECOGNIZED)) {
+
                     element.setAttribute("style", "color:blue");
                 }
                 else if(wordInstance.getState().equals(WordState.UNFAMILIAR)) {

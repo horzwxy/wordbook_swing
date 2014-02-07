@@ -48,6 +48,8 @@ public abstract class SwingController {
 
     public abstract void deleteSentence();
 
+    public abstract void markAndUpload(File file);
+
     /**
      * Display log on the frame.
      * @param log

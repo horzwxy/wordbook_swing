@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>analyse result</title>
+        <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.min.js"></script>
         <script type="text/javascript">
         <![CDATA[
             currentState = "none";
@@ -16,11 +17,22 @@
                     }
                 }
 
-                document.getElementById("feedback_list").innerHTML += "<li>change state to " + newState + "</li>";
             }
 
             function addNewWord(word, possibleForms) {
+                document.getElementById("reference").innerHTML = "loading...";
+                var margintop = window.event.srcElement.offsetTop;
+                document.getElementById("reference").style.top = margintop;
+
                 if(currentState == 'none') {
+                    jQuery.ajax({
+                        url: "http://www.iciba.com/" + word,
+                        type : "GET",
+                        dataType : "html",
+                        success: function(data) {
+                            $("#reference").html( jQuery(data).find("#dict_tab_101").html() );
+                        }
+                    });
                     return;
                 }
 
@@ -64,7 +76,6 @@
                     }
                 }
 
-                document.getElementById("feedback_list").innerHTML += "<li>add "+ currentState + " word " + form + "</li>";
             }
         ]]>
         </script>
@@ -81,15 +92,16 @@
                 width:100%;
             }
 
-            #feedback{
-                float:left;
-                width:15%;
+            #reference{
+                width:30%;
+                position:absolute;
+                display:inline-block;
             }
 
             #article{
                 margin-top:50px;
-                float:left;
-                width:80%;
+                width:65%;
+                display:inline-block;
             }
 
             #main{
@@ -123,10 +135,7 @@
 
             </div>
 
-            <div id="feedback">
-                <ul id="feedback_list">
-                    <li>(feedback)</li>
-                </ul>
+            <div id="reference">
             </div>
 
             <div id="form_picker">
